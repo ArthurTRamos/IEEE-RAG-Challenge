@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.Identifier
+*:Zone.Identifier
+*.zip
+src/embed_model/
+src/docling_models/
+experiments/runs/
+*.pdf

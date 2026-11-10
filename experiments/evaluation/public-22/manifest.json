@@ -1,0 +1,319 @@
+{
+  "excluded_question_ids": [
+    "16",
+    "18",
+    "21"
+  ],
+  "question_count": 22,
+  "document_count": 64,
+  "missing_document_ids": [],
+  "questions_without_available_direct_evidence": [],
+  "coverage": [
+    {
+      "id": 1,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-032",
+        "DONES-033"
+      ],
+      "available_direct_documents": [
+        "DONES-032",
+        "DONES-033"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 2,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-017",
+        "DONES-018",
+        "DONES-019",
+        "DONES-033"
+      ],
+      "available_direct_documents": [
+        "DONES-017",
+        "DONES-018",
+        "DONES-019",
+        "DONES-033"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 3,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 4,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-027"
+      ],
+      "available_direct_documents": [
+        "DONES-027"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "requires_figure"
+    },
+    {
+      "id": 5,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-008",
+        "DONES-031",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-008",
+        "DONES-031",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "partial_text"
+    },
+    {
+      "id": 6,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-001",
+        "DONES-006",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-001",
+        "DONES-006",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 7,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-001",
+        "DONES-013",
+        "DONES-029",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-001",
+        "DONES-013",
+        "DONES-029",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 8,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 9,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-034"
+      ],
+      "available_direct_documents": [
+        "DONES-034"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "scope_warning"
+    },
+    {
+      "id": 10,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-013"
+      ],
+      "available_direct_documents": [
+        "DONES-013"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "partial_text"
+    },
+    {
+      "id": 11,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-001"
+      ],
+      "available_direct_documents": [
+        "AI-001"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 12,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-004",
+        "AI-006"
+      ],
+      "available_direct_documents": [
+        "AI-004",
+        "AI-006"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "partial_text"
+    },
+    {
+      "id": 13,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-007"
+      ],
+      "available_direct_documents": [
+        "AI-007"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 14,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-008"
+      ],
+      "available_direct_documents": [
+        "AI-008"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 15,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-010"
+      ],
+      "available_direct_documents": [
+        "AI-010"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 17,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-011"
+      ],
+      "available_direct_documents": [
+        "AI-011"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 19,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-010"
+      ],
+      "available_direct_documents": [
+        "AI-010"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 20,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-014"
+      ],
+      "available_direct_documents": [
+        "AI-014"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 22,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-016"
+      ],
+      "available_direct_documents": [
+        "AI-016"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 23,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-018",
+        "AI-019",
+        "AI-020"
+      ],
+      "available_direct_documents": [
+        "AI-018",
+        "AI-019",
+        "AI-020"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 24,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-021"
+      ],
+      "available_direct_documents": [
+        "AI-021"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 25,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-022"
+      ],
+      "available_direct_documents": [
+        "AI-022"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    }
+  ],
+  "sources": {
+    "questions": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/IEEE-CIS-DSQA-Starter-Kit/sample/sample_qa.json",
+      "sha256": "434bfe996df41b16e74fafe443e74fc67d8ab2cb5b57112006ac6a7145f7587f"
+    },
+    "historical_judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public-22-questions.json",
+      "sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5"
+    }
+  }
+}

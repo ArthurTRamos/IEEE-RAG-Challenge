@@ -1,0 +1,6143 @@
+{
+  "schema_version": 1,
+  "unit": "document",
+  "status": "assistant_estimate",
+  "coverage": "all_local_documents",
+  "limitations": [
+    "Assistant estimates, with provisional negatives; human audit remains necessary.",
+    "Document relevance is distinct from useful-chunk retrieval and final QA accuracy.",
+    "Some questions have missing primary sources, visual evidence, or scope/version differences.",
+    "This is public development data, not an independent hidden test set."
+  ],
+  "derivation": "Active public questions and available hash-verified PDFs only; original grades unchanged.",
+  "corpus_documents": [
+    {
+      "document_id": "AI-001",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-001.pdf",
+      "pdf_sha256": "c5aa16f4b864f5d0ea9be55c7a6d4fb6f887516d66d27dce77b834f837bcd426",
+      "title": "OneSearch: A Preliminary Exploration of the Unified End-to-End Generative Framework for E-commerce Search"
+    },
+    {
+      "document_id": "AI-002",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-002.pdf",
+      "pdf_sha256": "f59b0bd8bed24c321020a95be031a835383bc15eb5ff0c9d055f5ffb05231efa",
+      "title": "PinGER: Token-Efficient Generative Retrieval with Semantic IDs"
+    },
+    {
+      "document_id": "AI-003",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-003.pdf",
+      "pdf_sha256": "97963d4a94649ef9ddfc2567cbeec45d71f38e9ab5d2a70dcdfd77530df395b4",
+      "title": "Guiding the coarse levels of semantic IDs makes the fine levels learnable"
+    },
+    {
+      "document_id": "AI-004",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-004.pdf",
+      "pdf_sha256": "a93ed0f26e15b5c53a495244dd4c857165be684d3bcf3ce98f5287afc4331321",
+      "title": "Overlap Number of Balls Model-Agnostic CounterFactuals (ONB-MACF): A Data-Morphology-based Counterfactual Generation Method for Trustworthy Artificial Intelligence"
+    },
+    {
+      "document_id": "AI-005",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-005.pdf",
+      "pdf_sha256": "4bfac41f236f1239a0f5ac738e78fffd192c2e42b5290323d94a656610627a01",
+      "title": "Explaining Machine Learning Classifiers through Diverse Counterfactual Explanations"
+    },
+    {
+      "document_id": "AI-006",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-006.pdf",
+      "pdf_sha256": "566d89b33d252d8993b211533ac4d5f7e3ecc65e7c8b635a2b51d0630ac97344",
+      "title": "FACE: Feasible and Actionable Counterfactual Explanations"
+    },
+    {
+      "document_id": "AI-007",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-007.pdf",
+      "pdf_sha256": "0b4c102bccd5769c3082149436d957a5c949729227005d8d1fe7f01f04a09e21",
+      "title": "Properties of lush spaces and applications to Banach spaces with numerical index 1"
+    },
+    {
+      "document_id": "AI-008",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-008.pdf",
+      "pdf_sha256": "9b9f8f050ca4eb1188597d24b59e15ba1c0a205e829ef49ebfff0e727f1503aa",
+      "title": "REVEL Framework to Measure Local Linear Explanations for Black-Box Models: Deep Learning Image Classification Case Study"
+    },
+    {
+      "document_id": "AI-009",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-009.pdf",
+      "pdf_sha256": "3cc81439dcf5c90758038340b472d0ddf5c9f222f2911d72fe2e22baa0424f82",
+      "title": "To trust or not to trust an explanation: using LEAF to evaluate local linear XAI methods"
+    },
+    {
+      "document_id": "AI-010",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-010.pdf",
+      "pdf_sha256": "f1ac5d074c3006f0575ef5cfd15f6fba0954bcf359ef601cc42c0a96b799c143",
+      "title": "WinStat: A Family of Trainable Positional Encodings for Transformers in Time Series Forecasting"
+    },
+    {
+      "document_id": "AI-011",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-011.pdf",
+      "pdf_sha256": "912773595c35daed5bdf238169cb21d1f4a84c1f87b9df0a86c19a9485db44b5",
+      "title": "Unveiling the Dynamic Behavior of Fuzzy Cognitive Maps"
+    },
+    {
+      "document_id": "AI-012",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-012.pdf",
+      "pdf_sha256": "6dbd451f0fc0b352e8265bf3362ba7e5f1ce9985b5168cbf546d2ebb6adbc1b4",
+      "title": "Prompting Away Stereotypes? Evaluating Bias in Text-to-Image Models for Occupations"
+    },
+    {
+      "document_id": "AI-013",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-013.pdf",
+      "pdf_sha256": "b7962f0b538c2a36c2ae207af49f6320dc0e14fed731aa33e0dba185e3c0e595",
+      "title": "Survey of Bias In Text-to-Image Generation: Definition, Evaluation, and Mitigation"
+    },
+    {
+      "document_id": "AI-014",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-014.pdf",
+      "pdf_sha256": "7be194da1e97c749d0a3f136eb67c4b3733cff6d77058510e27eb61331449748",
+      "title": "ZeroDiff: Solidified Visual-Semantic Correlation in Zero-Shot Learning"
+    },
+    {
+      "document_id": "AI-015",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-015.pdf",
+      "pdf_sha256": "4c2fe91d0c9819680c51eb929eb0a76d1b32d45c8d0531b4106dcfc6aa5a1ab5",
+      "title": "ZeroDiff++: Generative Test-Time Adaptation for Zero-shot Learning"
+    },
+    {
+      "document_id": "AI-016",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-016.pdf",
+      "pdf_sha256": "e1b10db76adeb0d21a014b9abcf42f6a6af928540c223f010fa1d8c293d9d105",
+      "title": "A Simple Framework for Contrastive Learning of Visual Representations"
+    },
+    {
+      "document_id": "AI-017",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-017.pdf",
+      "pdf_sha256": "b6f1f9ed63e6fcc3d387fa069425848d4791e35db1ea5b404441e0fdcab885a6",
+      "title": "Supervised Contrastive Learning"
+    },
+    {
+      "document_id": "AI-018",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-018.pdf",
+      "pdf_sha256": "df73b5e45e062a2aceeb5ecba0881c6d0d04f382fb29e6ef7324f7cf6bb489c7",
+      "title": "Machine Learning with Adversaries: Byzantine Tolerant Gradient Descent"
+    },
+    {
+      "document_id": "AI-019",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-019.pdf",
+      "pdf_sha256": "5b4efd6b3ccdb5e9f97880f76291b5670bb7258b5fe7590914aea88397a93217",
+      "title": "FLTrust: Byzantine-robust Federated Learning via Trust Bootstrapping"
+    },
+    {
+      "document_id": "AI-020",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-020.pdf",
+      "pdf_sha256": "3a326dd4cd3a57775e0f0ad257f5313c520764e651a11cd342137abe9cda196b",
+      "title": "Byzantine Machine Learning: MultiKrum and an optimal notion of robustness"
+    },
+    {
+      "document_id": "AI-021",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-021.pdf",
+      "pdf_sha256": "289031c08ad9430cf2f3bc6df49d0e7c1b413de97779ddcc0135ed3d2f4e31b3",
+      "title": "General Purpose Artificial Intelligence Systems (GPAIS): Properties, Definition, Taxonomy, Societal Implications and Responsible Governance"
+    },
+    {
+      "document_id": "AI-022",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-022.pdf",
+      "pdf_sha256": "adf70ed1803c85b1899dec3e21f3af0b124411439e8654b840ea65f7b9f52b2e",
+      "title": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
+    },
+    {
+      "document_id": "AI-023",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-023.pdf",
+      "pdf_sha256": "872b4ef302312d04ef4d55610613c0e59da32c443a2e38552d7cebb7dc3636fa",
+      "title": "Efficiently Modeling Long Sequences with Structured State Spaces"
+    },
+    {
+      "document_id": "AI-024",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-024.pdf",
+      "pdf_sha256": "6fe16414fa471a5ab150cddcba5840d3a94e347e96992c50c12c1fb8b919479f",
+      "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
+    },
+    {
+      "document_id": "AI-025",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-025.pdf",
+      "pdf_sha256": "0682997d136fd0b2f20129014c8f3d37306d9e25a0c468025bd31483ad6ad6ff",
+      "title": "A Survey on Structured State Space Sequence (S4) Models"
+    },
+    {
+      "document_id": "AI-026",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-026.pdf",
+      "pdf_sha256": "a6483a2f2a0d4636d2844b36947c9ed74a949ddb56517109270986aa81c07b78",
+      "title": "Measuring Social Bias in Vision-Language Models with Face-Only Counterfactuals from Real Photos"
+    },
+    {
+      "document_id": "AI-027",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-027.pdf",
+      "pdf_sha256": "9eea5a394b9ea6f8026d54adff20543bceb76e738ace18566a0f5801ce7af080",
+      "title": "Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models"
+    },
+    {
+      "document_id": "AI-028",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-028.pdf",
+      "pdf_sha256": "2057f7f7497650171b9f9a2411c8a2ccd68a9ae3fd8b53c55337ec122cafa1c7",
+      "title": "FoggyTrust: Robust Federated Learning with Hierarchical Trust Networks"
+    },
+    {
+      "document_id": "AI-029",
+      "relative_path": "corpus_piloto_ia_28_artigos/pdfs_ia/AI-029.pdf",
+      "pdf_sha256": "92570d221aadee6ab58812cc208eea94463cb1151e3febeab26fb2456622e2ee",
+      "title": "Time for a Change: a Tutorial for Comparing Multiple Classifiers Through Bayesian Analysis"
+    },
+    {
+      "document_id": "DONES-001",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-001.pdf",
+      "pdf_sha256": "073d731c4a3d9ade89ca8d78dab0589a7258caba3c1a948e6ee38642faa55a4c",
+      "title": "Lithium Loop and Purification System of DONES: Preliminary Design"
+    },
+    {
+      "document_id": "DONES-002",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-002.pdf",
+      "pdf_sha256": "fa1cdbd0930ad9f71677c7fd2c57d6d3c8305d78aa53ed37eb54ad7756817ef8",
+      "title": "The Design of the DONES Lithium Target System"
+    },
+    {
+      "document_id": "DONES-003",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-003.pdf",
+      "pdf_sha256": "bf9118a44ddc58741332c4014a31183821dd70ef7698fa81d97012148ca7e8b2",
+      "title": "Preliminary engineering design of DONES Target Assembly"
+    },
+    {
+      "document_id": "DONES-004",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-004.pdf",
+      "pdf_sha256": "d12119ce999539e13105c7e63c57aaf4a9cd71e3f8cc85a3a8312df14d5afa16",
+      "title": "CFD Analyses of the Quench Tank Configuration for IFMIF-DONES Liquid-Lithium Target System"
+    },
+    {
+      "document_id": "DONES-005",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-005.pdf",
+      "pdf_sha256": "03a7f854333512de16e0dff8d8655da33735e22836ddf83d47ab438fc17b995d",
+      "title": "Development of an electrochemical sensor for hydrogen detection in liquid lithium for IFMIF-DONES"
+    },
+    {
+      "document_id": "DONES-006",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-006.pdf",
+      "pdf_sha256": "188fd399f1fbdd2237727e1f0a7419d8880ed65a4e004dc8173e673bbced22a7",
+      "title": "Accident analysis with MELCOR-fusion code for DONES lithium loop and accelerator"
+    },
+    {
+      "document_id": "DONES-007",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-007.pdf",
+      "pdf_sha256": "9f3ec024e799c0e9a3eabeb458a8a3917088a191eaf0033b709a1d759ad57075",
+      "title": "Neutronics Analyses of the IFMIF-DONES Test Cell"
+    },
+    {
+      "document_id": "DONES-008",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-008.pdf",
+      "pdf_sha256": "10c9b60bc612cc2c30eb6a5b6b9a778eeab48de28bedf81bb6dd38f50fab8d0d",
+      "title": "Neutronics of the IFMIF-DONES irradiation facility"
+    },
+    {
+      "document_id": "DONES-009",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-009.pdf",
+      "pdf_sha256": "0fd456370b4437984cd90c698de1d1a3d013cf052291fb24399dbe6a06a652d3",
+      "title": "Overview of the Current Status of IFMIF-DONES Test Cell Biological Shielding Design"
+    },
+    {
+      "document_id": "DONES-010",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-010.pdf",
+      "pdf_sha256": "18e5514a1877b30d3db41dd0192ccef62dc3bb937eb4d8d3a5e82301b0e6473b",
+      "title": "Methodology for Remote Handling Operations in IFMIF-DONES"
+    },
+    {
+      "document_id": "DONES-011",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-011.pdf",
+      "pdf_sha256": "8bb9af7042c9fbb34dfc3e02e68d2214ffaeabb97af12a161a9adaea53a5a836",
+      "title": "Maintenance Logistics for IFMIF-DONES"
+    },
+    {
+      "document_id": "DONES-012",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-012.pdf",
+      "pdf_sha256": "e0ba7399b547eb4b58f27424138cfbcbcbfdc88ca0a3f60c0a2224118e6812a7",
+      "title": "Preliminary Analysis on A Maintainable Test Cell Concept for IFMIF-DONES"
+    },
+    {
+      "document_id": "DONES-013",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-013.pdf",
+      "pdf_sha256": "576428d1bd6bca43be39fe20f3ea58cdf3ee29806b4a6ce30a3f5152bbe6a5ee",
+      "title": "Towards the EU fusion-oriented neutron source: the Preliminary Engineering Design of IFMIF-DONES"
+    },
+    {
+      "document_id": "DONES-014",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-014.pdf",
+      "pdf_sha256": "32b53220ce67baba002c82a0adc36dbc329f7eeb94351a182b138a4a7e8f0ab2",
+      "title": "Measurement of neutron fluence in the High-Flux Test Module of the Early Neutron Source by an activation foils method"
+    },
+    {
+      "document_id": "DONES-015",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-015.pdf",
+      "pdf_sha256": "fe66e1bfa674e5d4e30ee7d7af4890544b5480a2ef6ed49d0a226dfff2c71bd2",
+      "title": "Numerical study of conjugated heat transfer for DONES high flux test module"
+    },
+    {
+      "document_id": "DONES-016",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-016.pdf",
+      "pdf_sha256": "e87cabd4c8def40453d82100c09cc471adac0c9a95f904c515139fcf0ce02dc1",
+      "title": "Material irradiation capabilities of IFMIF-DONES"
+    },
+    {
+      "document_id": "DONES-017",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-017.pdf",
+      "pdf_sha256": "ae8bf4ae11e0417c3dc6ca1b87f0766d04b9ef8d629f2da1f023efdec00fb286",
+      "title": "Design of the HEBT components inside TIR room of the IFMIF DONES facility"
+    },
+    {
+      "document_id": "DONES-018",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-018.pdf",
+      "pdf_sha256": "c988ce88e2bebfdd22461048006a64424c997a6af43d67a40ba1aff6309e6e5b",
+      "title": "Beam Diagnostics for the Multi-MW Hadron Linac IFMIF/DONES"
+    },
+    {
+      "document_id": "DONES-019",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-019.pdf",
+      "pdf_sha256": "de70bc6742f4fbdf8c31fc40ec7e528540090a99e8704a8044bf570bd79dd802",
+      "title": "Beam diagnostics for IFMIF-DONES: addressing the challenges of high-power irradiation facilities"
+    },
+    {
+      "document_id": "DONES-020",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-020.pdf",
+      "pdf_sha256": "1cf4a97007581539a1f59606bbd652333bb6db193f540bd019b4508809f5ffe4",
+      "title": "Challenges of Target and Irradiation Diagnostics of the IFMIF-DONES Facility"
+    },
+    {
+      "document_id": "DONES-021",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-021.pdf",
+      "pdf_sha256": "56db3802bf9a5d891aaddc964660e4c1791942aa0d75992f64865d3da7fdf9a1",
+      "title": "Study of a novel eight electrodes RF pickup"
+    },
+    {
+      "document_id": "DONES-022",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-022.pdf",
+      "pdf_sha256": "fbf44375aead73dc68b28d32458da73164f57282fe33085aafb4c33af7edda6e",
+      "title": "Status of the Engineering Design of the IFMIF-DONES High Energy Beam Transport Line and Beam Dump System"
+    },
+    {
+      "document_id": "DONES-023",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-023.pdf",
+      "pdf_sha256": "9c6c2af1a9f508934d1e8c9e846f053e3916a3ea977d626f7d0ca4ee527fa1ae",
+      "title": "Concrete structure and shielding in the IFMIF-DONES main building"
+    },
+    {
+      "document_id": "DONES-024",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-024.pdf",
+      "pdf_sha256": "277f8f36b2776c86ae7d85f88278b07722c631cf1214d73851725ec3132d51ac",
+      "title": "Preliminary Engineering Design of the Central Instrumentation and Control Systems for the IFMIF-DONES Plant"
+    },
+    {
+      "document_id": "DONES-025",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-025.pdf",
+      "pdf_sha256": "28b6f2cec237ff5b55551bdebdb049629fb57b84342403fa92897d6ccada030c",
+      "title": "Transverse Profile Monitors based on Fluorescence for IFMIF-EVEDA Accelerator"
+    },
+    {
+      "document_id": "DONES-026",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-026.pdf",
+      "pdf_sha256": "19e567056b08292cb32c7e9d21ae004ca5d27ca5b52a641fcab93cbc0ce97d18",
+      "title": "Beam Induced Fluorescence Measurements of 100 keV Deuterons in LIPAc Accelerator"
+    },
+    {
+      "document_id": "DONES-027",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-027.pdf",
+      "pdf_sha256": "3f63f3528d773dacd7630315f61123c1360d8d71ada78600990c5b6de90aa1c6",
+      "title": "Estimation of activated lithium and corrosion product contribution to the dose rate in IFMIF-DONES lithium loop cell"
+    },
+    {
+      "document_id": "DONES-028",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-028.pdf",
+      "pdf_sha256": "c5eecb85f15425ca7b52331cda467e325628c3929fea8c705325d9d6a0166654",
+      "title": "Activation of high flux test module sample holder after IFMIF-DONES operation"
+    },
+    {
+      "document_id": "DONES-029",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-029.pdf",
+      "pdf_sha256": "4e7d73e8f2b4a856fe2826d21342c94fc5b9def0bc7e4bccf2bc36f08900c39b",
+      "title": "The IFMIF-DONES Project: Design Status and Main Achievements Within the EUROfusion FP8 Work Programme"
+    },
+    {
+      "document_id": "DONES-030",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-030.pdf",
+      "pdf_sha256": "717e21a2242165faa13d09dc0339ae0e8041eb55b7a1ea11c2773538f8ce45d9",
+      "title": "IFMIF-EVEDA Accelerator: Beam Dump Design"
+    },
+    {
+      "document_id": "DONES-031",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-031.pdf",
+      "pdf_sha256": "2403738aec50e81f22af1d23e644389b935df380ff23236b98a50f01840cf7b6",
+      "title": "Status of DONES neutronics, source terms analyses and radiation protections"
+    },
+    {
+      "document_id": "DONES-032",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-032.pdf",
+      "pdf_sha256": "16c78d9ac22d811dd67c3434656ecada5be8da36d4e63f0184f016aba5bae8a1",
+      "title": "Resolution Studies of Inorganic Scintillation Screens for High Energy and High Brilliance Electron Beams"
+    },
+    {
+      "document_id": "DONES-033",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-033.pdf",
+      "pdf_sha256": "4c433226fecdc2297bd5b8cbad268397432bcacc12c06ad45f9e7efd2cabc4f9",
+      "title": "Beam Instrumentation — CERN Summer Student Lectures"
+    },
+    {
+      "document_id": "DONES-034",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-034.pdf",
+      "pdf_sha256": "2e46db4aad44ddb00a21ded5fc936bb8d6952927432053f5b684c999d30786a7",
+      "title": "The accomplishment of the Engineering Design Activities of IFMIF/EVEDA: The European-Japanese project towards a Li(d,xn) fusion relevant neutron source"
+    },
+    {
+      "document_id": "DONES-035",
+      "relative_path": "corpus_piloto_ifmif_dones/corpus_ifmif_dones/pdfs/DONES-035.pdf",
+      "pdf_sha256": "66789c60ef5db644a35903225df464504ad5d2ac39f691b137a1a69f81b374d7",
+      "title": "The lithium systems of the IFMIF-DONES facility"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 2
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 1
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 1
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 1
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 1
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "judgments": [
+        {
+          "document_id": "AI-001",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-002",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-003",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-004",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-005",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-006",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-007",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-008",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-009",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-010",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-011",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-012",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-013",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-014",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-015",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-016",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-017",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-018",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-019",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-020",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-021",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-022",
+          "grade": 2
+        },
+        {
+          "document_id": "AI-023",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-024",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-025",
+          "grade": 1
+        },
+        {
+          "document_id": "AI-026",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-027",
+          "grade": 1
+        },
+        {
+          "document_id": "AI-028",
+          "grade": 0
+        },
+        {
+          "document_id": "AI-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-001",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-002",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-003",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-004",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-005",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-006",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-007",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-008",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-009",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-010",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-011",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-012",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-013",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-014",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-015",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-016",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-017",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-018",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-019",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-020",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-021",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-022",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-023",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-024",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-025",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-026",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-027",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-028",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-029",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-030",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-031",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-032",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-033",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-034",
+          "grade": 0
+        },
+        {
+          "document_id": "DONES-035",
+          "grade": 0
+        }
+      ]
+    }
+  ]
+}
