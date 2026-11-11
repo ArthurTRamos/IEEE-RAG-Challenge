@@ -1,18 +1,22 @@
 # Resultados de submissões
 
 Registro iniciado em 5/11/2026 com valores informados pelo usuário. Os resultados
-não foram reproduzidos localmente. IDs e tempos oficiais ainda não foram
-fornecidos. Os registros novos identificam o artefato local quando disponível;
+não foram reproduzidos localmente nem conferidos diretamente no painel oficial.
+IDs oficiais ainda não foram fornecidos. Em 11/11/2026 foram informados os
+tempos de inferência de três variantes. Os registros novos identificam o artefato local quando disponível;
 os hashes dos históricos continuam desconhecidos.
 
-| ID local | Variante | Acurácia informada | Origem/estado |
-| --- | --- | ---: | --- |
-| HIST-01 | RAG com recuperação semântica | 57 | Informado pelo usuário |
-| HIST-02 | RAG semântico + BM25 | 47 | Informado pelo usuário |
-| HIST-03 | RAG semântico + BM25 + KG por menções/aliases | 57 | Informado pelo usuário |
-| NEXT-01 | RAG semântico + BM25 + expansão do grafo | 53 | Informado pelo usuário |
-| EMB-01 | Híbrido + BGE-small, top 10 sem expansão, sem KG e sem fórmulas | 40 | Informado pelo usuário em 08/11; artefato local identificado abaixo |
-| DENSE-01 | MiniLM denso, top 10, chunking por seção, penalizações e prompt atual | 41 | Informado pelo usuário em 10/11; associado ao ZIP denso pelo contexto da conversa |
+| ID local | Variante | Acurácia informada | Tempo de inferência (s) | Origem/estado |
+| --- | --- | ---: | ---: | --- |
+| ZERO-01 | Zero-shot baseline | 29 | 732 | Acurácia balanceada por domínio; informado em 11/11 |
+| RAG-BASE-01 | RAG semântico baseline | 57 | 2079 | Acurácia balanceada por domínio; informado em 11/11 |
+| HYBRID-2026-11-10 | MiniLM + BM25 k1=1,25, b=0,75; RRF 60, pesos 1/0,75 | 60 | 2389 | Acurácia balanceada por domínio; informado em 11/11; manifesto identificado |
+| HIST-01 | RAG com recuperação semântica | 57 | — | Histórico informado pelo usuário; não associado automaticamente a RAG-BASE-01 |
+| HIST-02 | RAG semântico + BM25 | 47 | — | Informado pelo usuário |
+| HIST-03 | RAG semântico + BM25 + KG por menções/aliases | 57 | — | Informado pelo usuário |
+| NEXT-01 | RAG semântico + BM25 + expansão do grafo | 53 | — | Informado pelo usuário |
+| EMB-01 | Híbrido + BGE-small, top 10 sem expansão, sem KG e sem fórmulas | 40 | — | Informado pelo usuário em 08/11; artefato local identificado abaixo |
+| DENSE-01 | MiniLM denso, top 10, chunking por seção, penalizações e prompt atual | 41 | — | Informado pelo usuário em 10/11; associado ao ZIP denso pelo contexto da conversa |
 
 Os valores estão preservados na escala relatada. Não convertê-los em número
 de perguntas corretas: a avaliação oficial é balanceada por domínio e o painel
@@ -22,8 +26,41 @@ Um empate agregado não demonstra identidade dos acertos. As versões precisam
 ser associadas a arquivos/configurações antes de atribuir uma diferença apenas
 ao canal de recuperação.
 
-Próximos passos e critérios de comparação:
-[plano de experimentos](../plans/experimentation-roadmap.md).
+## Atualização de 11/11/2026 — híbrido com score 60
+
+O usuário informou os três resultados no ambiente de avaliação, identificando a
+métrica como acurácia balanceada dos domínios e os tempos como tempo de
+inferência em segundos. O registro estruturado está em
+[evaluation-reported-2026-11-11.json](../../experiments/results/evaluation-reported-2026-11-11.json).
+
+O híbrido corresponde ao
+[manifesto do pacote de 10/11](../../experiments/submissions/2026-11-10-hybrid-k1_1p25-b0p75-rrf60-dw1-bw0p75.json):
+
+- ZIP: `2026-11-10-hybrid-k1_1p25-b0p75-rrf60-dw1-bw0p75.zip`.
+- SHA-256: `6fbafb07d918527a4b0af3625735c46ff7ba58576f1ec84b1471892f701e9b97`.
+- Tamanho: 398.592.372 bytes.
+- Configuração: BM25 `k1=1.25`, `b=0.75`; RRF 60, pesos denso/BM25 de 1/0.75;
+  orçamento de contexto de 10.000 tokens de texto dos chunks.
+- Resultado informado: score 60, tempo de inferência 2389 s (39 min 49 s).
+- ID da avaliação, data exata de execução, scores por domínio, respostas e logs:
+  não fornecidos. A data de 11/11 é a data do relato, não uma data de execução
+  presumida.
+
+Em relação ao baseline semântico, o score passou de 57 para 60: **+3 pontos na
+escala relatada**, com **+310 s** de inferência (**+14,91%**). Em relação ao
+zero-shot, o híbrido teve +31 pontos e +1657 s. É o maior score registrado neste
+histórico, com associação explícita ao pacote local.
+
+Os 2389 s ficam 1211 s abaixo de 3600 s. Como o tempo foi descrito como
+**inferência**, ainda não está confirmado se inclui pré-processamento,
+carregamento dos modelos e construção de índices; portanto esse número sozinho
+não comprova a margem total de execução de 60 minutos.
+
+Os resultados agregados não demonstram significância estatística nem isolam o
+efeito da fusão sem respostas por pergunta e identificação exata dos artefatos
+dos baselines. A mesma pontuação 57 em HIST-01 não basta para concluir que se
+trata da mesma submissão que RAG-BASE-01. Os demais híbridos da grade local não
+foram avaliados oficialmente com base nesse relato.
 
 ## EMB-01 — BGE-small: resultado oficial informado de 40
 

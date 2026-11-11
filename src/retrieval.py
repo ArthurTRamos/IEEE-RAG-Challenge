@@ -26,6 +26,81 @@ class RetrievalIndex:
     documents: list[str]
     failures: list[dict]
     build_seconds: float
+    lexical_index: object = None
+
+
+def lexical_tokens(text):
+    """Unicode words/numbers, case-folded; no stemming or stopword resources."""
+    return re.findall(r"\w+", text.casefold())
+
+
+class BM25Retriever:
+    def __init__(self, chunks, k1=1.25, b=0.75):
+        from rank_bm25 import BM25Okapi
+
+        if not np.isfinite(k1) or k1 <= 0 or not np.isfinite(b) or not 0 <= b <= 1:
+            raise ValueError("BM25 requires finite k1 > 0 and 0 <= b <= 1")
+        self.k1, self.b = k1, b
+        tokens = [lexical_tokens(chunk["text"]) for chunk in chunks]
+        if not any(tokens):
+            raise ValueError("BM25 corpus has no lexical tokens")
+        self.model = BM25Okapi(tokens, k1=k1, b=b)
+
+    def scores(self, question):
+        # rank-bm25 divides 0/0 for lexically empty chunks when b=1. Their
+        # contribution is zero: no query term occurs. Keep such chunks in the
+        # corpus statistics so existing configurations retain identical scores.
+        with np.errstate(divide="ignore", invalid="ignore"):
+            values = np.asarray(self.model.get_scores(lexical_tokens(question)))
+        values[np.asarray(self.model.doc_len) == 0] = 0.0
+        if not np.isfinite(values).all():
+            raise ValueError("BM25 produced non-finite scores for nonempty chunks")
+        return values
+
+
+def rank_chunks(chunks, dense_scores, question, method="dense", lexical_index=None,
+                rrf_k=60, dense_weight=1.0, bm25_weight=1.0):
+    """Weighted RRF over all dense chunks and positive BM25 matches.
+
+    No fixed top-k candidate cutoff. BM25 zero/negative scores contribute no
+    lexical vote. Stable lexical/fusion ties follow canonical chunk order.
+    The dense sort retains the original NumPy default for baseline equivalence.
+    """
+    if method not in {"dense", "bm25", "hybrid"}:
+        raise ValueError(f"Unknown retrieval method: {method}")
+    if not np.isfinite(rrf_k) or rrf_k <= 0:
+        raise ValueError("RRF constant must be finite and positive")
+    if (not np.isfinite([dense_weight, bm25_weight]).all()
+            or min(dense_weight, bm25_weight) < 0 or dense_weight + bm25_weight <= 0):
+        raise ValueError("RRF weights must be finite, nonnegative and not both zero")
+    lexical_scores = None
+    if method != "dense":
+        if lexical_index is None:
+            raise ValueError("BM25 index is required for lexical/hybrid retrieval")
+        lexical_scores = lexical_index.scores(question)
+    if method == "dense":
+        scores = np.asarray(dense_scores)
+        order = np.argsort(-scores)
+    elif method == "bm25":
+        scores = lexical_scores
+        order = np.argsort(-scores, kind="stable")
+    else:
+        scores = np.zeros(len(chunks), dtype=np.float64)
+        dense_order = np.argsort(-np.asarray(dense_scores))
+        lexical_order = np.argsort(-lexical_scores, kind="stable")
+        positive_order = lexical_order[lexical_scores[lexical_order] > 0]
+        for channel, weight in ((dense_order, dense_weight), (positive_order, bm25_weight)):
+            scores[channel] += weight / (rrf_k + np.arange(1, len(channel) + 1))
+        order = np.argsort(-scores, kind="stable")
+    ranking = []
+    for rank, i in enumerate(order, 1):
+        row = {**chunks[int(i)], "rank": rank, "score": float(scores[i])}
+        if dense_scores is not None:
+            row["dense_score"] = float(dense_scores[i])
+        if lexical_scores is not None:
+            row["bm25_score"] = float(lexical_scores[i])
+        ranking.append(row)
+    return ranking
 
 
 def discover_pdfs(corpus_dir):
@@ -96,27 +171,40 @@ def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
                           time.perf_counter() - started)
 
 
-def retrieve(question, index, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS):
+def retrieve(question, index, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
+             method="dense", k1=1.25, b=0.75, rrf_k=60,
+             dense_weight=1.0, bm25_weight=1.0):
     """Return the full ranking and, when tokenized, the actual baseline context.
 
     The budget counts chunk text only, as in the starter kit. Headers, question
     and chat template are not included. The oversized-first-chunk fallback is
     the original approximate character truncation, not a strict token limit.
     """
+    similarities = None
+    if method != "bm25":
+        query = index.embedder.encode([question], normalize_embeddings=True,
+                                  show_progress_bar=False)[0]
+        similarities = index.embeddings @ query
+    if method != "dense" and (index.lexical_index is None or
+                               (index.lexical_index.k1, index.lexical_index.b) != (k1, b)):
+        index.lexical_index = BM25Retriever(index.chunks, k1, b)
+    ranking = rank_chunks(index.chunks, similarities, question, method,
+                          index.lexical_index, rrf_k, dense_weight, bm25_weight)
+    return select_context(ranking, tokenizer, max_tokens)
+
+
+def select_context(ranking, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
+                   token_counts=None):
+    """Apply the same baseline context policy to any ranked chunk list."""
     if max_tokens <= 0:
         raise ValueError("Context budget must be positive")
-    query = index.embedder.encode([question], normalize_embeddings=True,
-                                  show_progress_bar=False)[0]
-    similarities = index.embeddings @ query
-    order = np.argsort(-similarities)
-    ranking = [{**index.chunks[int(i)], "rank": rank,
-                "score": float(similarities[i])}
-               for rank, i in enumerate(order, 1)]
     if tokenizer is None:
         return {"chunks": ranking, "selected_chunks": None, "context": None}
     selected, used = [], 0
     for chunk in ranking:
-        n = len(tokenizer.encode(chunk["text"]))
+        n = token_counts.get(chunk["chunk_id"]) if token_counts is not None else None
+        if n is None:
+            n = len(tokenizer.encode(chunk["text"]))
         if used + n > max_tokens:
             if not selected and n > 0:
                 text = chunk["text"][:int(len(chunk["text"]) * max_tokens / n)]

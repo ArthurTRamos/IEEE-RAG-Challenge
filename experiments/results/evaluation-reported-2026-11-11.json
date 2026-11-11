@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "reported_on": "2026-11-11",
+  "metric": "Domain-balanced accuracy, preserved on the user-reported scale; not converted to correct-question counts",
+  "records": [
+    {
+      "local_id": "ZERO-01",
+      "variant": "zero_shot_baseline",
+      "reported_on": "2026-11-11",
+      "source": "user_report",
+      "independently_verified": false,
+      "evaluation_date": null,
+      "official_submission_id": null,
+      "balanced_accuracy_reported": 29,
+      "inference_seconds_reported": 732,
+      "timing_scope": "Inference time as reported; inclusion of preprocessing, model loading and indexing not confirmed",
+      "per_domain_scores": null,
+      "responses_or_logs_provided": false
+    },
+    {
+      "local_id": "RAG-BASE-01",
+      "variant": "semantic_rag_baseline",
+      "reported_on": "2026-11-11",
+      "source": "user_report",
+      "independently_verified": false,
+      "evaluation_date": null,
+      "official_submission_id": null,
+      "balanced_accuracy_reported": 57,
+      "inference_seconds_reported": 2079,
+      "timing_scope": "Inference time as reported; inclusion of preprocessing, model loading and indexing not confirmed",
+      "per_domain_scores": null,
+      "responses_or_logs_provided": false
+    },
+    {
+      "local_id": "HYBRID-2026-11-10",
+      "variant": "hybrid_rrf",
+      "reported_on": "2026-11-11",
+      "source": "user_report",
+      "independently_verified": false,
+      "evaluation_date": null,
+      "official_submission_id": null,
+      "balanced_accuracy_reported": 60,
+      "inference_seconds_reported": 2389,
+      "timing_scope": "Inference time as reported; inclusion of preprocessing, model loading and indexing not confirmed",
+      "per_domain_scores": null,
+      "responses_or_logs_provided": false,
+      "submission_manifest": "experiments/submissions/2026-11-10-hybrid-k1_1p25-b0p75-rrf60-dw1-bw0p75.json",
+      "archive_sha256": "6fbafb07d918527a4b0af3625735c46ff7ba58576f1ec84b1471892f701e9b97"
+    }
+  ],
+  "hybrid_vs_semantic_baseline": {
+    "score_delta_reported_scale": 3,
+    "inference_seconds_delta": 310,
+    "inference_relative_increase": 0.1491101491101491
+  }
+}

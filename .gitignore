@@ -7,4 +7,6 @@ __pycache__/
 src/embed_model/
 src/docling_models/
 experiments/runs/
+models/
+.cache/
 *.pdf

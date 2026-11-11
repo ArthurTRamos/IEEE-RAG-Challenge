@@ -27,6 +27,12 @@ def main():
     mode.add_argument("--tokenizer", type=Path, help="Local OLMo tokenizer directory; no LLM weights needed")
     mode.add_argument("--ranking-only", action="store_true", help="Skip context selection; no context metrics")
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--method", choices=("dense", "bm25", "hybrid"), default="dense")
+    parser.add_argument("--k1", type=float, default=1.25)
+    parser.add_argument("--b", type=float, default=0.75)
+    parser.add_argument("--rrf-k", type=float, default=60)
+    parser.add_argument("--dense-weight", type=float, default=1.0)
+    parser.add_argument("--bm25-weight", type=float, default=1.0)
     args = parser.parse_args()
     if args.output_dir.exists() and any(args.output_dir.iterdir()):
         parser.error("Output directory must be empty; use a new directory for each run")
@@ -51,12 +57,18 @@ def main():
                                 "docling_models": str(args.docling_models.resolve()),
                                 "tokenizer": str(args.tokenizer.resolve()) if args.tokenizer else None,
                                 "chunk_size_characters": 800, "chunk_overlap_characters": 150,
+                                "method": args.method, "bm25_k1": args.k1,
+                                "bm25_b": args.b, "rrf_k": args.rrf_k,
+                                "rrf_dense_weight": args.dense_weight,
+                                "rrf_bm25_weight": args.bm25_weight,
                                 "context_chunk_text_budget": MAX_CONTEXT_TOKENS}})
-    ranking = {"variant": "starter_dense", "questions": []}
-    context = {"variant": "starter_dense_selected_context", "questions": []}
+    ranking = {"variant": args.method, "questions": []}
+    context = {"variant": f"{args.method}_selected_context", "questions": []}
     for question in questions:
         tick = time.perf_counter()
-        result = retrieve(question["question"], index, tokenizer)
+        result = retrieve(question["question"], index, tokenizer, method=args.method,
+                          k1=args.k1, b=args.b, rrf_k=args.rrf_k,
+                          dense_weight=args.dense_weight, bm25_weight=args.bm25_weight)
         base = {"id": question["id"], "domain": question["domain"],
                 "question": question["question"]}
         ranking["questions"].append({**base, "chunks": result["chunks"],
