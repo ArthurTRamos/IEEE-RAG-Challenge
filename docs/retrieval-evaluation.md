@@ -54,6 +54,130 @@ Para avaliar somente o ranking, sem tokenizer:
   --output-dir experiments/runs/baseline-public22-ranking
 ```
 
+## BM25 e RRF
+
+Baixe somente os arquivos do tokenizer oficial, sem os pesos do LLM:
+
+```bash
+.venv/bin/python tools/download_tokenizer.py
+```
+
+O download usa `allenai/Olmo-3.1-32B-Instruct`, resolve uma revisão imutável e
+registra revisão e hashes em `models/olmo-tokenizer/download.json`. A pasta de
+modelos fica fora do controle de versão. O download requer internet apenas na
+preparação; as execuções subsequentes usam o tokenizer local.
+
+Para uma execução completa de parsing, embeddings e recuperação híbrida:
+
+```bash
+.venv/bin/python tools/run_retrieval.py \
+  --method hybrid --k1 1.25 --b 0.75 --rrf-k 60 \
+  --dense-weight 1 --bm25-weight 0.75 \
+  --tokenizer models/olmo-tokenizer \
+  --output-dir experiments/runs/hybrid-public22
+```
+
+`--method dense` permanece o padrão; `--method bm25` usa a ordenação lexical.
+O construtor de índice completo ainda calcula embeddings mesmo no experimento
+BM25, para manter o mesmo pipeline de extração. Não usar o tempo dessa variante
+como estimativa de um sistema BM25 independente.
+
+Para comparar os três métodos sem repetir parsing e embeddings, reutilize uma
+execução densa completa (com `ranking.json`, `judgments.json` e `manifest.json`):
+
+```bash
+.venv/bin/python tools/compare_retrieval.py \
+  --source-run experiments/runs/baseline-public22-ranking \
+  --tokenizer models/olmo-tokenizer \
+  --k1 1.25 --b 0.75 --rrf-k 60 \
+  --output-dir experiments/runs/bm25-rrf-public22-initial
+```
+
+O replay valida os PDFs, julgamentos, enunciados, catálogo integral dos chunks e
+a reprodução exata da ordem densa de cada pergunta. Ele reutiliza os scores
+densos salvos, mas calcula os scores BM25 e a seleção de contexto com o
+tokenizer real. Exporta subdiretórios `dense/`, `bm25/` e `hybrid/`, além de
+`summary.json` e um manifesto de proveniência e recursos. Os tempos do replay
+excluem extração e inferência de embeddings.
+
+BM25 usa `rank-bm25==0.2.2`, já disponível no ambiente oficial, com Unicode
+`\w+` e `casefold`, sem stemming nem remoção de stopwords. Termos da consulta
+recebem a mesma tokenização. A fusão soma `1 / (60 + posição)` por canal, com
+posições começando em 1 e pesos iguais por padrão. Os argumentos
+`--dense-weight` e `--bm25-weight` permitem ponderar os canais; o score passa
+a ser a soma de `peso_do_canal / (rrf_k + posição)`. Todos os chunks participam do canal
+denso; apenas matches BM25 com score positivo recebem voto lexical. Isso evita
+votos arbitrários dos empates em zero quando não há correspondência lexical.
+Empates BM25/RRF seguem a ordem original do catálogo. Não há corte fixo de
+candidatos nem limite de dez chunks no contexto.
+
+O arquivo `context-metrics.json` da comparação inclui
+`macro_full_context_document_coverage`, que considera **todos** os chunks
+selecionados, além das métricas com cortes fixos. As variantes compartilham
+exatamente a política de orçamento do baseline.
+
+Na configuração de submissão escolhida em 10/11/2026, `src/main.py` usa
+`RETRIEVAL_METHOD = "hybrid"`, `BM25_K1 = 1.25`, `BM25_B = 0.75`, `RRF_K = 60`,
+`RRF_DENSE_WEIGHT = 1` e `RRF_BM25_WEIGHT = 0.75`. O avaliador local e as APIs de
+recuperação mantêm o padrão denso; o starter kit original também foi preservado.
+Nenhuma variante foi enviada automaticamente à plataforma da competição.
+
+Para empacotar os modelos auxiliares já disponíveis, sem download:
+
+```bash
+bash src/build.sh --offline ../submissions/nome-da-submissao.zip
+```
+
+O caminho de saída é relativo a `src/`. O build recusa sobrescrever um ZIP
+existente, confere integridade e tamanho máximo de 1 GB e inclui `main.py`,
+`retrieval.py`, `embed_model/` e `docling_models/` na raiz do pacote.
+
+## Grade de parâmetros com nomes explícitos
+
+```bash
+.venv/bin/python tools/sweep_retrieval.py \
+  --source-run experiments/runs/baseline-public22-ranking \
+  --tokenizer models/olmo-tokenizer \
+  --output-dir experiments/runs/public22-bm25-rrf-sweep
+```
+
+Os padrões geram 91 runs: uma referência densa, nove controles BM25 e o produto
+cartesiano de 81 configurações híbridas:
+
+- `k1`: 0,75, 1,25 e 1,75.
+- `b`: 0,5, 0,75 e 1.
+- Peso BM25: 1, 0,75 e 0,5; peso denso fixo em 1.
+- Constante RRF: 30, 60 e 90.
+
+As listas são configuráveis por `--k1`, `--b`, `--bm25-weight` e `--rrf-k`, cada
+uma aceitando múltiplos valores. A mesma execução valida o conjunto congelado
+uma vez e calcula os tokens de cada chunk uma vez. Os scores BM25 são
+reutilizados entre combinações com o mesmo `k1` e `b`. Esse cache não muda a
+seleção de contexto, inclusive o fallback de truncamento.
+
+Exemplos de nomes:
+
+- `dense-reference`
+- `bm25-k1_1p25-b0p75`
+- `hybrid-dw1-bw0p75-k1_1p25-b0p75-rrf60`
+- `hybrid-dw1-bw0p5-k1_0p75-b0p5-rrf30`
+
+Cada subdiretório contém `manifest.json`, `summary.json`, ranking, contexto e
+métricas. O ranking completo usa `chunk_ids` e uma lista paralela de `scores`;
+o texto e os tokens de todos os chunks ficam no catálogo compartilhado
+`chunks.jsonl` da grade. O contexto renderizado é salvo integralmente em cada
+run. Os manifestos referenciam hashes do catálogo, dados, tokenizer e código.
+
+`summary.json` e `summary.csv` no diretório da grade consolidam as configurações,
+nDCG@10, recall no contexto completo, recall por domínio, contagem de chunks,
+tokens e tempo incremental. As métricas têm o mesmo significado e limites das
+comparações anteriores. Tempos com caches não incluem parsing/embeddings nem
+podem ser comparados como latências completas de submissão.
+
+Os resultados dessa grade usam as mesmas 22 perguntas de desenvolvimento. Eles
+servem para selecionar candidatas a novos testes; a melhor configuração local
+não é uma estimativa independente de desempenho no benchmark oculto.
+
 Escolha uma pasta de saída nova ou vazia para cada execução. As duas opções são
 mutuamente exclusivas. O tokenizer e o embedder são carregados apenas de arquivos
 locais. O pipeline de recuperação não carrega o modelo gerador.
@@ -108,7 +232,8 @@ parcial e registra essa escolha. Não há julgamentos por chunk implementados.
 
 Os testes conferem equivalência de chunking e contexto com o starter original,
 métricas com rankings sintéticos, exclusão de perguntas, fontes ausentes,
-hashes e descoberta recursiva. Rankings sintéticos não são benchmarks.
+hashes, descoberta recursiva, fórmula BM25, votos RRF e ausência de corte em
+dez chunks. Rankings sintéticos não são benchmarks.
 
 A interface oficial `answer(question, corpus_dir, model_id) -> str` permanece.
 `src/build.sh` inclui `retrieval.py` no ZIP. Os dados e relatórios locais não são

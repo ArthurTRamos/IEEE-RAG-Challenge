@@ -1,0 +1,1422 @@
+{
+  "excluded_question_ids": [
+    "16",
+    "18",
+    "21"
+  ],
+  "question_count": 22,
+  "document_count": 64,
+  "missing_document_ids": [],
+  "questions_without_available_direct_evidence": [],
+  "coverage": [
+    {
+      "id": 1,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-032",
+        "DONES-033"
+      ],
+      "available_direct_documents": [
+        "DONES-032",
+        "DONES-033"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 2,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-017",
+        "DONES-018",
+        "DONES-019",
+        "DONES-033"
+      ],
+      "available_direct_documents": [
+        "DONES-017",
+        "DONES-018",
+        "DONES-019",
+        "DONES-033"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 3,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 4,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-027"
+      ],
+      "available_direct_documents": [
+        "DONES-027"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "requires_figure"
+    },
+    {
+      "id": 5,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-008",
+        "DONES-031",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-008",
+        "DONES-031",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "partial_text"
+    },
+    {
+      "id": 6,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-001",
+        "DONES-006",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-001",
+        "DONES-006",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 7,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-001",
+        "DONES-013",
+        "DONES-029",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-001",
+        "DONES-013",
+        "DONES-029",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 8,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "available_direct_documents": [
+        "DONES-031",
+        "DONES-035"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 9,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-034"
+      ],
+      "available_direct_documents": [
+        "DONES-034"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "scope_warning"
+    },
+    {
+      "id": 10,
+      "domain": "DONES",
+      "historical_direct_documents": [
+        "DONES-013"
+      ],
+      "available_direct_documents": [
+        "DONES-013"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "partial_text"
+    },
+    {
+      "id": 11,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-001"
+      ],
+      "available_direct_documents": [
+        "AI-001"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 12,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-004",
+        "AI-006"
+      ],
+      "available_direct_documents": [
+        "AI-004",
+        "AI-006"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "partial_text"
+    },
+    {
+      "id": 13,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-007"
+      ],
+      "available_direct_documents": [
+        "AI-007"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 14,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-008"
+      ],
+      "available_direct_documents": [
+        "AI-008"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 15,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-010"
+      ],
+      "available_direct_documents": [
+        "AI-010"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 17,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-011"
+      ],
+      "available_direct_documents": [
+        "AI-011"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 19,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-010"
+      ],
+      "available_direct_documents": [
+        "AI-010"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 20,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-014"
+      ],
+      "available_direct_documents": [
+        "AI-014"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 22,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-016"
+      ],
+      "available_direct_documents": [
+        "AI-016"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 23,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-018",
+        "AI-019",
+        "AI-020"
+      ],
+      "available_direct_documents": [
+        "AI-018",
+        "AI-019",
+        "AI-020"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 24,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-021"
+      ],
+      "available_direct_documents": [
+        "AI-021"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    },
+    {
+      "id": 25,
+      "domain": "AI Papers",
+      "historical_direct_documents": [
+        "AI-022"
+      ],
+      "available_direct_documents": [
+        "AI-022"
+      ],
+      "missing_direct_documents": [],
+      "historical_coverage_status": "supported_text"
+    }
+  ],
+  "sources": {
+    "questions": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/IEEE-CIS-DSQA-Starter-Kit/sample/sample_qa.json",
+      "sha256": "434bfe996df41b16e74fafe443e74fc67d8ab2cb5b57112006ac6a7145f7587f"
+    },
+    "historical_judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public-22-questions.json",
+      "sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5"
+    },
+    "source_ranking": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/baseline-public22-ranking/ranking.json",
+      "sha256": "66e6fbda9429fa314b194ef45fdea8f96423c5381961a4319b9f821320fb6121"
+    },
+    "shared_catalog": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-bm25-rrf-sweep/chunks.jsonl",
+      "sha256": "c6848ed45d6d16bf6e359953ea229367d1a30ebe96e0de42494a4c20849e4c21"
+    },
+    "judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-bm25-rrf-sweep/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "tokenizer_files": {
+      "chat_template.jinja": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/chat_template.jinja",
+        "sha256": "49a944c9814e130bd3cc80a2420c55ff22e24a4e4ba97009aa60000909b5eac3"
+      },
+      "merges.txt": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/merges.txt",
+        "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502"
+      },
+      "special_tokens_map.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/special_tokens_map.json",
+        "sha256": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+      },
+      "tokenizer_config.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/tokenizer_config.json",
+        "sha256": "80fbc2a161419760bb8a84ed1d3b9550a2d68b7abd07a72706b8f5977e044b8d"
+      },
+      "config.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/config.json",
+        "sha256": "d47a120cb2669cd46482d5c2da9488903b67759ca167cd85c1127b2e05755f95"
+      },
+      "vocab.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/vocab.json",
+        "sha256": "d8eb44d0d51f5e39c9b14825ca8bd10a2500f99c438ca81d4462f0263acd3b53"
+      },
+      "tokenizer.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/tokenizer.json",
+        "sha256": "7738a25c46a6043a0e2e605138851baa450269ce9d800af6ca9bf6192e45510c"
+      },
+      "download.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/download.json",
+        "sha256": "352544ef33e70733d2a45031550a26fe8660b0f0c0c19df56da8dbe8bc91bfae"
+      }
+    },
+    "code": {
+      "src/retrieval.py": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/src/retrieval.py",
+        "sha256": "be1f090ff48c17ccf400476c2b552eeb60dae0dffa14579ea0c2ac789352e0e5"
+      },
+      "tools/sweep_retrieval.py": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/sweep_retrieval.py",
+        "sha256": "5480bea2a9da784f4198157c2c76efc4a181763772da4d3b87b789483a7d335a"
+      },
+      "tools/evaluate_retrieval.py": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/evaluate_retrieval.py",
+        "sha256": "6b30ac248f00b1bad5deea76a0e4f4d3dbfde721cd2bcb1b2d1db4006953a685"
+      }
+    }
+  },
+  "mode": "weighted_rrf_grid_frozen_replay",
+  "source_manifest": {
+    "excluded_question_ids": [
+      "16",
+      "18",
+      "21"
+    ],
+    "question_count": 22,
+    "document_count": 64,
+    "missing_document_ids": [],
+    "questions_without_available_direct_evidence": [],
+    "coverage": [
+      {
+        "id": 1,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-032",
+          "DONES-033"
+        ],
+        "available_direct_documents": [
+          "DONES-032",
+          "DONES-033"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 2,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-017",
+          "DONES-018",
+          "DONES-019",
+          "DONES-033"
+        ],
+        "available_direct_documents": [
+          "DONES-017",
+          "DONES-018",
+          "DONES-019",
+          "DONES-033"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 3,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-031",
+          "DONES-035"
+        ],
+        "available_direct_documents": [
+          "DONES-031",
+          "DONES-035"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 4,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-027"
+        ],
+        "available_direct_documents": [
+          "DONES-027"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "requires_figure"
+      },
+      {
+        "id": 5,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-008",
+          "DONES-031",
+          "DONES-035"
+        ],
+        "available_direct_documents": [
+          "DONES-008",
+          "DONES-031",
+          "DONES-035"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "partial_text"
+      },
+      {
+        "id": 6,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-001",
+          "DONES-006",
+          "DONES-035"
+        ],
+        "available_direct_documents": [
+          "DONES-001",
+          "DONES-006",
+          "DONES-035"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 7,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-001",
+          "DONES-013",
+          "DONES-029",
+          "DONES-035"
+        ],
+        "available_direct_documents": [
+          "DONES-001",
+          "DONES-013",
+          "DONES-029",
+          "DONES-035"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 8,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-031",
+          "DONES-035"
+        ],
+        "available_direct_documents": [
+          "DONES-031",
+          "DONES-035"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 9,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-034"
+        ],
+        "available_direct_documents": [
+          "DONES-034"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "scope_warning"
+      },
+      {
+        "id": 10,
+        "domain": "DONES",
+        "historical_direct_documents": [
+          "DONES-013"
+        ],
+        "available_direct_documents": [
+          "DONES-013"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "partial_text"
+      },
+      {
+        "id": 11,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-001"
+        ],
+        "available_direct_documents": [
+          "AI-001"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 12,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-004",
+          "AI-006"
+        ],
+        "available_direct_documents": [
+          "AI-004",
+          "AI-006"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "partial_text"
+      },
+      {
+        "id": 13,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-007"
+        ],
+        "available_direct_documents": [
+          "AI-007"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 14,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-008"
+        ],
+        "available_direct_documents": [
+          "AI-008"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 15,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-010"
+        ],
+        "available_direct_documents": [
+          "AI-010"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 17,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-011"
+        ],
+        "available_direct_documents": [
+          "AI-011"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 19,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-010"
+        ],
+        "available_direct_documents": [
+          "AI-010"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 20,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-014"
+        ],
+        "available_direct_documents": [
+          "AI-014"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 22,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-016"
+        ],
+        "available_direct_documents": [
+          "AI-016"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 23,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-018",
+          "AI-019",
+          "AI-020"
+        ],
+        "available_direct_documents": [
+          "AI-018",
+          "AI-019",
+          "AI-020"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 24,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-021"
+        ],
+        "available_direct_documents": [
+          "AI-021"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      },
+      {
+        "id": 25,
+        "domain": "AI Papers",
+        "historical_direct_documents": [
+          "AI-022"
+        ],
+        "available_direct_documents": [
+          "AI-022"
+        ],
+        "missing_direct_documents": [],
+        "historical_coverage_status": "supported_text"
+      }
+    ],
+    "sources": {
+      "questions": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/IEEE-CIS-DSQA-Starter-Kit/sample/sample_qa.json",
+        "sha256": "434bfe996df41b16e74fafe443e74fc67d8ab2cb5b57112006ac6a7145f7587f"
+      },
+      "historical_judgments": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public-22-questions.json",
+        "sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5"
+      }
+    },
+    "parse_failures": [],
+    "index_build_seconds": 350.050026336,
+    "chunk_count": 5174,
+    "embedding_bytes": 7947264,
+    "config": {
+      "embedding_model": "/home/arthur/repos/IEEE-RAG-Challenge/src/embed_model",
+      "docling_models": "/home/arthur/repos/IEEE-RAG-Challenge/src/docling_models",
+      "tokenizer": null,
+      "chunk_size_characters": 800,
+      "chunk_overlap_characters": 150,
+      "context_chunk_text_budget": 10000
+    },
+    "elapsed_seconds": 368.268089532,
+    "process_peak_rss_bytes": 5092761600,
+    "process_peak_rss_scope": "Linux process RSS only; excludes descendants and GPU memory"
+  },
+  "chunk_count": 5174,
+  "run_count": 91,
+  "context_chunk_text_budget": 10000,
+  "grid": [
+    {
+      "method": "dense"
+    },
+    {
+      "method": "bm25",
+      "k1": 0.75,
+      "b": 0.5
+    },
+    {
+      "method": "bm25",
+      "k1": 0.75,
+      "b": 0.75
+    },
+    {
+      "method": "bm25",
+      "k1": 0.75,
+      "b": 1.0
+    },
+    {
+      "method": "bm25",
+      "k1": 1.25,
+      "b": 0.5
+    },
+    {
+      "method": "bm25",
+      "k1": 1.25,
+      "b": 0.75
+    },
+    {
+      "method": "bm25",
+      "k1": 1.25,
+      "b": 1.0
+    },
+    {
+      "method": "bm25",
+      "k1": 1.75,
+      "b": 0.5
+    },
+    {
+      "method": "bm25",
+      "k1": 1.75,
+      "b": 0.75
+    },
+    {
+      "method": "bm25",
+      "k1": 1.75,
+      "b": 1.0
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 0.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.25,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.5,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 0.75,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 1.0,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.75,
+      "rrf_k": 90
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 30
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 60
+    },
+    {
+      "method": "hybrid",
+      "k1": 1.75,
+      "b": 1.0,
+      "dense_weight": 1.0,
+      "bm25_weight": 0.5,
+      "rrf_k": 90
+    }
+  ],
+  "lexical_votes": "positive BM25 scores only",
+  "lexical_tokenization": "Unicode word regex, casefold; no stemming/stopwords",
+  "timing_scope": "Frozen replay: excludes PDF parsing, dense embeddings and LLM inference",
+  "status": "complete",
+  "elapsed_seconds": 80.51434797399997,
+  "process_peak_rss_bytes": 1173622784,
+  "rss_scope": "Linux process only; excludes descendants and GPU"
+}

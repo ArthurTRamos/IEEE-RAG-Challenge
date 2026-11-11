@@ -31,6 +31,13 @@ else:
     from retrieval import build_index, retrieve
 
 MAX_NEW_TOKENS = 2048
+# Selected submission: dense + BM25 with weighted RRF.
+RETRIEVAL_METHOD = "hybrid"
+BM25_K1 = 1.25
+BM25_B = 0.75
+RRF_K = 60
+RRF_DENSE_WEIGHT = 1.0
+RRF_BM25_WEIGHT = 0.75
 
 # Loaded once and reused across every question in the run (answer() is
 # called once per question, in the same process).
@@ -52,7 +59,10 @@ def _load(model_id: str, corpus_dir: str):
 
 def answer(question: str, corpus_dir: str, model_id: str) -> str:
     tokenizer, model, index = _load(model_id, corpus_dir)
-    context = retrieve(question, index, tokenizer)["context"]
+    context = retrieve(question, index, tokenizer, method=RETRIEVAL_METHOD,
+                       k1=BM25_K1, b=BM25_B, rrf_k=RRF_K,
+                       dense_weight=RRF_DENSE_WEIGHT,
+                       bm25_weight=RRF_BM25_WEIGHT)["context"]
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
