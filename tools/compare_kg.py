@@ -99,7 +99,7 @@ def main():
                           'linked_entities':sum(bool(v) for v in kg.postings.values()),
                           'ambiguous_label_edges_skipped':kg.ambiguous_edges,
                           'definitions_present':sum(bool(n.get('definition')) for n in kg.nodes.values())},
-        'limitations': ['Graph uses exported related_concepts cards (capped at 25 by notebook), not full Turtle edges.',
+        'limitations': ['Graph uses related_concepts resolved by unique labels; export-time caps depend on the source bundle. Structured URI edges are not consumed.',
                        'Section classification is a heading heuristic, not a Docling semantic section label.',
                        'Document grade does not establish chunk relevance; overlap may span sections.',
                        'Timing excludes source PDF parsing/dense embeddings and final LLM.'],

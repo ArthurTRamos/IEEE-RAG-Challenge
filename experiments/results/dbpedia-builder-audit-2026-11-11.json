@@ -1,0 +1,412 @@
+{
+  "date": "2026-11-11",
+  "method": "Leitura JSONL e AST da célula 3; sem consultas remotas, parsing RDF ou execução do construtor.",
+  "sources": {
+    "notebooks/dbpedia.ipynb": {
+      "bytes": 44792,
+      "sha256": "2afe9a7c7969fefa1f5d77eab17c798d340e0eb79d3179ee93c0c366176a1463"
+    },
+    "data/kg_rag_chunks.jsonl": {
+      "bytes": 3395513,
+      "sha256": "9ae2663de7b9d3e941606360e57a3610e750226e28db3f553fdf1f62819105e7"
+    },
+    "data/domain_kg.ttl": {
+      "bytes": 3074924,
+      "sha256": "2f521a6bf38a0c8981fcddf430361504419906f35b8d5e78592d11f0bffa3beb"
+    }
+  },
+  "cards": 8342,
+  "unique_uris": 8342,
+  "definitions_present": 0,
+  "fields": {
+    "aliases": {
+      "cards_with_values": 5416,
+      "values": 22996,
+      "max_per_card": 15
+    },
+    "properties": {
+      "cards_with_values": 101,
+      "values": 151,
+      "max_per_card": 4
+    },
+    "categories": {
+      "cards_with_values": 8324,
+      "values": 10240,
+      "max_per_card": 6
+    },
+    "related_concepts": {
+      "cards_with_values": 7437,
+      "values": 54464,
+      "max_per_card": 25
+    }
+  },
+  "cards_at_neighbor_cap_25": 382,
+  "seed_count": 65,
+  "missing_seed_uris": [
+    "http://dbpedia.org/resource/DEMO",
+    "http://dbpedia.org/resource/Region_of_practical_equivalence"
+  ],
+  "ambiguous_casefolded_names": {
+    "air duct cleaning": [
+      "http://dbpedia.org/resource/Duct_(flow)",
+      "http://dbpedia.org/resource/Heating,_ventilation,_and_air_conditioning"
+    ],
+    "alpha radiation": [
+      "http://dbpedia.org/resource/Alpha_decay",
+      "http://dbpedia.org/resource/Alpha_particle"
+    ],
+    "beryllium-11": [
+      "http://dbpedia.org/resource/Beryllium-11",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-12": [
+      "http://dbpedia.org/resource/Beryllium-12",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-13": [
+      "http://dbpedia.org/resource/Beryllium-13",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-14": [
+      "http://dbpedia.org/resource/Beryllium-14",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-15": [
+      "http://dbpedia.org/resource/Beryllium-15",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-16": [
+      "http://dbpedia.org/resource/Beryllium-16",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-5": [
+      "http://dbpedia.org/resource/Beryllium-5",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-6": [
+      "http://dbpedia.org/resource/Beryllium-6",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-7": [
+      "http://dbpedia.org/resource/Beryllium-7",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "beryllium-9": [
+      "http://dbpedia.org/resource/Beryllium-9",
+      "http://dbpedia.org/resource/Isotopes_of_beryllium"
+    ],
+    "boiling heat transfer": [
+      "http://dbpedia.org/resource/Heat_transfer",
+      "http://dbpedia.org/resource/Leidenfrost_effect"
+    ],
+    "cavity resonator": [
+      "http://dbpedia.org/resource/Microwave_cavity",
+      "http://dbpedia.org/resource/Resonator"
+    ],
+    "closed linear operator": [
+      "http://dbpedia.org/resource/Closed_graph_property",
+      "http://dbpedia.org/resource/Closed_linear_operator"
+    ],
+    "closed-loop controller": [
+      "http://dbpedia.org/resource/Closed-loop_controller",
+      "http://dbpedia.org/resource/Control_theory"
+    ],
+    "complete manifold": [
+      "http://dbpedia.org/resource/Complete_manifold",
+      "http://dbpedia.org/resource/Hopf–Rinow_theorem"
+    ],
+    "convolutional layer": [
+      "http://dbpedia.org/resource/Convolutional_layer",
+      "http://dbpedia.org/resource/Convolutional_neural_network"
+    ],
+    "diameter (graph theory)": [
+      "http://dbpedia.org/resource/Distance_(graph_theory)",
+      "http://dbpedia.org/resource/Graph_diameter"
+    ],
+    "discrete metric": [
+      "http://dbpedia.org/resource/Discrete_metric",
+      "http://dbpedia.org/resource/Discrete_space"
+    ],
+    "distance formula": [
+      "http://dbpedia.org/resource/Distance",
+      "http://dbpedia.org/resource/Euclidean_distance"
+    ],
+    "elastic net": [
+      "http://dbpedia.org/resource/Elastic_map",
+      "http://dbpedia.org/resource/Elastic_net_regularization"
+    ],
+    "fuzzy sets and systems": [
+      "http://dbpedia.org/resource/Fuzzy_Sets_and_Systems",
+      "http://dbpedia.org/resource/Fuzzy_control_system"
+    ],
+    "generalized lifting": [
+      "http://dbpedia.org/resource/Generalized_lifting",
+      "http://dbpedia.org/resource/Lifting_scheme"
+    ],
+    "generative ai": [
+      "http://dbpedia.org/resource/Generative_artificial_intelligence",
+      "http://dbpedia.org/resource/Synthetic_media"
+    ],
+    "gradient operator": [
+      "http://dbpedia.org/resource/Del",
+      "http://dbpedia.org/resource/Gradient"
+    ],
+    "graph diameter": [
+      "http://dbpedia.org/resource/Distance_(graph_theory)",
+      "http://dbpedia.org/resource/Graph_diameter"
+    ],
+    "heat transfer rate": [
+      "http://dbpedia.org/resource/Heat_current",
+      "http://dbpedia.org/resource/Heat_transfer"
+    ],
+    "helium ii": [
+      "http://dbpedia.org/resource/Helium",
+      "http://dbpedia.org/resource/Superfluid_helium-4"
+    ],
+    "hill's spherical vortex": [
+      "http://dbpedia.org/resource/Hill's_spherical_vortex",
+      "http://dbpedia.org/resource/Vortex_ring"
+    ],
+    "human thermoregulation": [
+      "http://dbpedia.org/resource/Human_thermoregulation",
+      "http://dbpedia.org/resource/Thermoregulation"
+    ],
+    "hydrogen-4": [
+      "http://dbpedia.org/resource/Hydrogen-4",
+      "http://dbpedia.org/resource/Isotopes_of_hydrogen"
+    ],
+    "hydrogen-5": [
+      "http://dbpedia.org/resource/Hydrogen-5",
+      "http://dbpedia.org/resource/Isotopes_of_hydrogen"
+    ],
+    "hydrogen-6": [
+      "http://dbpedia.org/resource/Hydrogen-6",
+      "http://dbpedia.org/resource/Isotopes_of_hydrogen"
+    ],
+    "hydrogen-7": [
+      "http://dbpedia.org/resource/Hydrogen-7",
+      "http://dbpedia.org/resource/Isotopes_of_hydrogen"
+    ],
+    "isodiapher": [
+      "http://dbpedia.org/resource/Isodiapher",
+      "http://dbpedia.org/resource/Nuclide"
+    ],
+    "kelvin wake pattern": [
+      "http://dbpedia.org/resource/Kelvin_wake_pattern",
+      "http://dbpedia.org/resource/Wake_(physics)"
+    ],
+    "knudsen flow": [
+      "http://dbpedia.org/resource/Free_molecular_flow",
+      "http://dbpedia.org/resource/Knudsen_flow"
+    ],
+    "l-infinity-space": [
+      "http://dbpedia.org/resource/L-infinity",
+      "http://dbpedia.org/resource/Lp_space"
+    ],
+    "lexicographic optimization": [
+      "http://dbpedia.org/resource/Lexicographic_optimization",
+      "http://dbpedia.org/resource/Multi-objective_optimization"
+    ],
+    "linear control": [
+      "http://dbpedia.org/resource/Control_system",
+      "http://dbpedia.org/resource/Linear_control"
+    ],
+    "lithium-10": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-10"
+    ],
+    "lithium-10m1": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-10m1"
+    ],
+    "lithium-10m2": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-10m2"
+    ],
+    "lithium-12": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-12"
+    ],
+    "lithium-13": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-13"
+    ],
+    "lithium-3": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-3"
+    ],
+    "lithium-5": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-5"
+    ],
+    "lithium-6": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-6"
+    ],
+    "lithium-7": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-7"
+    ],
+    "lithium-9": [
+      "http://dbpedia.org/resource/Isotopes_of_lithium",
+      "http://dbpedia.org/resource/Lithium-9"
+    ],
+    "low-level circulation center": [
+      "http://dbpedia.org/resource/Cyclone",
+      "http://dbpedia.org/resource/Eye_(cyclone)"
+    ],
+    "mass defect": [
+      "http://dbpedia.org/resource/Binding_energy",
+      "http://dbpedia.org/resource/Nuclear_binding_energy"
+    ],
+    "mathematical programming": [
+      "http://dbpedia.org/resource/Mathematical_Programming",
+      "http://dbpedia.org/resource/Mathematical_optimization"
+    ],
+    "mechanical draft": [
+      "http://dbpedia.org/resource/Boiler",
+      "http://dbpedia.org/resource/Cooling_tower"
+    ],
+    "minimum principle": [
+      "http://dbpedia.org/resource/Calculus_of_variations",
+      "http://dbpedia.org/resource/Pontryagin's_maximum_principle"
+    ],
+    "multi-label classification": [
+      "http://dbpedia.org/resource/Multi-label_classification",
+      "http://dbpedia.org/resource/Multiclass_classification"
+    ],
+    "muography": [
+      "http://dbpedia.org/resource/Muography",
+      "http://dbpedia.org/resource/Muon_tomography"
+    ],
+    "natural circulation": [
+      "http://dbpedia.org/resource/Convection",
+      "http://dbpedia.org/resource/Natural_circulation"
+    ],
+    "natural convection": [
+      "http://dbpedia.org/resource/Convection",
+      "http://dbpedia.org/resource/Natural_convection"
+    ],
+    "nuclear deterrence": [
+      "http://dbpedia.org/resource/Deterrence_theory",
+      "http://dbpedia.org/resource/Mutual_assured_destruction"
+    ],
+    "néel temperature": [
+      "http://dbpedia.org/resource/Curie_temperature",
+      "http://dbpedia.org/resource/Néel_temperature"
+    ],
+    "overhauser effect": [
+      "http://dbpedia.org/resource/Dynamic_nuclear_polarization",
+      "http://dbpedia.org/resource/Nuclear_Overhauser_effect"
+    ],
+    "policy gradient method": [
+      "http://dbpedia.org/resource/Policy_gradient_method",
+      "http://dbpedia.org/resource/Reinforcement_learning"
+    ],
+    "post's inversion formula": [
+      "http://dbpedia.org/resource/Inverse_Laplace_transform",
+      "http://dbpedia.org/resource/Post's_inversion_formula"
+    ],
+    "proofs": [
+      "http://dbpedia.org/resource/Approximation_theory",
+      "http://dbpedia.org/resource/Arzelà–Ascoli_theorem",
+      "http://dbpedia.org/resource/Chebyshev_polynomials",
+      "http://dbpedia.org/resource/Geodesics_in_general_relativity",
+      "http://dbpedia.org/resource/Powerset_construction"
+    ],
+    "radiation monitoring": [
+      "http://dbpedia.org/resource/Dosimetry",
+      "http://dbpedia.org/resource/Radiation_monitoring"
+    ],
+    "rc servo": [
+      "http://dbpedia.org/resource/Servo_(radio_control)",
+      "http://dbpedia.org/resource/Servomechanism"
+    ],
+    "servo motor": [
+      "http://dbpedia.org/resource/Servomechanism",
+      "http://dbpedia.org/resource/Servomotor"
+    ],
+    "slosh": [
+      "http://dbpedia.org/resource/Slosh_dynamics",
+      "http://dbpedia.org/resource/Storm_surge"
+    ],
+    "spallation neutron source": [
+      "http://dbpedia.org/resource/Neutron_source",
+      "http://dbpedia.org/resource/Spallation_Neutron_Source"
+    ],
+    "stable isotope": [
+      "http://dbpedia.org/resource/Stable_isotope_ratio",
+      "http://dbpedia.org/resource/Stable_nuclide"
+    ],
+    "symmetric operator": [
+      "http://dbpedia.org/resource/Self-adjoint_operator",
+      "http://dbpedia.org/resource/Symmetric_operator"
+    ],
+    "synchrotron light": [
+      "http://dbpedia.org/resource/Synchrotron_light_source",
+      "http://dbpedia.org/resource/Synchrotron_radiation"
+    ],
+    "systems for nuclear auxiliary power": [
+      "http://dbpedia.org/resource/Radioisotope_thermoelectric_generator",
+      "http://dbpedia.org/resource/Systems_for_Nuclear_Auxiliary_Power"
+    ],
+    "thermal break": [
+      "http://dbpedia.org/resource/Thermal_break",
+      "http://dbpedia.org/resource/Thermal_insulation"
+    ],
+    "thermal inertia": [
+      "http://dbpedia.org/resource/Thermal_effusivity",
+      "http://dbpedia.org/resource/Thermal_inertia",
+      "http://dbpedia.org/resource/Volumetric_heat_capacity"
+    ],
+    "thermonuclear": [
+      "http://dbpedia.org/resource/Nuclear_fusion",
+      "http://dbpedia.org/resource/Thermonuclear_fusion"
+    ],
+    "thermonuclear fusion": [
+      "http://dbpedia.org/resource/Nuclear_fusion",
+      "http://dbpedia.org/resource/Thermonuclear_fusion"
+    ],
+    "tho-radia": [
+      "http://dbpedia.org/resource/Radioactive_quackery",
+      "http://dbpedia.org/resource/Tho-Radia"
+    ],
+    "total activity": [
+      "http://dbpedia.org/resource/Radioactive_decay",
+      "http://dbpedia.org/resource/Specific_activity"
+    ],
+    "tropical easterly jet": [
+      "http://dbpedia.org/resource/African_easterly_jet",
+      "http://dbpedia.org/resource/Tropical_Easterly_Jet"
+    ],
+    "ultrasonic flowmeter": [
+      "http://dbpedia.org/resource/Flow_measurement",
+      "http://dbpedia.org/resource/Ultrasonic_flow_meter"
+    ],
+    "underfitting": [
+      "http://dbpedia.org/resource/Overfitting",
+      "http://dbpedia.org/resource/Underfitting"
+    ],
+    "unit ball": [
+      "http://dbpedia.org/resource/Unit_ball",
+      "http://dbpedia.org/resource/Unit_sphere"
+    ],
+    "uranium mill tailings": [
+      "http://dbpedia.org/resource/Uranium_mining",
+      "http://dbpedia.org/resource/Uranium_tailings"
+    ],
+    "wind": [
+      "http://dbpedia.org/resource/Crosswind",
+      "http://dbpedia.org/resource/Wind"
+    ]
+  },
+  "exact_casefolded_name_checks": {
+    "OTR": [],
+    "DONES": [],
+    "IFMIF-DONES": [],
+    "AGI": [],
+    "FCM": [],
+    "Scintillation": [],
+    "DEMO": []
+  }
+}
