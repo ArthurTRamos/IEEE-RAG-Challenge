@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "mode": "control",
+  "question_count": 22,
+  "config": {
+    "k1": 1.25,
+    "b": 0.75,
+    "rrf_k": 60,
+    "dense_weight": 1,
+    "bm25_weight": 0.75,
+    "token_budget": 10000,
+    "dense_query": "unchanged",
+    "llm_question": "unchanged"
+  },
+  "sources": {
+    "kg_cards": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/data/kg_rag_chunks.jsonl",
+      "sha256": "9ae2663de7b9d3e941606360e57a3610e750226e28db3f553fdf1f62819105e7"
+    },
+    "dense_ranking": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/baseline-public22-ranking/ranking.json",
+      "sha256": "66e6fbda9429fa314b194ef45fdea8f96423c5381961a4319b9f821320fb6121"
+    },
+    "judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-kg-alias-onehop-2026-11-11-final/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "sections": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-kg-alias-onehop-2026-11-11-final/sections.json",
+      "sha256": "64ddc0d01937220c8f869c2f54901bc39109d11b8ba48392573531dac370ba82"
+    }
+  }
+}

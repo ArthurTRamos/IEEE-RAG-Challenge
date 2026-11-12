@@ -1,0 +1,64 @@
+{
+  "name": "hybrid-bw0p75-k1_1p25-b0p75-rrf60-kg-aliases",
+  "mode": "aliases",
+  "question_count": 22,
+  "ndcg_at10": 0.881248287852319,
+  "full_context_coverage": {
+    "recall_ge1": {
+      "value": 0.9632034632034632,
+      "questions": 22
+    },
+    "recall_ge2": {
+      "value": 0.9772727272727273,
+      "questions": 22
+    }
+  },
+  "selected_chunks": 1155,
+  "mean_fraction_from_grade2_documents": 0.5270586025808867,
+  "questions_with_seeds": 13,
+  "questions_with_added_phrases": 13,
+  "totals": {
+    "by_document_grade": {
+      "2": 595,
+      "1": 142,
+      "0": 418
+    },
+    "by_primary_section": {
+      "introduction": 131,
+      "abstract": 23,
+      "other": 778,
+      "conclusion": 46,
+      "methods": 71,
+      "references": 31,
+      "results": 64,
+      "acknowledgments": 3,
+      "discussion": 8
+    },
+    "section_by_document_grade": {
+      "introduction|grade_2": 51,
+      "abstract|grade_2": 9,
+      "other|grade_2": 397,
+      "other|grade_1": 97,
+      "conclusion|grade_1": 7,
+      "introduction|grade_1": 24,
+      "other|grade_0": 284,
+      "conclusion|grade_2": 26,
+      "methods|grade_2": 60,
+      "references|grade_1": 6,
+      "references|grade_2": 13,
+      "abstract|grade_1": 5,
+      "introduction|grade_0": 56,
+      "references|grade_0": 12,
+      "methods|grade_0": 11,
+      "results|grade_0": 27,
+      "acknowledgments|grade_0": 3,
+      "results|grade_1": 3,
+      "conclusion|grade_0": 13,
+      "discussion|grade_2": 5,
+      "results|grade_2": 34,
+      "abstract|grade_0": 9,
+      "discussion|grade_0": 3
+    }
+  },
+  "incremental_seconds": 1.150147812000796
+}
