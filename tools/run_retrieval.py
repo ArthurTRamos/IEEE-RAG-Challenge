@@ -33,7 +33,11 @@ def main():
     parser.add_argument("--rrf-k", type=float, default=60)
     parser.add_argument("--dense-weight", type=float, default=1.0)
     parser.add_argument("--bm25-weight", type=float, default=1.0)
+    parser.add_argument("--reranker-model", type=Path)
+    parser.add_argument("--rerank-candidates", type=int, default=100)
     args = parser.parse_args()
+    if args.reranker_model and args.rerank_candidates <= 0:
+        parser.error("--rerank-candidates must be positive")
     if args.output_dir.exists() and any(args.output_dir.iterdir()):
         parser.error("Output directory must be empty; use a new directory for each run")
     started = time.perf_counter()
@@ -62,13 +66,20 @@ def main():
                                 "rrf_dense_weight": args.dense_weight,
                                 "rrf_bm25_weight": args.bm25_weight,
                                 "context_chunk_text_budget": MAX_CONTEXT_TOKENS}})
+    reranker = None
+    if args.reranker_model:
+        from src.reranking import ChunkReranker
+        reranker = ChunkReranker(args.reranker_model)
+    manifest["config"].update(reranker_model=str(args.reranker_model) if args.reranker_model else None,
+                               rerank_candidates=args.rerank_candidates if reranker else None)
     ranking = {"variant": args.method, "questions": []}
     context = {"variant": f"{args.method}_selected_context", "questions": []}
     for question in questions:
         tick = time.perf_counter()
         result = retrieve(question["question"], index, tokenizer, method=args.method,
                           k1=args.k1, b=args.b, rrf_k=args.rrf_k,
-                          dense_weight=args.dense_weight, bm25_weight=args.bm25_weight)
+                          dense_weight=args.dense_weight, bm25_weight=args.bm25_weight,
+                          reranker=reranker, rerank_candidates=args.rerank_candidates)
         base = {"id": question["id"], "domain": question["domain"],
                 "question": question["question"]}
         ranking["questions"].append({**base, "chunks": result["chunks"],

@@ -1,0 +1,365 @@
+[
+  {
+    "id": 1,
+    "question": "Both OTR and scintillation are proposed for experimental beam imaging diagnostics, but they produce photons by different mechanisms. Which physical process does scintillation require that OTR does not?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.911298659909514,
+    "chunks_from_grade2_documents_at10": 8,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 32,
+      "1": 25,
+      "0": 8
+    },
+    "selected_chunks": 65,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 2,
+    "question": "What does a \"destructive\" beam diagnostic do to the beam it measures?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.6068077212987494,
+    "chunks_from_grade2_documents_at10": 5,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "1": 9,
+      "2": 32,
+      "0": 16
+    },
+    "selected_chunks": 57,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 3,
+    "question": "What would be the radioactive decay constant of Be7 if we round its half life in days to the nearest integer?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.2516878877545971,
+    "chunks_from_grade2_documents_at10": 1,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 19,
+      "0": 26,
+      "1": 7
+    },
+    "selected_chunks": 52,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 4,
+    "question": "At what point in time does Be7 stop being the main source of activity in the Heat Exchanger of DONES?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.4537425745411855,
+    "chunks_from_grade2_documents_at10": 3,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 12,
+      "0": 38,
+      "1": 5
+    },
+    "selected_chunks": 55,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 5,
+    "question": "How are the inventories of Be7 and Tritium calculated for DONES Li loop?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.8943938982876649,
+    "chunks_from_grade2_documents_at10": 8,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 22,
+      "1": 14,
+      "0": 11
+    },
+    "selected_chunks": 47,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 6,
+    "question": "In the context of IFMIF-DONES, what is the approximate volumetric flow rate in the primary heat exchanger?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.31213914122380265,
+    "chunks_from_grade2_documents_at10": 3,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "0": 35,
+      "1": 6,
+      "2": 13
+    },
+    "selected_chunks": 54,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 7,
+    "question": "What is the temperature of the on-line Nitrogen trap in IFMIF-DONES?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.7885497208855956,
+    "chunks_from_grade2_documents_at10": 7,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 24,
+      "0": 25,
+      "1": 3
+    },
+    "selected_chunks": 52,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 8,
+    "question": "What is the bypass ratio of the ICS Branch of the DONES Li loop?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.425815914611284,
+    "chunks_from_grade2_documents_at10": 2,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 20,
+      "1": 14,
+      "0": 15
+    },
+    "selected_chunks": 49,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 9,
+    "question": "What will be volumen of the main building in the IFMIF DONES facilities?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.33798414482679845,
+    "chunks_from_grade2_documents_at10": 4,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "0": 38,
+      "2": 17,
+      "1": 3
+    },
+    "selected_chunks": 58,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 10,
+    "question": "In the context of IFMIF DONES, when would be required hands-on or remote handling maintenance in areas with neutronics activity?",
+    "domain": "DONES",
+    "ndcg_document_grade_proxy_at10": 0.17318663334822615,
+    "chunks_from_grade2_documents_at10": 2,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "0": 42,
+      "2": 6,
+      "1": 9
+    },
+    "selected_chunks": 57,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 11,
+    "question": "In the paper 'OneSearch: A preliminary exploration of the unified end-to-end generative framework for e-commerce search'. Comparing RQ-VAE to RQ-Kmeans as a foundational tokenizer for OneSearch. What architectural property of RQ-Kmeans might explain its superiority over the learned reconstruction objective in RQ-VAE for this discrete tokenization task?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 0.9052116356304492,
+    "chunks_from_grade2_documents_at10": 9,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 34,
+      "0": 12
+    },
+    "selected_chunks": 46,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 12,
+    "question": "In ONB-MACF, is the experimental comparison unfair because the proposed method enforces immutability constraints (via projections) while the baselines do not, and should an ablation without constraint satisfaction therefore be included?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 1.0,
+    "chunks_from_grade2_documents_at10": 10,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 31,
+      "0": 26,
+      "1": 2
+    },
+    "selected_chunks": 59,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 13,
+    "question": "In the context of properties of lush spaces and applications to Banach spaces with numerical index 1, on Theorem 4.1 \"Let $X$ be a Banach space and le $G \\subset S_{x^*}$ be a norming rounded subset for X. Then the following are equivalent\" , on \n\n(I) X is lush \n\nimply \n\n(II) $_\\mathbb{C}$ For every $x, y \\in S_X$, $n \\in \\mathbb{N}$ and $\\varepsilon > 0$, there exist $\\lambda_1, \\ldots, \\lambda_n \\geq 0$ with $\\sum_{k=1}^{n} \\lambda_k = 1$ and $x_1, \\ldots, x_n \\in B_X$ such that\n\n$$\\left\\| x + \\sum_{k=1}^{n} x_k \\right\\| > n + 1 - \\varepsilon$$\n\n*and*\n\n$$\\left\\| y - \\sum_{k=1}^{n} \\lambda_k \\exp\\left(\\frac{2\\pi i k}{n}\\right) x_k \\right\\| < \\varepsilon + \\frac{2\\pi}{n}$$\n\nWhy can we conclude that $Y$ is lush?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 1.0,
+    "chunks_from_grade2_documents_at10": 10,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 42,
+      "0": 1
+    },
+    "selected_chunks": 43,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 14,
+    "question": "In REVEL framework, the authors say it is very important to have a metric between 0 and 1. Why is this?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 1.0,
+    "chunks_from_grade2_documents_at10": 10,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 35,
+      "0": 15
+    },
+    "selected_chunks": 50,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 15,
+    "question": "In the paper WinStat. Considering how the window size heuristic is determined based on sequence length: if we have a sequence length of $L=512$, what would be the appropriate window size, $w$?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 0.7670273914429264,
+    "chunks_from_grade2_documents_at10": 7,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 26,
+      "0": 36
+    },
+    "selected_chunks": 62,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 17,
+    "question": "In Dynamic Behavior of Fuzzy Cognitive Maps. Why study the covering for stable FCMs using the knowledge of the weights? Summarize in a small paragraph.",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 1.0,
+    "chunks_from_grade2_documents_at10": 10,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 54,
+      "0": 4
+    },
+    "selected_chunks": 58,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 19,
+    "question": "In WinStat paper. What type of normalized weighting mechanism has been used to adjust the $\\tilde{w}$ weights of the WinStatFlex model to prevent overflow and component dominance? Define it mathematically.",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 1.0,
+    "chunks_from_grade2_documents_at10": 10,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 50,
+      "0": 15
+    },
+    "selected_chunks": 65,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 20,
+    "question": "In ZeroDiff (solidified visual-semantic correlation in zero-shot learning), what is the purpose of the other Diffusion-based Representation Generator (R)?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 0.5773497457952017,
+    "chunks_from_grade2_documents_at10": 4,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "1": 24,
+      "2": 14
+    },
+    "selected_chunks": 38,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 22,
+    "question": "In SimCLR's paper, what is the main weakness of using a single fixed data augmentation?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 0.5801476231864473,
+    "chunks_from_grade2_documents_at10": 5,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 15,
+      "0": 39
+    },
+    "selected_chunks": 54,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 23,
+    "question": "In the context of federated learning, what are the differences between $(\\alpha,f)$-byzantine resilience method and other approaches?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 1.0,
+    "chunks_from_grade2_documents_at10": 10,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 30,
+      "1": 1
+    },
+    "selected_chunks": 31,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 24,
+    "question": "According to the taxonomy and definition framework of \"General Purpose Artificial Intelligence Systems: Definition and Taxonomy\", what specific capability would an open-world GPAIS gain by incorporating active learning that would move it closer to being classified as an 'advanced GPAIS,' in terms of the supervision mechanism described for handling new tasks at time $t + \\Delta t$?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 1.0,
+    "chunks_from_grade2_documents_at10": 10,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 56
+    },
+    "selected_chunks": 56,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  },
+  {
+    "id": 25,
+    "question": "In the paper of Mamba, why Linear Time Invariance models struggle with selective Copying?",
+    "domain": "AI Papers",
+    "ndcg_document_grade_proxy_at10": 0.7576494534023693,
+    "chunks_from_grade2_documents_at10": 6,
+    "candidate_document_ids": [],
+    "context_chunks_by_document_grade": {
+      "2": 18,
+      "1": 25,
+      "0": 11
+    },
+    "selected_chunks": 54,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "selected_unscored_tail_chunks": 0
+  }
+]

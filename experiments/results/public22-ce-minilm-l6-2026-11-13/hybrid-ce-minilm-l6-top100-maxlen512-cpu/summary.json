@@ -1,0 +1,18 @@
+{
+  "name": "hybrid-ce-minilm-l6-top100-maxlen512-cpu",
+  "candidates": 100,
+  "question_count": 22,
+  "document_ndcg_at10": 0.8793470086981359,
+  "document_grade_proxy_ndcg_at10": 0.7266619515793235,
+  "mean_grade2_chunks_at10": 6.454545454545454,
+  "context_recall_ge2": 0.9772727272727273,
+  "context_recall_ge1": 0.9783549783549784,
+  "context_chunks_by_document_grade": {
+    "2": 587,
+    "1": 140,
+    "0": 364
+  },
+  "selected_chunks": 1091,
+  "truncated_cross_encoder_pairs": 144,
+  "scored_pairs": 2200
+}

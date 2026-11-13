@@ -1,5 +1,68 @@
 # Avaliação local de recuperação
 
+## Reranking opcional por cross-encoder
+
+`src/reranking.py` implementa o reranking de um prefixo do ranking híbrido.
+`ChunkReranker` usa `sentence_transformers.CrossEncoder`, modelo local, CPU,
+comprimento máximo de 512 tokens e batches de 16 pares pergunta–chunk. Os
+scores são logits sem ativação; eles ordenam apenas os candidatos pontuados.
+Scores CE e RRF não são somados nem comparados. Empates CE preservam a ordem
+híbrida. A cauda não pontuada é anexada na ordem original. O orçamento de
+contexto e o texto dos chunks permanecem os mesmos.
+
+Para a comparação congelada de 50, 100 e 200 candidatos:
+
+```bash
+.venv/bin/python tools/compare_reranking.py \
+  --model models/ms-marco-MiniLM-L6-v2 \
+  --candidates 50 100 200 --threads 4 \
+  --output-dir experiments/runs/public22-ce-minilm-l6-2026-11-13
+```
+
+O diretório de modelo deve conter os pesos e tokenizer locais do
+[cross-encoder/ms-marco-MiniLM-L6-v2](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2).
+Nesta máquina foi usada uma cópia do snapshot já existente no cache, revisão
+`233902d25c440f23af6f7d6e94d2946bac0bee0a`; hashes estão em
+`models/ms-marco-MiniLM-L6-v2/provenance.json`. Não houve download de novos pesos.
+O carregamento usa `local_files_only=True` e não requer novas dependências.
+
+A execução preserva BM25 k1=1,25/b=0,75, RRF 60 e pesos 1/0,75, não usa KG e
+reutiliza a extração/embeddings densos da execução original. Pares do maior
+prefixo são pontuados uma vez por pergunta e os scores são reutilizados nos
+menores prefixos. Portanto o tempo total da comparação não é a soma do custo
+de quatro pipelines completos e não fornece a latência individual de 50/100.
+
+Cada run contém ranking completo com `hybrid_rank` e `rerank_score`, contexto,
+métricas, diagnóstico e manifesto. `score` continua sendo o score híbrido
+original para rastreabilidade, mesmo depois da reordenação. `scores.json`
+registra todos os scores CE calculados, tamanhos dos pares e tempos por pergunta.
+Truncamento em 512 tokens ocorre somente para a pontuação; o contexto usa o
+chunk original, sujeito à regra de orçamento já existente.
+
+Além das métricas documentais, há nDCG@10 por chunk com **grau herdado do
+documento** e contagem de chunks de documentos grau 2 nos primeiros dez. Isso é
+um proxy, não julgamento de relevância de passagens: referências, métodos ou
+introduções do artigo podem não sustentar a resposta. O diagnóstico informa
+pares truncados, chunks da cauda não pontuada e composição do contexto por grau.
+
+Para ativar o mesmo reranker em uma execução local completa:
+
+```bash
+.venv/bin/python tools/run_retrieval.py \
+  --method hybrid --k1 1.25 --b 0.75 --rrf-k 60 \
+  --dense-weight 1 --bm25-weight 0.75 \
+  --reranker-model models/ms-marco-MiniLM-L6-v2 --rerank-candidates 100 \
+  --tokenizer models/olmo-tokenizer \
+  --output-dir experiments/runs/hybrid-ce-minilm-top100
+```
+
+O `main.py` de submissão permanece com o híbrido sem reranker. Para uma futura
+submissão com CE será necessário habilitar a opção na inferência e incluir o
+módulo e seus pesos no build; o ZIP atual não contém esses arquivos. Os pesos
+locais adicionais somam cerca de 91,8 MB, mas o ZIP final dessa variante ainda
+não foi construído. Inferência CPU evita VRAM adicional; os limites de tempo
+total na H100 precisam de avaliação completa com o LLM.
+
 ## Escopo e dados
 
 A amostra ativa contém 22 perguntas. Os IDs 16, 18 e 21 estão excluídos e os
