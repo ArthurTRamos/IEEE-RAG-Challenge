@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "reported_on": "2026-11-12",
+  "metric": "Domain-balanced accuracy on the competition scale used in prior reports; user reports 57%. Not converted to counts of correct answers.",
+  "records": [
+    {
+      "local_id": "DBPEDIA-LEGACY-2026-11-12",
+      "variant": "hybrid_dbpedia_original_aliases_legacy",
+      "reported_on": "2026-11-12",
+      "source": "user_report",
+      "independently_verified": false,
+      "evaluation_date": null,
+      "official_submission_id": null,
+      "balanced_accuracy_reported": 57,
+      "score_unit": "percent, as reported by user",
+      "inference_seconds_reported": null,
+      "timing_scope": null,
+      "per_domain_scores": null,
+      "responses_or_logs_provided": false,
+      "submission_manifest": "experiments/submissions/2026-11-12-dbpedia-original-legacy.json",
+      "archive_sha256": "a8bf22b59aec7d71609736c34abbf6020a108900960588d6371472a81d09df42"
+    }
+  ],
+  "legacy_vs_hybrid": {
+    "baseline_local_id": "HYBRID-2026-11-10",
+    "baseline_accuracy_reported": 60,
+    "legacy_accuracy_reported": 57,
+    "delta_percentage_points": -3,
+    "baseline_archive_sha256": "6fbafb07d918527a4b0af3625735c46ff7ba58576f1ec84b1471892f701e9b97",
+    "limitations": "Aggregated user-reported scores; no per-question answers, domain breakdown or runtime available."
+  }
+}

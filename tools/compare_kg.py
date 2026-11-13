@@ -26,14 +26,18 @@ def main():
     parser.add_argument('--kg', type=Path, default=ROOT/'data/kg_rag_chunks.jsonl')
     parser.add_argument('--tokenizer', type=Path, default=ROOT/'models/olmo-tokenizer')
     parser.add_argument('--output-dir', type=Path, required=True)
+    parser.add_argument('--alias-policy', choices=('legacy', 'contextual'), default='legacy')
+    parser.add_argument('--modes', nargs='+', choices=('control', 'aliases', 'one_hop'), default=['control', 'aliases', 'one_hop'])
     args = parser.parse_args()
+    if args.alias_policy == 'contextual' and 'one_hop' in args.modes:
+        parser.error('Contextual experiment supports control/aliases only; pass --modes control aliases')
     if args.output_dir.exists() and any(args.output_dir.iterdir()):
         parser.error('Output directory must be empty')
     started = time.perf_counter()
     questions, judgments, manifest = prepare(ROOT/'data/pdfs')
     chunks, dense, source_manifest = load_frozen_run(args.source_run, questions, judgments)
     annotations = annotate_sections(chunks)
-    kg = KnowledgeExpansion(args.kg, chunks)
+    kg = KnowledgeExpansion(args.kg, chunks, policy=args.alias_policy)
     from transformers import AutoTokenizer
     tokenizer = AutoTokenizer.from_pretrained(str(args.tokenizer), local_files_only=True)
     counts = {c['chunk_id']: len(tokenizer.encode(c['text'])) for c in chunks}
@@ -43,7 +47,7 @@ def main():
     write_json(args.output_dir/'judgments.json', judgments)
     write_json(args.output_dir/'entity-chunk-links.json', {u: sorted(v) for u,v in sorted(kg.postings.items()) if v})
     summaries = []
-    for mode in ('control', 'aliases', 'one_hop'):
+    for mode in args.modes:
         tick = time.perf_counter()
         name = f'hybrid-bw0p75-k1_1p25-b0p75-rrf60-kg-{mode}'
         folder = args.output_dir/name
@@ -81,7 +85,7 @@ def main():
         write_json(folder/'manifest.json', {
             'status': 'complete', 'mode': mode, 'question_count': len(questions),
             'config': {'k1': 1.25, 'b': .75, 'rrf_k': 60, 'dense_weight': 1, 'bm25_weight': .75,
-                       'token_budget': 10000, 'dense_query': 'unchanged', 'llm_question': 'unchanged'},
+                       'token_budget': 10000, 'alias_policy': args.alias_policy, 'dense_query': 'unchanged', 'llm_question': 'unchanged'},
             'sources': {'kg_cards': fingerprint(args.kg),
                         'dense_ranking': fingerprint(args.source_run/'ranking.json'),
                         'judgments': fingerprint(args.output_dir/'judgments.json'),
@@ -94,7 +98,9 @@ def main():
                     'code': {p: fingerprint(ROOT/p) for p in ('src/kg_expansion.py','src/chunk_diagnostics.py','tools/compare_kg.py','src/retrieval.py')}},
         'config': {'k1':1.25,'b':.75,'rrf_k':60,'dense_weight':1,'bm25_weight':.75,'token_budget':10000,
                    'seed_limit':8,'aliases_per_seed':2,'neighbor_limit':8,'max_phrase_words':8,
-                   'dense_query':'unchanged','llm_question':'unchanged','kg_prompt_context':False},
+                   'dense_query':'unchanged','llm_question':'unchanged','kg_prompt_context':False,
+                   'alias_policy': args.alias_policy, 'modes': args.modes,
+                   'contextual_min_terms': 2, 'contextual_min_coverage': .5},
         'kg_statistics': {'nodes':len(kg.nodes),'directed_card_edges':sum(map(len,kg.edges.values())),
                           'linked_entities':sum(bool(v) for v in kg.postings.values()),
                           'ambiguous_label_edges_skipped':kg.ambiguous_edges,

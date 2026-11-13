@@ -11,6 +11,8 @@ os hashes dos históricos continuam desconhecidos.
 | ZERO-01 | Zero-shot baseline | 29 | 732 | Acurácia balanceada por domínio; informado em 11/11 |
 | RAG-BASE-01 | RAG semântico baseline | 57 | 2079 | Acurácia balanceada por domínio; informado em 11/11 |
 | HYBRID-2026-11-10 | MiniLM + BM25 k1=1,25, b=0,75; RRF 60, pesos 1/0,75 | 60 | 2389 | Acurácia balanceada por domínio; informado em 11/11; manifesto identificado |
+| DBPEDIA-LEGACY-2026-11-12 | Híbrido + grafo original + aliases, política legacy | 57 | — | Informado em 12/11; ZIP e manifesto identificados |
+| DBPEDIA-V2-CONTEXTUAL-2026-11-13 | Híbrido + grafo V2 revisado + aliases contextuais | 60 | — | Informado em 13/11; empate agregado com o híbrido; manifesto identificado |
 | HIST-01 | RAG com recuperação semântica | 57 | — | Histórico informado pelo usuário; não associado automaticamente a RAG-BASE-01 |
 | HIST-02 | RAG semântico + BM25 | 47 | — | Informado pelo usuário |
 | HIST-03 | RAG semântico + BM25 + KG por menções/aliases | 57 | — | Informado pelo usuário |
@@ -109,3 +111,53 @@ kit. A auditoria encontrou evidências relevantes abaixo do corte de dez chunks
 e mudanças importantes de prompt e chunking. O resultado não demonstra uma
 regressão causada apenas pelo encoder ou pela correção de metadados.
 Veja o [diagnóstico detalhado](dense-versus-starter-2026-11-10.md).
+
+## Atualização de 12/11/2026 — DBpedia original + aliases legacy: 57%
+
+O usuário informou que a primeira candidata DBpedia atingiu 57% no ambiente
+oficial, contra 60% do híbrido de referência: **−3 pontos percentuais**.
+Registro estruturado em
+[evaluation-reported-2026-11-12.json](../../experiments/results/evaluation-reported-2026-11-12.json).
+
+- ZIP: `2026-11-12-dbpedia-original-legacy.zip`, 399.603.332 bytes.
+- SHA-256: `a8bf22b59aec7d71609736c34abbf6020a108900960588d6371472a81d09df42`.
+- [Manifesto da candidata](../../experiments/submissions/2026-11-12-dbpedia-original-legacy.json).
+- Configuração: mesmo MiniLM, modelos auxiliares, chunking, prompt, geração e
+  parâmetros BM25/RRF do híbrido, com expansão somente da consulta BM25 por
+  labels/aliases do grafo original. Encoder e pergunta do prompt permanecem originais.
+- Resultado recebido por relato do usuário, sem consulta independente ao painel.
+  Tempo, ID oficial, data de execução, scores por domínio e respostas/logs não
+  fornecidos; a data acima é a do relato.
+
+O quase empate de nDCG local (0,8812 contra 0,8816 do controle) não se converteu
+em ganho de acurácia oficial. O resultado é compatível com a hipótese de
+expansão deslocar evidências úteis, mas a causa não pode ser confirmada sem
+respostas/contextos por pergunta. O score não deve ser convertido em quantidade
+de perguntas erradas nem associado automaticamente às outras versões históricas
+que também obtiveram 57.
+
+Manter o híbrido de score 60 como melhor referência registrada. Não promover
+esta candidata legacy nem ampliar sua expansão com base neste resultado.
+Na data desse relato, a V2 contextual ainda não tinha resultado informado.
+Seu resultado posterior está registrado na atualização de 13/11 abaixo.
+
+## Atualização de 13/11/2026 — DBpedia V2 contextual: 60%
+
+O usuário informou que a V2 obteve **60%**, exatamente o mesmo score agregado
+relatado para o híbrido sem KG: **0 ponto percentual de diferença**, e +3 pontos
+percentuais frente à legacy (57%).
+
+- ZIP: `2026-11-12-dbpedia-v2-contextual.zip`.
+- SHA-256: `4b933399eda72513053ff4497f82ee833972a90ac36c051d1be69257dcfe9b44`.
+- [Manifesto da candidata](../../experiments/submissions/2026-11-12-dbpedia-v2-contextual.json).
+- [Registro estruturado](../../experiments/results/evaluation-reported-2026-11-13.json).
+- Fonte: relato do usuário, sem verificação independente do painel. Tempo,
+  ID oficial, data exata de execução, resultados por domínio e respostas/logs
+  não fornecidos. 13/11 é a data do relato.
+
+A seleção contextual com abstenção empatou com o híbrido na acurácia agregada,
+mas não demonstrou ganho. O empate não comprova identidade dos acertos nem
+igualdade de custo. Manter o híbrido sem KG como referência, pois a adição do
+recurso e do vinculador ainda não mostrou benefício de acurácia. Os resultados
+das duas candidatas não encerram a hipótese futura de grafos ligados às
+passagens dos PDFs; referem-se às políticas de expansão lexical DBpedia testadas.

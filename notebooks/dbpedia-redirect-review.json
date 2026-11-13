@@ -1,0 +1,14 @@
+{
+  "version": "redirect-review-v1",
+  "evidence": "Local DBpedia v1 bundle and audit docs/reports/dbpedia-v1-retrieval-comparison-2026-11-12.md; conservative review of mixed targets and distinct specific concepts, no replacement facts inferred.",
+  "excluded_entities": [
+    {"uri": "http://dbpedia.org/resource/Demo", "reason": "Mixed disambiguation target: names include Demo version and Demonstration Power Plant; cannot resolve the nuclear concept reliably."}
+  ],
+  "rejected_equivalences": [
+    {"source_uri": "http://dbpedia.org/resource/DEMO", "target_uri": "http://dbpedia.org/resource/Demo", "reason": "Redirect to mixed disambiguation target; abstain from equivalence."},
+    {"source_uri": "http://dbpedia.org/resource/Beryllium-7", "target_uri": "http://dbpedia.org/resource/Isotopes_of_beryllium", "reason": "Specific isotope and general isotope article kept distinct; redirect alone is insufficient for equivalence."},
+    {"source_uri": "http://dbpedia.org/resource/Lithium-6", "target_uri": "http://dbpedia.org/resource/Isotopes_of_lithium", "reason": "Specific isotope and general isotope article kept distinct."},
+    {"source_uri": "http://dbpedia.org/resource/Lithium-7", "target_uri": "http://dbpedia.org/resource/Isotopes_of_lithium", "reason": "Specific isotope and general isotope article kept distinct."},
+    {"source_uri": "http://dbpedia.org/resource/Unit_ball", "target_uri": "http://dbpedia.org/resource/Unit_sphere", "reason": "Related concepts with distinct labels and nodes; preserve distinction rather than infer synonymy from redirect."}
+  ]
+}

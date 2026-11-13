@@ -41,7 +41,10 @@ def iri(value):
 
 
 def name_from_uri(value):
-    return unquote(value.rsplit('/', 1)[-1]).replace('_', ' ')
+    # A resource title can itself contain '/': T1/2 must stay T1/2.
+    resource = NS['dbr']
+    title = value[len(resource):] if value.startswith(resource) else value.rsplit('/', 1)[-1]
+    return unquote(title).replace('_', ' ')
 
 
 class IncompleteQuery(RuntimeError):
@@ -61,7 +64,7 @@ class Client:
         self.config, self.transport, self.sleep = config, transport, sleep
         # Publication exceptions do not change SPARQL responses; preserve the existing cache.
         query_config = {k: v for k, v in config.items() if k != 'allowed_missing_seed_labels'}
-        self.namespace = digest(encode({'version': VERSION, 'config': query_config}).encode())
+        self.namespace = digest(encode({'version': VERSION, 'config': {k: v for k, v in query_config.items() if k != 'redirect_review'}}).encode())
         self.conn = sqlite3.connect(cache)
         self.conn.execute('CREATE TABLE IF NOT EXISTS responses_v3 '
                           '(namespace TEXT, query_hash TEXT, status TEXT, response TEXT, detail TEXT, '
@@ -352,6 +355,58 @@ def rdf_value(binding):
     return result + ('^^' + iri(binding['datatype']) if binding.get('datatype') else '')
 
 
+def apply_redirect_review(data, review):
+    """Apply explicit reviewed exceptions, without silently equating related concepts."""
+    data = json.loads(json.dumps(data))
+    blocked = {(uri(r['source_uri']), uri(r['target_uri'])): r['reason']
+               for r in review.get('rejected_equivalences', [])}
+    excluded = {uri(r['uri']): r['reason'] for r in review.get('excluded_entities', [])}
+    if any(not reason.strip() for reason in [*blocked.values(), *excluded.values()]):
+        raise ValueError('Redirect review requires reasons')
+    changes = []
+    cards = {c['uri']: c for c in data['cards'] if c['uri'] not in excluded}
+    for ent, card in sorted(cards.items()):
+        names = []
+        for record in card['names']:
+            if record['kind'] in ('redirect', 'seed_redirect'):
+                if (record['source_uri'], ent) in blocked:
+                    changes.append({'action': 'reject_equivalence', 'target_uri': ent, **record})
+                    continue
+                corrected = name_from_uri(record['source_uri'])
+                if corrected != record['text']:
+                    changes.append({'action': 'repair_name', 'old_text': record['text'], 'new_text': corrected,
+                                    'source_uri': record['source_uri'], 'target_uri': ent})
+                record['text'] = corrected
+            names.append(record)
+        card['names'] = sorted({encode(n): n for n in names}.values(), key=encode)
+        card['aliases'] = sorted({n['text'] for n in names if n['text'] != card['label']})
+    data['cards'] = [cards[u] for u in sorted(cards)]
+    data['edges'] = [e for e in data['edges'] if e['source_uri'] in cards and e['target_uri'] in cards]
+    neighbors = {}
+    for edge in data['edges']:
+        neighbors.setdefault(edge['source_uri'], set()).add(cards[edge['target_uri']]['label'])
+    for ent, card in cards.items():
+        card['related_concepts'] = sorted(neighbors.get(ent, set()))
+    data['triples'] = [t for t in data['triples'] if t[0] not in excluded and t[2] not in {iri(u) for u in excluded}]
+    for seed in data['seeds']:
+        requested, canonical = seed['requested_uri'], seed['canonical_uri']
+        if (requested, canonical) in blocked:
+            seed['endpoint_canonical_uri'] = canonical
+            seed['review_reason'] = blocked[(requested, canonical)]
+            if requested in cards:
+                seed['canonical_uri'] = requested
+                seed['status'] = 'reviewed_distinct_resource'
+                seed['metadata_status'] = 'present'
+            else:
+                seed['metadata_status'] = 'excluded_redirect_review'
+        elif canonical in excluded:
+            seed['metadata_status'] = 'excluded_redirect_review'
+            seed['exclusion_reason'] = excluded[canonical]
+    data['derivation'] = {**data.get('derivation', {}), 'redirect_review': review,
+                          'review_changes': changes, 'excluded_entities': excluded}
+    return data
+
+
 def publish(output, data, config, namespace):
     """Publish a new immutable directory by a single rename, or publish nothing."""
     output = Path(output)
@@ -377,6 +432,7 @@ def publish(output, data, config, namespace):
         manifest = {'status': 'complete', 'builder_version': VERSION, 'cache_namespace': namespace,
                     'snapshot_caveat': 'Live endpoint cannot guarantee reproducibility across dates or unadvertised truncation.',
                     'config': config, 'seeds': data['seeds'], 'missing_metadata_uris': data['missing_metadata_uris'],
+                    'derivation': data.get('derivation'),
                     'counts': {'cards': len(cards), 'triples': len(data['triples']), 'edges': len(data['edges'])}, 'files': files}
         (staging / 'manifest.json').write_text(encode(manifest) + '\n', encoding='utf-8')
         validate_bundle(staging)
@@ -438,6 +494,8 @@ def build(config, cache, output, transport=http_transport, sleep=time.sleep):
     client = Client(config, cache, transport, sleep)
     try:
         data = extract(client)
+        if config.get('redirect_review'):
+            data = apply_redirect_review(data, config['redirect_review'])
         return publish(output, data, config, client.namespace)
     except Exception as error:
         # Separate diagnostics never masquerade as the successful output directory.

@@ -226,3 +226,6 @@ ambíguos e substituir a escolha alfabética de aliases por seleção contextual
 abstenção. Depois repetir primeiro a ablação de aliases. A disponibilidade de
 mais nomes e relações, sozinha, não melhorou a recuperação local. Os resultados
 não medem acurácia de respostas nem permitem concluir sobre o benchmark oculto.
+
+A implementação e os resultados dessa decisão estão em
+[Decisão sobre aliases DBpedia](dbpedia-alias-decision-2026-11-12.md).

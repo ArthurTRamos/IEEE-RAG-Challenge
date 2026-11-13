@@ -173,7 +173,7 @@ def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
 
 def retrieve(question, index, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
              method="dense", k1=1.25, b=0.75, rrf_k=60,
-             dense_weight=1.0, bm25_weight=1.0):
+             dense_weight=1.0, bm25_weight=1.0, lexical_question=None):
     """Return the full ranking and, when tokenized, the actual baseline context.
 
     The budget counts chunk text only, as in the starter kit. Headers, question
@@ -188,8 +188,12 @@ def retrieve(question, index, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
     if method != "dense" and (index.lexical_index is None or
                                (index.lexical_index.k1, index.lexical_index.b) != (k1, b)):
         index.lexical_index = BM25Retriever(index.chunks, k1, b)
+    lexical = index.lexical_index
+    if lexical_question is not None and method != "dense":
+        from types import SimpleNamespace
+        lexical = SimpleNamespace(scores=lambda _: index.lexical_index.scores(lexical_question))
     ranking = rank_chunks(index.chunks, similarities, question, method,
-                          index.lexical_index, rrf_k, dense_weight, bm25_weight)
+                          lexical, rrf_k, dense_weight, bm25_weight)
     return select_context(ranking, tokenizer, max_tokens)
 
 

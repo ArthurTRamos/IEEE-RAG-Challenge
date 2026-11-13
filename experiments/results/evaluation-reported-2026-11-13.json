@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "reported_on": "2026-11-13",
+  "metric": "Domain-balanced accuracy on the previously reported competition scale; user reports 60%. Not converted to counts of correct answers.",
+  "records": [
+    {
+      "local_id": "DBPEDIA-V2-CONTEXTUAL-2026-11-13",
+      "variant": "hybrid_dbpedia_v2_aliases_contextual",
+      "reported_on": "2026-11-13",
+      "source": "user_report",
+      "independently_verified": false,
+      "evaluation_date": null,
+      "official_submission_id": null,
+      "balanced_accuracy_reported": 60,
+      "score_unit": "percent, as reported by user",
+      "inference_seconds_reported": null,
+      "timing_scope": null,
+      "per_domain_scores": null,
+      "responses_or_logs_provided": false,
+      "submission_manifest": "experiments/submissions/2026-11-12-dbpedia-v2-contextual.json",
+      "archive_sha256": "4b933399eda72513053ff4497f82ee833972a90ac36c051d1be69257dcfe9b44"
+    }
+  ],
+  "contextual_vs_hybrid": {
+    "baseline_local_id": "HYBRID-2026-11-10",
+    "baseline_accuracy_reported": 60,
+    "contextual_accuracy_reported": 60,
+    "delta_percentage_points": 0
+  },
+  "contextual_vs_legacy": {
+    "legacy_accuracy_reported": 57,
+    "contextual_accuracy_reported": 60,
+    "delta_percentage_points": 3
+  },
+  "limitations": "Aggregate user-reported scores only; equality does not establish identical per-question answers or equal runtime."
+}
