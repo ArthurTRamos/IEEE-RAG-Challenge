@@ -11,6 +11,7 @@ os hashes dos históricos continuam desconhecidos.
 | ZERO-01 | Zero-shot baseline | 29 | 732 | Acurácia balanceada por domínio; informado em 11/11 |
 | RAG-BASE-01 | RAG semântico baseline | 57 | 2079 | Acurácia balanceada por domínio; informado em 11/11 |
 | HYBRID-2026-11-10 | MiniLM + BM25 k1=1,25, b=0,75; RRF 60, pesos 1/0,75 | 60 | 2389 | Acurácia balanceada por domínio; informado em 11/11; manifesto identificado |
+| CE-TOP100-2026-11-14 | Híbrido + cross-encoder MS MARCO MiniLM-L6, 100 candidatos | 55 | — | Informado pelo usuário em 14/11; associado ao último pacote gerado pelo contexto da conversa |
 | HIST-01 | RAG com recuperação semântica | 57 | — | Histórico informado pelo usuário; não associado automaticamente a RAG-BASE-01 |
 | HIST-02 | RAG semântico + BM25 | 47 | — | Informado pelo usuário |
 | HIST-03 | RAG semântico + BM25 + KG por menções/aliases | 57 | — | Informado pelo usuário |
@@ -109,3 +110,22 @@ kit. A auditoria encontrou evidências relevantes abaixo do corte de dez chunks
 e mudanças importantes de prompt e chunking. O resultado não demonstra uma
 regressão causada apenas pelo encoder ou pela correção de metadados.
 Veja o [diagnóstico detalhado](dense-versus-starter-2026-11-10.md).
+
+## Atualização de 14/11/2026 — cross-encoder top 100: 55%
+
+O usuário relatou regressão para 55% no ambiente de avaliação após gerar o
+[pacote CE top 100](../../experiments/submissions/2026-11-14-hybrid-ce-minilm-l6-top100-rrf60-bw0p75.json).
+A associação ao artefato segue o contexto da conversa, sem ID oficial ou consulta
+ao painel. Tempo, resultados por domínio, respostas e logs não foram informados.
+
+A queda é de **5 pontos percentuais** em relação ao híbrido sem CE (60) e de
+**2 pontos** em relação ao baseline semântico (57). O híbrido sem CE permanece
+como a melhor configuração com resultado informado.
+
+O ganho local de nDCG proxy por chunk@50 (0,6156 → 0,6332) não se confirmou
+como ganho de QA. As notas herdadas de documentos não garantem presença dos
+fatos necessários nas passagens; o resultado reforça a limitação desse proxy.
+Não foi estabelecida a causa da regressão. Truncamento dos pares em 512 tokens,
+mudanças de ordenação e da composição do contexto são hipóteses para auditoria,
+não conclusões demonstradas. Não atribuir significância estatística sem dados
+por pergunta e informação sobre a avaliação.

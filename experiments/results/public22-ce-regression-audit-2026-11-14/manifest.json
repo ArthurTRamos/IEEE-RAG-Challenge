@@ -1,0 +1,115 @@
+{
+  "sources": {
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/judgments.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/scores.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/scores.json",
+      "sha256": "135f6f3faba492597cb02bbb12dcf9c28e7d009ed269550afd5cbd8089b160c6"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/summary.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/summary.json",
+      "sha256": "d4492b5477227a5d12cd54839bb299a3b512feffcf4bb2e29c70ef48cf12cbf2"
+    },
+    "experiments/runs/baseline-public22-ranking/ranking.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/baseline-public22-ranking/ranking.json",
+      "sha256": "66e6fbda9429fa314b194ef45fdea8f96423c5381961a4319b9f821320fb6121"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/context.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/context.json",
+      "sha256": "78df37d4c15056beced5d06f6ad5adba91a61b95bd807887364ff2cc4c8cff14"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/ranking.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/ranking.json",
+      "sha256": "e58c858d5876b06a56da581826c4fae77431a049a1eac25ed25c28698adbbdd4"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/ranking.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/ranking.json",
+      "sha256": "c40cad77eb83ec59236da2c75dca6ef4e6724ec27f957f2d1f3edd81288f51fb"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/context.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/context.json",
+      "sha256": "fbb50b94682229c82a8c752aa5227335def869e188149adc8022f2780c2061d8"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/ranking.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/ranking.json",
+      "sha256": "93776c3f90e4164faa29e0956b532f640307149b006649d16c582d7543392c8b"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/context.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/context.json",
+      "sha256": "8e1cff254936c5d353d1fc7c959e20e290f8091a3e84567fd0c905694e73727f"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/ranking.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/ranking.json",
+      "sha256": "b5d9bb79a07a6ab8f7550f839deccac32357bd57d38b6bfa19d633b7bda67876"
+    },
+    "experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/context.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/context.json",
+      "sha256": "1bd444252f8c60857aae8095273938ec4e3e79341b60bb4ec46a73dc8d47241b"
+    }
+  },
+  "tokenizer_files": {
+    "chat_template.jinja": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/chat_template.jinja",
+      "sha256": "49a944c9814e130bd3cc80a2420c55ff22e24a4e4ba97009aa60000909b5eac3"
+    },
+    "merges.txt": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/merges.txt",
+      "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502"
+    },
+    "special_tokens_map.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/special_tokens_map.json",
+      "sha256": "78afb564e81264029b25f9caf24bda2521d5bdaeff5cd3fdbc01d3da2e8ce2f2"
+    },
+    "tokenizer_config.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/tokenizer_config.json",
+      "sha256": "80fbc2a161419760bb8a84ed1d3b9550a2d68b7abd07a72706b8f5977e044b8d"
+    },
+    "config.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/config.json",
+      "sha256": "d47a120cb2669cd46482d5c2da9488903b67759ca167cd85c1127b2e05755f95"
+    },
+    "vocab.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/vocab.json",
+      "sha256": "d8eb44d0d51f5e39c9b14825ca8bd10a2500f99c438ca81d4462f0263acd3b53"
+    },
+    "tokenizer.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/tokenizer.json",
+      "sha256": "7738a25c46a6043a0e2e605138851baa450269ce9d800af6ca9bf6192e45510c"
+    },
+    "download.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/olmo-tokenizer/download.json",
+      "sha256": "352544ef33e70733d2a45031550a26fe8660b0f0c0c19df56da8dbe8bc91bfae"
+    }
+  },
+  "reranker_tokenizer_files": {
+    "special_tokens_map.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/ms-marco-MiniLM-L6-v2/special_tokens_map.json",
+      "sha256": "3c3507f36dff57bce437223db3b3081d1e2b52ec3e56ee55438193ecb2c94dd6"
+    },
+    "tokenizer_config.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/ms-marco-MiniLM-L6-v2/tokenizer_config.json",
+      "sha256": "a5c2e5a7b1a29a0702cd28c08a399b5ecc110c263009d17f7e3b415f25905fd8"
+    },
+    "vocab.txt": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/ms-marco-MiniLM-L6-v2/vocab.txt",
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "tokenizer.json": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/models/ms-marco-MiniLM-L6-v2/tokenizer.json",
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+    }
+  },
+  "pair_truncation_policy": "longest_first, max_length=512; reproduces installed Sentence Transformers default",
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/analyze_reranking_regression.py",
+    "sha256": "5503e13dc70c5de7c90edfd9d0a4465d4795dc6f75e491e63a2f577167ca5426"
+  },
+  "limitations": [
+    "Public development set; no hidden responses or final LLM inference.",
+    "Document grades are proxies, not passage support labels.",
+    "Tokens in truncated pairs count whole chunks, not omitted tokens.",
+    "Token budget counts chunk text only, matching baseline."
+  ]
+}

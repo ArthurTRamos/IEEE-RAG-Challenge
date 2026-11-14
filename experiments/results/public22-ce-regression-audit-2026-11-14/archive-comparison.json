@@ -1,0 +1,30 @@
+{
+  "archives": [
+    "submissions/2026-11-10-hybrid-k1_1p25-b0p75-rrf60-dw1-bw0p75.zip",
+    "submissions/2026-11-14-hybrid-ce-minilm-l6-top100-rrf60-bw0p75.zip"
+  ],
+  "changed_shared_entries": [
+    "main.py",
+    "retrieval.py"
+  ],
+  "added_entries": [
+    "reranker_model/config.json",
+    "reranker_model/model.safetensors",
+    "reranker_model/provenance.json",
+    "reranker_model/special_tokens_map.json",
+    "reranker_model/tokenizer.json",
+    "reranker_model/tokenizer_config.json",
+    "reranker_model/vocab.txt",
+    "reranking.py"
+  ],
+  "removed_entries": [
+    "docling_models/",
+    "docling_models/docling-project--docling-layout-heron-onnx/",
+    "docling_models/docling-project--docling-layout-heron-onnx/.gitattributes",
+    "docling_models/docling-project--docling-layout-heron/",
+    "docling_models/docling-project--docling-layout-heron/.gitattributes",
+    "embed_model/",
+    "embed_model/1_Pooling/",
+    "embed_model/2_Normalize/"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "sources": {
+    "judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "runs": {
+      "hybrid-control": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/ranking.json",
+          "sha256": "e58c858d5876b06a56da581826c4fae77431a049a1eac25ed25c28698adbbdd4"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/context.json",
+          "sha256": "78df37d4c15056beced5d06f6ad5adba91a61b95bd807887364ff2cc4c8cff14"
+        }
+      },
+      "hybrid-ce-minilm-l6-top50-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/ranking.json",
+          "sha256": "c40cad77eb83ec59236da2c75dca6ef4e6724ec27f957f2d1f3edd81288f51fb"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/context.json",
+          "sha256": "fbb50b94682229c82a8c752aa5227335def869e188149adc8022f2780c2061d8"
+        }
+      },
+      "hybrid-ce-minilm-l6-top100-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/ranking.json",
+          "sha256": "93776c3f90e4164faa29e0956b532f640307149b006649d16c582d7543392c8b"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/context.json",
+          "sha256": "8e1cff254936c5d353d1fc7c959e20e290f8091a3e84567fd0c905694e73727f"
+        }
+      },
+      "hybrid-ce-minilm-l6-top200-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/ranking.json",
+          "sha256": "b5d9bb79a07a6ab8f7550f839deccac32357bd57d38b6bfa19d633b7bda67876"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/context.json",
+          "sha256": "1bd444252f8c60857aae8095273938ec4e3e79341b60bb4ec46a73dc8d47241b"
+        }
+      }
+    },
+    "catalog": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/baseline-public22-ranking/ranking.json",
+      "sha256": "66e6fbda9429fa314b194ef45fdea8f96423c5381961a4319b9f821320fb6121"
+    }
+  },
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/evaluate_paratext.py",
+    "sha256": "44bb33998584afd262b8490c421a87f859790ef877addfc4d2b334b7dcf2d51f"
+  },
+  "k": 50,
+  "definitions": {
+    "primary_category": "Largest character span; ties prefer earlier span",
+    "mixed": "More than one nonempty category span; overlaps count as present",
+    "front_matter_candidate": "Prefix before first recognized abstract/introduction marker; not verified cover page",
+    "bibliography": "Recognized references heading until next same/shallower heading",
+    "body_candidate": "After body marker, outside bibliography; not a relevance judgment",
+    "unknown": "No confident structural anchor; never counted as body by default",
+    "limits": "Heuristics on exported Markdown; no PDF page/layout provenance. No filtering applied."
+  }
+}

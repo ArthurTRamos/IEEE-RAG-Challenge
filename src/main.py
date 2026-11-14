@@ -38,10 +38,29 @@ BM25_B = 0.75
 RRF_K = 60
 RRF_DENSE_WEIGHT = 1.0
 RRF_BM25_WEIGHT = 0.75
+RERANK_ENABLED = False  # Enabled only in the dedicated reranker submission build.
+RERANK_CANDIDATES = 100
+RERANK_MAX_LENGTH = 512
+RERANK_BATCH_SIZE = 16
 
 # Loaded once and reused across every question in the run (answer() is
 # called once per question, in the same process).
 _cache = {}
+_reranker = None
+
+
+def _load_reranker():
+    global _reranker
+    if _reranker is None:
+        if __package__:
+            from .reranking import ChunkReranker
+        else:
+            from reranking import ChunkReranker
+        _reranker = ChunkReranker(
+            Path(__file__).parent / "reranker_model", device="cpu",
+            max_length=RERANK_MAX_LENGTH, batch_size=RERANK_BATCH_SIZE,
+        )
+    return _reranker
 
 
 def _load(model_id: str, corpus_dir: str):
@@ -62,7 +81,9 @@ def answer(question: str, corpus_dir: str, model_id: str) -> str:
     context = retrieve(question, index, tokenizer, method=RETRIEVAL_METHOD,
                        k1=BM25_K1, b=BM25_B, rrf_k=RRF_K,
                        dense_weight=RRF_DENSE_WEIGHT,
-                       bm25_weight=RRF_BM25_WEIGHT)["context"]
+                       bm25_weight=RRF_BM25_WEIGHT,
+                       reranker=_load_reranker() if RERANK_ENABLED else None,
+                       rerank_candidates=RERANK_CANDIDATES)["context"]
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},

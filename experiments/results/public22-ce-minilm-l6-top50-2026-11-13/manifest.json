@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "chunk_k": 50,
+  "sources": {
+    "judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "runs": {
+      "hybrid-control": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/ranking.json",
+          "sha256": "e58c858d5876b06a56da581826c4fae77431a049a1eac25ed25c28698adbbdd4"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/context.json",
+          "sha256": "78df37d4c15056beced5d06f6ad5adba91a61b95bd807887364ff2cc4c8cff14"
+        }
+      },
+      "hybrid-ce-minilm-l6-top50-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/ranking.json",
+          "sha256": "c40cad77eb83ec59236da2c75dca6ef4e6724ec27f957f2d1f3edd81288f51fb"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/context.json",
+          "sha256": "fbb50b94682229c82a8c752aa5227335def869e188149adc8022f2780c2061d8"
+        }
+      },
+      "hybrid-ce-minilm-l6-top100-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/ranking.json",
+          "sha256": "93776c3f90e4164faa29e0956b532f640307149b006649d16c582d7543392c8b"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/context.json",
+          "sha256": "8e1cff254936c5d353d1fc7c959e20e290f8091a3e84567fd0c905694e73727f"
+        }
+      },
+      "hybrid-ce-minilm-l6-top200-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/ranking.json",
+          "sha256": "b5d9bb79a07a6ab8f7550f839deccac32357bd57d38b6bfa19d633b7bda67876"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/context.json",
+          "sha256": "1bd444252f8c60857aae8095273938ec4e3e79341b60bb4ec46a73dc8d47241b"
+        }
+      }
+    }
+  },
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/evaluate_chunk_windows.py",
+    "sha256": "059d666b8bb39dd2b6b050aa17b1cec4b5eedaec0a5ffcacf2795ea8d73b14c6"
+  },
+  "definitions": {
+    "cutoff": "First k chunks, not k distinct documents",
+    "ndcg": "Gain 2**document_grade-1; ideal over full frozen chunk catalog with inherited document grades",
+    "precision": "Chunks from relevant documents divided by k; actual-context fractions use actual context size",
+    "recall": "Distinct relevant documents seen in window divided by all judged relevant documents",
+    "limitation": "Document-grade proxies do not establish passage usefulness or answer accuracy"
+  }
+}

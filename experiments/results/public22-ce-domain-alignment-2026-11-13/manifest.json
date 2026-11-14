@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "sources": {
+    "judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "runs": {
+      "hybrid-control": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/ranking.json",
+          "sha256": "e58c858d5876b06a56da581826c4fae77431a049a1eac25ed25c28698adbbdd4"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-control/context.json",
+          "sha256": "78df37d4c15056beced5d06f6ad5adba91a61b95bd807887364ff2cc4c8cff14"
+        }
+      },
+      "hybrid-ce-minilm-l6-top50-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/ranking.json",
+          "sha256": "c40cad77eb83ec59236da2c75dca6ef4e6724ec27f957f2d1f3edd81288f51fb"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top50-maxlen512-cpu/context.json",
+          "sha256": "fbb50b94682229c82a8c752aa5227335def869e188149adc8022f2780c2061d8"
+        }
+      },
+      "hybrid-ce-minilm-l6-top100-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/ranking.json",
+          "sha256": "93776c3f90e4164faa29e0956b532f640307149b006649d16c582d7543392c8b"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu/context.json",
+          "sha256": "8e1cff254936c5d353d1fc7c959e20e290f8091a3e84567fd0c905694e73727f"
+        }
+      },
+      "hybrid-ce-minilm-l6-top200-maxlen512-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/ranking.json",
+          "sha256": "b5d9bb79a07a6ab8f7550f839deccac32357bd57d38b6bfa19d633b7bda67876"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top200-maxlen512-cpu/context.json",
+          "sha256": "1bd444252f8c60857aae8095273938ec4e3e79341b60bb4ec46a73dc8d47241b"
+        }
+      }
+    },
+    "domain_metadata": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public-22-questions.json",
+      "sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5"
+    },
+    "questions": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/IEEE-CIS-DSQA-Starter-Kit/sample/sample_qa.json",
+      "sha256": "434bfe996df41b16e74fafe443e74fc67d8ab2cb5b57112006ac6a7145f7587f"
+    }
+  },
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/evaluate_domains.py",
+    "sha256": "45919683b750dcaf0bed2760802767f534d681f6a842c9028a166b03d35e29ca"
+  },
+  "chunk_k": 50,
+  "definitions": {
+    "domain": "Source document domain from imported metadata, not semantic passage classification",
+    "macro": "Mean of per-question domain fractions",
+    "micro": "Same-domain chunk occurrences / all chunk occurrences",
+    "limits": "Domain alignment is not passage relevance or QA accuracy; no domain filtering was applied"
+  }
+}

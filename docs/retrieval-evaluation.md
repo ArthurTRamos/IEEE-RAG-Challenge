@@ -56,12 +56,31 @@ Para ativar o mesmo reranker em uma execução local completa:
   --output-dir experiments/runs/hybrid-ce-minilm-top100
 ```
 
-O `main.py` de submissão permanece com o híbrido sem reranker. Para uma futura
-submissão com CE será necessário habilitar a opção na inferência e incluir o
-módulo e seus pesos no build; o ZIP atual não contém esses arquivos. Os pesos
-locais adicionais somam cerca de 91,8 MB, mas o ZIP final dessa variante ainda
-não foi construído. Inferência CPU evita VRAM adicional; os limites de tempo
-total na H100 precisam de avaliação completa com o LLM.
+O `main.py` fonte mantém o híbrido sem reranker por padrão. Os pesos locais
+adicionais somam cerca de 91,8 MB; o construtor dedicado abaixo inclui o módulo
+e os pesos e ativa o CE somente no pacote gerado, de aproximadamente 482,4 MB.
+Inferência CPU evita VRAM adicional; os limites de tempo total na H100 precisam
+de avaliação completa com o LLM.
+
+Atualização de 14/11/2026: o pacote CE top 100 é gerado pelo construtor dedicado:
+
+```bash
+.venv/bin/python tools/package_reranker_submission.py \
+  --output submissions/2026-11-14-hybrid-ce-minilm-l6-top100-rrf60-bw0p75.zip \
+  --manifest experiments/submissions/2026-11-14-hybrid-ce-minilm-l6-top100-rrf60-bw0p75.json
+```
+
+O construtor usa somente recursos locais, confere as configurações e habilita
+`RERANK_ENABLED` apenas no `main.py` empacotado. Inclui `reranking.py` e
+`reranker_model/`, preserva os recursos MiniLM/Docling e verifica CRC e limite
+de 1 GB. Recusa sobrescrever artefatos existentes. O código fonte mantém o CE
+desativado por padrão; `src/build.sh` continua sendo o build do híbrido sem CE.
+Na configuração do pacote, o CE roda na CPU com máximo de 512 tokens, batch 16,
+100 candidatos e a cauda híbrida preservada. Threads CPU seguem o ambiente;
+o teste de comparação local anterior usou quatro threads explicitamente.
+O orçamento de contexto continua em 10 mil tokens e a geração em até 2048
+novos tokens. O ZIP anterior permanece preservado; nenhum pacote é enviado
+automaticamente à plataforma.
 
 ## Escopo e dados
 

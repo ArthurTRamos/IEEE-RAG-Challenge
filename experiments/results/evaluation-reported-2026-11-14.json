@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "local_id": "CE-TOP100-2026-11-14",
+  "submission_manifest": "experiments/submissions/2026-11-14-hybrid-ce-minilm-l6-top100-rrf60-bw0p75.json",
+  "archive_sha256": "79b05169eb7d1f7f10f23163182e1ed30795170576fec20b46b9acea7cc3a4fc",
+  "reported_on": "2026-11-14",
+  "source": "user_report",
+  "independently_verified": false,
+  "accuracy_percent_reported": 55,
+  "metric_context": "Domain-balanced accuracy according to prior conversation; latest message reports accuracy",
+  "inference_seconds_reported": null,
+  "evaluation_date": null,
+  "official_submission_id": null,
+  "artifact_association": "Most recent top-100 reranker ZIP, inferred from conversation context",
+  "per_domain_scores": null,
+  "responses_or_logs_provided": false,
+  "delta_vs_hybrid_percentage_points": -5,
+  "delta_vs_semantic_baseline_percentage_points": -2
+}

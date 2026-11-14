@@ -93,8 +93,22 @@ Os dados das quatro runs foram validados quanto às 22 perguntas e às contagens
 
 ## Decisão
 
+Atualização: a [reanálise do top-50 de chunks](cross-encoder-top50-2026-11-13.md)
+encontrou melhora dos proxies de composição/ordenação com CE top 100, sem perda
+do recall grau 2 no contexto. Isso o torna uma candidata a teste de QA; os
+resultados documentais@10 desta página continuam válidos.
+
 Manter o híbrido atual como configuração de submissão. O CE fica disponível
 para experimentação; a evidência desta rodada não justifica ativá-lo por padrão.
 Antes de escolher outro reranker ou calibrar seus scores com RRF, priorizar uma
 amostra de passagens julgadas quanto aos fatos necessários à resposta. Não
 generalizar esse resultado de um modelo e 22 perguntas para todos os rerankers.
+
+## Resultado de avaliação informado em 14/11/2026
+
+O pacote MiniLM-L6 top 100 obteve **55%**, segundo relato do usuário: cinco
+pontos percentuais abaixo do híbrido sem reranker (60%). Tempo não informado.
+A melhora dos proxies locais do top-50 não demonstrou melhora nas respostas.
+Manter o híbrido sem CE como referência; investigar falhas com evidências por
+passagem antes de repetir a escolha por essas métricas. A causa da regressão
+não foi identificada, e não houve nova alteração de pipeline.
