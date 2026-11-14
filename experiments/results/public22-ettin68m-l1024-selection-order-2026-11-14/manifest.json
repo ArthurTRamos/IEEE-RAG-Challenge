@@ -1,0 +1,43 @@
+{
+  "sources": {
+    "hybrid": {
+      "ranking.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-control/ranking.json",
+        "sha256": "e58c858d5876b06a56da581826c4fae77431a049a1eac25ed25c28698adbbdd4"
+      },
+      "context.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-control/context.json",
+        "sha256": "78df37d4c15056beced5d06f6ad5adba91a61b95bd807887364ff2cc4c8cff14"
+      }
+    },
+    "ettin68m-l1024": {
+      "ranking.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu/ranking.json",
+        "sha256": "ebfe793436b2fde8388f776f96f70a3a8b1b70bd7d87e028606d61485839e63d"
+      },
+      "context.json": {
+        "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu/context.json",
+        "sha256": "c97041f6097a411345bc18d3e33ffd076e5c51cecbd989b6d5228b57113dca0e"
+      }
+    }
+  },
+  "judgments": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/judgments.json",
+    "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+  },
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/compare_context_order.py",
+    "sha256": "9847bad791016056520841f55e0bf92988b3793d650afb19da47fc4bb00d798b"
+  },
+  "repacking": false,
+  "new_model_inference": false,
+  "definitions": {
+    "rank": "Context position; source_rank retains source retrieval position",
+    "ndcg": "Document-grade proxy; full-context cutoff varies with selection",
+    "token_budget": "Same selected texts as source, no repacking after ordering"
+  },
+  "limitations": [
+    "No final LLM or measured answer accuracy.",
+    "Source context budget counts chunk texts, excluding headers."
+  ]
+}

@@ -1,0 +1,150 @@
+[
+  {
+    "run": "hybrid-control",
+    "candidates": 0,
+    "scope": "top50",
+    "question_count": 22,
+    "mean_same_domain_chunks": 49.81818181818182,
+    "mean_total_chunks": 50.0,
+    "macro_same_domain_fraction": 0.9963636363636365,
+    "micro_same_domain_fraction": 0.9963636363636363,
+    "mean_same_domain_grade0_chunks": 16.40909090909091,
+    "other_domain_relevant_chunk_occurrences": 0,
+    "by_question_domain": {
+      "AI/mathematics": {
+        "question_count": 12,
+        "mean_same_domain_chunks": 49.833333333333336,
+        "mean_total_chunks": 50.0,
+        "macro_same_domain_fraction": 0.9966666666666667,
+        "micro_same_domain_fraction": 0.9966666666666667,
+        "mean_same_domain_grade0_chunks": 11.333333333333334,
+        "other_domain_relevant_chunk_occurrences": 0
+      },
+      "IFMIF-DONES": {
+        "question_count": 10,
+        "mean_same_domain_chunks": 49.8,
+        "mean_total_chunks": 50.0,
+        "macro_same_domain_fraction": 0.9960000000000001,
+        "micro_same_domain_fraction": 0.996,
+        "mean_same_domain_grade0_chunks": 22.5,
+        "other_domain_relevant_chunk_occurrences": 0
+      }
+    },
+    "paired_fraction": {
+      "improved": 0,
+      "worse": 0,
+      "tied": 22
+    }
+  },
+  {
+    "run": "hybrid-control",
+    "candidates": 0,
+    "scope": "actual_context",
+    "question_count": 22,
+    "mean_same_domain_chunks": 52.40909090909091,
+    "mean_total_chunks": 52.81818181818182,
+    "macro_same_domain_fraction": 0.9932584958900749,
+    "micro_same_domain_fraction": 0.9922547332185886,
+    "mean_same_domain_grade0_chunks": 18.363636363636363,
+    "other_domain_relevant_chunk_occurrences": 0,
+    "by_question_domain": {
+      "AI/mathematics": {
+        "question_count": 12,
+        "mean_same_domain_chunks": 50.916666666666664,
+        "mean_total_chunks": 51.333333333333336,
+        "macro_same_domain_fraction": 0.9935897435897436,
+        "micro_same_domain_fraction": 0.9918831168831169,
+        "mean_same_domain_grade0_chunks": 12.833333333333334,
+        "other_domain_relevant_chunk_occurrences": 0
+      },
+      "IFMIF-DONES": {
+        "question_count": 10,
+        "mean_same_domain_chunks": 54.2,
+        "mean_total_chunks": 54.6,
+        "macro_same_domain_fraction": 0.9928609986504723,
+        "micro_same_domain_fraction": 0.9926739926739927,
+        "mean_same_domain_grade0_chunks": 25.0,
+        "other_domain_relevant_chunk_occurrences": 0
+      }
+    },
+    "paired_fraction": {
+      "improved": 0,
+      "worse": 0,
+      "tied": 22
+    }
+  },
+  {
+    "run": "hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu",
+    "candidates": 100,
+    "scope": "top50",
+    "question_count": 22,
+    "mean_same_domain_chunks": 49.81818181818182,
+    "mean_total_chunks": 50.0,
+    "macro_same_domain_fraction": 0.9963636363636365,
+    "micro_same_domain_fraction": 0.9963636363636363,
+    "mean_same_domain_grade0_chunks": 17.318181818181817,
+    "other_domain_relevant_chunk_occurrences": 0,
+    "by_question_domain": {
+      "AI/mathematics": {
+        "question_count": 12,
+        "mean_same_domain_chunks": 49.916666666666664,
+        "mean_total_chunks": 50.0,
+        "macro_same_domain_fraction": 0.9983333333333334,
+        "micro_same_domain_fraction": 0.9983333333333333,
+        "mean_same_domain_grade0_chunks": 12.416666666666666,
+        "other_domain_relevant_chunk_occurrences": 0
+      },
+      "IFMIF-DONES": {
+        "question_count": 10,
+        "mean_same_domain_chunks": 49.7,
+        "mean_total_chunks": 50.0,
+        "macro_same_domain_fraction": 0.994,
+        "micro_same_domain_fraction": 0.994,
+        "mean_same_domain_grade0_chunks": 23.2,
+        "other_domain_relevant_chunk_occurrences": 0
+      }
+    },
+    "paired_fraction": {
+      "improved": 1,
+      "worse": 1,
+      "tied": 20
+    }
+  },
+  {
+    "run": "hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu",
+    "candidates": 100,
+    "scope": "actual_context",
+    "question_count": 22,
+    "mean_same_domain_chunks": 50.27272727272727,
+    "mean_total_chunks": 50.54545454545455,
+    "macro_same_domain_fraction": 0.9949819519081657,
+    "micro_same_domain_fraction": 0.9946043165467626,
+    "mean_same_domain_grade0_chunks": 18.045454545454547,
+    "other_domain_relevant_chunk_occurrences": 0,
+    "by_question_domain": {
+      "AI/mathematics": {
+        "question_count": 12,
+        "mean_same_domain_chunks": 49.583333333333336,
+        "mean_total_chunks": 49.833333333333336,
+        "macro_same_domain_fraction": 0.9956635940132817,
+        "micro_same_domain_fraction": 0.9949832775919732,
+        "mean_same_domain_grade0_chunks": 13.333333333333334,
+        "other_domain_relevant_chunk_occurrences": 0
+      },
+      "IFMIF-DONES": {
+        "question_count": 10,
+        "mean_same_domain_chunks": 51.1,
+        "mean_total_chunks": 51.4,
+        "macro_same_domain_fraction": 0.9941639813820264,
+        "micro_same_domain_fraction": 0.9941634241245136,
+        "mean_same_domain_grade0_chunks": 23.7,
+        "other_domain_relevant_chunk_occurrences": 0
+      }
+    },
+    "paired_fraction": {
+      "improved": 2,
+      "worse": 3,
+      "tied": 17
+    }
+  }
+]

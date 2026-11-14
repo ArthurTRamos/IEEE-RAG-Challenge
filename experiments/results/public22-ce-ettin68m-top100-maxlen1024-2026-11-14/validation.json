@@ -1,0 +1,23 @@
+{
+  "offline": true,
+  "integration_tests_passed": 3,
+  "window": 1024,
+  "actual_predict_preserves_query": true,
+  "actual_pair_active_tokens_in_long_pair_test": 1024,
+  "query_overflow_fallback_test": "passed",
+  "same_candidate_ids_as_512": true,
+  "same_hybrid_control_contexts_as_512": true,
+  "new_weights": false,
+  "new_dependencies": false,
+  "llm_inference_tested": false,
+  "h100_total_runtime_tested": false,
+  "timing_note": "Integration tests overlapped part of replay; CPU4 times are observations, not isolated cross-run speed benchmarks",
+  "query13_tokens": 269,
+  "query13_passage_budget": 752,
+  "query13_truncated_pairs": 1,
+  "code_sha256": {
+    "tests/test_ettin_reranking.py": "35b76a8ad961b7e404a313230a198e8aa4e31e190b231a5f71370be4cbd8e624",
+    "tools/compare_reranking.py": "7075aac68b2520341c1e8b08fdda3335001a2395dd7286446591ee471308ffc3",
+    "tools/compare_context_order.py": "9847bad791016056520841f55e0bf92988b3793d650afb19da47fc4bb00d798b"
+  }
+}

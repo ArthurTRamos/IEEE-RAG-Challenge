@@ -2,6 +2,50 @@
 
 ## Reranking opcional por cross-encoder
 
+Os [dois pacotes de reordenação do contexto selecionado](reports/reranking-order-submissions-2026-11-14.md)
+usam `rerank_mode="selected_context"`: selecionam pelo híbrido e permutam o
+conjunto, sem repacking. O construtor aceita `--variant minilm-selected` e
+`--variant ettin1024-selected`. O padrão legado `before_selection` permanece
+disponível; o `main.py` fonte mantém CE desativado. A ferramenta
+`tools/validate_reranker_submission.py` valida o ZIP extraído, reproduz os
+22 contextos e exercita `answer()` com CE real e gerador substituto offline.
+
+### Comparação entre modelos
+
+O [experimento Ettin 68M](reports/ettin68m-public22-2026-11-14.md) usa os mesmos
+100 candidatos e janela de 512 tokens do MiniLM corrigido. O modelo modular
+é preparado por `tools/download_reranker.py`, que fixa revisão e hashes e
+inclui a cabeça treinada. Os pesos e JSONs locais dispensam internet na
+inferência e não exigem dependências além das oficiais já utilizadas.
+
+`tools/compare_reranking.py` aceita `--model-label` para identificar o modelo
+no nome da run e `--max-length` para declarar a janela. Os valores padrão do
+MiniLM permanecem compatíveis com os experimentos anteriores.
+
+```bash
+.venv/bin/python tools/compare_reranking.py \
+  --model models/ettin-reranker-68m-v1 --model-label ettin68m \
+  --max-length 512 --candidates 100 --threads 4 \
+  --output-dir experiments/runs/public22-ce-ettin68m-NOVA-RUN
+
+.venv/bin/python tools/compare_context_order.py \
+  --source experiments/runs/public22-ce-ettin68m-NOVA-RUN \
+  --reranker-key ettin68m \
+  --output-dir experiments/runs/public22-ettin-selection-order-NOVA-RUN \
+  --results-dir experiments/results/public22-ettin-selection-order-NOVA-RUN
+```
+
+Usar diretórios novos. Os contextos podem ser exportados para o mesmo notebook
+Colab com `tools/export_llm_prompts.py`. Trocar o modelo de reranking não altera
+o modelo gerador usado pelo notebook. Uma janela maior do Ettin deve receber
+outra identificação de run para distinguir troca de modelo e troca de janela.
+
+A [ablação de janela 512 → 1.024 do Ettin](reports/ettin68m-window1024-2026-11-14.md)
+mantém top 100 e o orçamento de contexto OLMo. Para reproduzi-la, usar
+`--max-length 1024` em uma nova pasta e identificar a chave de reordenação,
+por exemplo, com `--reranker-key ettin68m-l1024`. A janela do reranker é
+independente do limite de tokens gerados pela LLM no notebook.
+
 `src/reranking.py` implementa o reranking de um prefixo do ranking híbrido.
 `ChunkReranker` usa `sentence_transformers.CrossEncoder`, modelo local, CPU,
 comprimento máximo de 512 tokens e batches de 16 pares pergunta–chunk. Os

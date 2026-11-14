@@ -1,0 +1,40 @@
+[
+  {
+    "name": "hybrid-control",
+    "candidates": 0,
+    "question_count": 22,
+    "document_ndcg_at10": 0.8815712794980008,
+    "document_grade_proxy_ndcg_at10": 0.7155905520974915,
+    "mean_grade2_chunks_at10": 6.545454545454546,
+    "context_recall_ge2": 0.9772727272727273,
+    "context_recall_ge1": 0.9783549783549784,
+    "context_chunks_by_document_grade": {
+      "2": 602,
+      "1": 147,
+      "0": 413
+    },
+    "selected_chunks": 1162,
+    "truncated_cross_encoder_pairs": 0,
+    "scored_pairs": 0,
+    "fallback_questions": 0
+  },
+  {
+    "name": "hybrid-ce-ettin68m-top100-query-preserved-maxlen512-cpu",
+    "candidates": 100,
+    "question_count": 22,
+    "document_ndcg_at10": 0.8680527002083605,
+    "document_grade_proxy_ndcg_at10": 0.7194536675839133,
+    "mean_grade2_chunks_at10": 6.636363636363637,
+    "context_recall_ge2": 0.9772727272727273,
+    "context_recall_ge1": 0.9632034632034632,
+    "context_chunks_by_document_grade": {
+      "2": 560,
+      "1": 147,
+      "0": 404
+    },
+    "selected_chunks": 1111,
+    "truncated_cross_encoder_pairs": 101,
+    "scored_pairs": 2200,
+    "fallback_questions": 0
+  }
+]

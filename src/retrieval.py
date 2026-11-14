@@ -173,13 +173,18 @@ def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
 
 def retrieve(question, index, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
              method="dense", k1=1.25, b=0.75, rrf_k=60,
-             dense_weight=1.0, bm25_weight=1.0, reranker=None, rerank_candidates=100):
+             dense_weight=1.0, bm25_weight=1.0, reranker=None, rerank_candidates=100,
+             rerank_mode="before_selection"):
     """Return the full ranking and, when tokenized, the actual baseline context.
 
     The budget counts chunk text only, as in the starter kit. Headers, question
     and chat template are not included. The oversized-first-chunk fallback is
     the original approximate character truncation, not a strict token limit.
     """
+    if rerank_mode not in ("before_selection", "selected_context"):
+        raise ValueError("Unknown reranking mode")
+    if reranker is not None and rerank_mode == "selected_context" and tokenizer is None:
+        raise ValueError("Selected-context reranking requires a tokenizer")
     similarities = None
     if method != "bm25":
         query = index.embedder.encode([question], normalize_embeddings=True,
@@ -190,9 +195,40 @@ def retrieve(question, index, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
         index.lexical_index = BM25Retriever(index.chunks, k1, b)
     ranking = rank_chunks(index.chunks, similarities, question, method,
                           index.lexical_index, rrf_k, dense_weight, bm25_weight)
+    if reranker is not None and rerank_mode == "selected_context":
+        selected = select_context(ranking, tokenizer, max_tokens)
+        ordered = reranker.rerank(question, ranking, rerank_candidates)
+        return order_selected_context(selected, ordered)
     if reranker is not None:
         ranking = reranker.rerank(question, ranking, rerank_candidates)
     return select_context(ranking, tokenizer, max_tokens)
+
+
+def format_context(selected):
+    """Render selected texts with the original baseline prompt framing."""
+    body = "\n\n".join(f"[Fragment {i}]\n{c['text']}"
+                         for i, c in enumerate(selected, 1))
+    return (f"Context extracted from a blind search over the corpus:\n\n{body}\n\n---\n\n"
+            if selected else "")
+
+
+def order_selected_context(selection, ranking):
+    """Permute the selected set without repacking or replacing truncated text.
+
+    Selected records retain their original retrieval rank and metadata. Their
+    position in the list determines the Fragment label in the rendered prompt.
+    """
+    positions = {c['chunk_id']: i for i,c in enumerate(ranking)}
+    chunks = selection['selected_chunks']
+    if chunks is None or len(positions) != len(ranking):
+        raise ValueError("Invalid selected context or duplicate ranked chunks")
+    if len({c['chunk_id'] for c in chunks}) != len(chunks):
+        raise ValueError("Duplicate selected chunks")
+    if not {c['chunk_id'] for c in chunks} <= positions.keys():
+        raise ValueError("Selected chunk absent from ranking")
+    ordered = sorted(chunks, key=lambda c: positions[c['chunk_id']])
+    return {**selection, 'chunks': ranking, 'selected_chunks': ordered,
+            'context': format_context(ordered)}
 
 
 def select_context(ranking, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
@@ -214,8 +250,5 @@ def select_context(ranking, tokenizer=None, max_tokens=MAX_CONTEXT_TOKENS,
             break
         selected.append({**chunk, "truncated": False})
         used += n
-    body = "\n\n".join(f"[Fragment {i}]\n{c['text']}"
-                         for i, c in enumerate(selected, 1))
-    context = (f"Context extracted from a blind search over the corpus:\n\n{body}\n\n---\n\n"
-               if selected else "")
+    context = format_context(selected)
     return {"chunks": ranking, "selected_chunks": selected, "context": context}

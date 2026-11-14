@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "sources": {
+    "judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "runs": {
+      "hybrid-control": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-control/ranking.json",
+          "sha256": "e58c858d5876b06a56da581826c4fae77431a049a1eac25ed25c28698adbbdd4"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-control/context.json",
+          "sha256": "78df37d4c15056beced5d06f6ad5adba91a61b95bd807887364ff2cc4c8cff14"
+        }
+      },
+      "hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu/ranking.json",
+          "sha256": "ebfe793436b2fde8388f776f96f70a3a8b1b70bd7d87e028606d61485839e63d"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu/context.json",
+          "sha256": "c97041f6097a411345bc18d3e33ffd076e5c51cecbd989b6d5228b57113dca0e"
+        }
+      }
+    },
+    "catalog": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/baseline-public22-ranking/ranking.json",
+      "sha256": "66e6fbda9429fa314b194ef45fdea8f96423c5381961a4319b9f821320fb6121"
+    }
+  },
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/evaluate_paratext.py",
+    "sha256": "44bb33998584afd262b8490c421a87f859790ef877addfc4d2b334b7dcf2d51f"
+  },
+  "k": 50,
+  "definitions": {
+    "primary_category": "Largest character span; ties prefer earlier span",
+    "mixed": "More than one nonempty category span; overlaps count as present",
+    "front_matter_candidate": "Prefix before first recognized abstract/introduction marker; not verified cover page",
+    "bibliography": "Recognized references heading until next same/shallower heading",
+    "body_candidate": "After body marker, outside bibliography; not a relevance judgment",
+    "unknown": "No confident structural anchor; never counted as body by default",
+    "limits": "Heuristics on exported Markdown; no PDF page/layout provenance. No filtering applied."
+  }
+}

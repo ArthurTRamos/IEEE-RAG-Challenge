@@ -42,6 +42,7 @@ RERANK_ENABLED = False  # Enabled only in the dedicated reranker submission buil
 RERANK_CANDIDATES = 100
 RERANK_MAX_LENGTH = 512
 RERANK_BATCH_SIZE = 16
+RERANK_MODE = "before_selection"
 
 # Loaded once and reused across every question in the run (answer() is
 # called once per question, in the same process).
@@ -83,7 +84,8 @@ def answer(question: str, corpus_dir: str, model_id: str) -> str:
                        dense_weight=RRF_DENSE_WEIGHT,
                        bm25_weight=RRF_BM25_WEIGHT,
                        reranker=_load_reranker() if RERANK_ENABLED else None,
-                       rerank_candidates=RERANK_CANDIDATES)["context"]
+                       rerank_candidates=RERANK_CANDIDATES,
+                       rerank_mode=RERANK_MODE)["context"]
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},

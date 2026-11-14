@@ -1,0 +1,82 @@
+[
+  {
+    "name": "select-hybrid-order-hybrid-query-preserved",
+    "selection": "hybrid",
+    "order": "hybrid",
+    "question_count": 22,
+    "macro": {
+      "returned_chunks": 52.81818181818182,
+      "grade0_chunks": 18.772727272727273,
+      "grade1_chunks": 6.681818181818182,
+      "grade2_chunks": 27.363636363636363,
+      "precision_grade_proxy_ge2": 0.5282892888342393,
+      "precision_grade_proxy_ge1": 0.6596866432265394,
+      "ndcg_grade_proxy": 0.6092458410545561,
+      "unique_documents": 9.454545454545455,
+      "duplicate_document_fraction": 0.8246077794369365,
+      "document_recall_ge1": 0.9783549783549784,
+      "document_recall_ge2": 0.9772727272727273,
+      "ndcg_proxy_at10": 0.7155905520974915
+    }
+  },
+  {
+    "name": "select-hybrid-order-ettin68m-l1024-query-preserved",
+    "selection": "hybrid",
+    "order": "ettin68m-l1024",
+    "question_count": 22,
+    "macro": {
+      "returned_chunks": 52.81818181818182,
+      "grade0_chunks": 18.772727272727273,
+      "grade1_chunks": 6.681818181818182,
+      "grade2_chunks": 27.363636363636363,
+      "precision_grade_proxy_ge2": 0.5282892888342393,
+      "precision_grade_proxy_ge1": 0.6596866432265394,
+      "ndcg_grade_proxy": 0.6123773528127825,
+      "unique_documents": 9.454545454545455,
+      "duplicate_document_fraction": 0.8246077794369365,
+      "document_recall_ge1": 0.9783549783549784,
+      "document_recall_ge2": 0.9772727272727273,
+      "ndcg_proxy_at10": 0.736692104596537
+    }
+  },
+  {
+    "name": "select-ettin68m-l1024-order-hybrid-query-preserved",
+    "selection": "ettin68m-l1024",
+    "order": "hybrid",
+    "question_count": 22,
+    "macro": {
+      "returned_chunks": 50.54545454545455,
+      "grade0_chunks": 18.318181818181817,
+      "grade1_chunks": 6.681818181818182,
+      "grade2_chunks": 25.545454545454547,
+      "precision_grade_proxy_ge2": 0.5085477743555038,
+      "precision_grade_proxy_ge1": 0.6496301041500684,
+      "ndcg_grade_proxy": 0.5958439385717411,
+      "unique_documents": 9.454545454545455,
+      "duplicate_document_fraction": 0.8151139287692157,
+      "document_recall_ge1": 0.9632034632034632,
+      "document_recall_ge2": 0.9772727272727273,
+      "ndcg_proxy_at10": 0.7195045472066658
+    }
+  },
+  {
+    "name": "select-ettin68m-l1024-order-ettin68m-l1024-query-preserved",
+    "selection": "ettin68m-l1024",
+    "order": "ettin68m-l1024",
+    "question_count": 22,
+    "macro": {
+      "returned_chunks": 50.54545454545455,
+      "grade0_chunks": 18.318181818181817,
+      "grade1_chunks": 6.681818181818182,
+      "grade2_chunks": 25.545454545454547,
+      "precision_grade_proxy_ge2": 0.5085477743555038,
+      "precision_grade_proxy_ge1": 0.6496301041500684,
+      "ndcg_grade_proxy": 0.5969884120094051,
+      "unique_documents": 9.454545454545455,
+      "duplicate_document_fraction": 0.8151139287692157,
+      "document_recall_ge1": 0.9632034632034632,
+      "document_recall_ge2": 0.9772727272727273,
+      "ndcg_proxy_at10": 0.7194536675839133
+    }
+  }
+]

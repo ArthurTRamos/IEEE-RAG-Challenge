@@ -1,0 +1,17 @@
+{
+  "offline": true,
+  "tests_passed": 49,
+  "same_top100_candidate_ids_as_minilm": true,
+  "same_hybrid_contexts_as_minilm": true,
+  "modular_model_loaded": true,
+  "actual_predict_query_preservation_test": "passed",
+  "query_overflow_fallback_test": "passed",
+  "model_revision": "d166fa88ddde3c42bc3ee92f7df476d941c8204a",
+  "full_llm_tested": false,
+  "h100_total_runtime_tested": false,
+  "timing_note": "CPU4 threads, integration tests ran concurrently during part of replay; timings are not an isolated cross-model speed benchmark",
+  "code_sha256": {
+    "tests/test_ettin_reranking.py": "35834c1ac1c5626755747c0212f47c4a289f7445b4a92eb28a79152d0ccaf6ce",
+    "tools/download_reranker.py": "b224f007aca5c96bf7f7627cd0eca8b7682d679016c954c00dab3881eac50ca2"
+  }
+}

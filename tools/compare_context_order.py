@@ -35,15 +35,19 @@ def main():
     parser.add_argument('--source', type=Path, default=ROOT/'experiments/runs/public22-ce-minilm-l6-query-preserved-2026-11-14')
     parser.add_argument('--output-dir', type=Path, required=True)
     parser.add_argument('--results-dir', type=Path, required=True)
+    parser.add_argument('--reranker-key', default='ce100', help='Short label identifying the reranker')
     args = parser.parse_args()
     for folder in (args.output_dir, args.results_dir):
         if folder.exists() and any(folder.iterdir()):
             parser.error('Use new output directories')
+    if not args.reranker_key or args.reranker_key == 'hybrid' or any(
+            c not in 'abcdefghijklmnopqrstuvwxyz0123456789-_' for c in args.reranker_key):
+        parser.error('Use a distinct lowercase reranker key')
     source = args.source
     read = lambda path:json.loads(path.read_text())
     configs = read(source/'summary.json')
     names = {}
-    for key, depth in [('hybrid',0), ('ce100',100)]:
+    for key, depth in [('hybrid',0), (args.reranker_key,100)]:
         matches = [c['name'] for c in configs if c['candidates']==depth]
         if len(matches) != 1:
             raise ValueError(f'Expected exactly one variant at depth {depth}')

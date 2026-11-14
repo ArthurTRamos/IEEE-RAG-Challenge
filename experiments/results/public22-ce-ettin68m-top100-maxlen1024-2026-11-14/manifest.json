@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "chunk_k": 50,
+  "sources": {
+    "judgments": {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/judgments.json",
+      "sha256": "59c0e5499df9af73afcff85e181bfdef9a6796db2ef824224d23c0b1e0cf821f"
+    },
+    "runs": {
+      "hybrid-control": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-control/ranking.json",
+          "sha256": "e58c858d5876b06a56da581826c4fae77431a049a1eac25ed25c28698adbbdd4"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-control/context.json",
+          "sha256": "78df37d4c15056beced5d06f6ad5adba91a61b95bd807887364ff2cc4c8cff14"
+        }
+      },
+      "hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu": {
+        "ranking.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu/ranking.json",
+          "sha256": "ebfe793436b2fde8388f776f96f70a3a8b1b70bd7d87e028606d61485839e63d"
+        },
+        "context.json": {
+          "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/public22-ce-ettin68m-top100-maxlen1024-2026-11-14/hybrid-ce-ettin68m-top100-query-preserved-maxlen1024-cpu/context.json",
+          "sha256": "c97041f6097a411345bc18d3e33ffd076e5c51cecbd989b6d5228b57113dca0e"
+        }
+      }
+    }
+  },
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/evaluate_chunk_windows.py",
+    "sha256": "059d666b8bb39dd2b6b050aa17b1cec4b5eedaec0a5ffcacf2795ea8d73b14c6"
+  },
+  "definitions": {
+    "cutoff": "First k chunks, not k distinct documents",
+    "ndcg": "Gain 2**document_grade-1; ideal over full frozen chunk catalog with inherited document grades",
+    "precision": "Chunks from relevant documents divided by k; actual-context fractions use actual context size",
+    "recall": "Distinct relevant documents seen in window divided by all judged relevant documents",
+    "limitation": "Document-grade proxies do not establish passage usefulness or answer accuracy"
+  }
+}

@@ -7,7 +7,6 @@ from pathlib import Path
 import resource
 import sys
 import time
-from types import SimpleNamespace
 import numpy as np
 from prepare_evaluation import ROOT, prepare, write_json, fingerprint
 from compare_retrieval import load_frozen_run
@@ -33,10 +32,16 @@ def main():
     p.add_argument('--candidates', type=int, nargs='+', default=[50,100,200])
     p.add_argument('--output-dir', type=Path, required=True)
     p.add_argument('--threads', type=int, default=4)
+    p.add_argument('--model-label', default=None, help='Short model label for run names')
+    p.add_argument('--max-length', type=int, default=512)
     args = p.parse_args()
     if args.output_dir.exists() and any(args.output_dir.iterdir()): p.error('Output must be empty')
     if not args.candidates or min(args.candidates)<=0 or len(set(args.candidates))!=len(args.candidates): p.error('Candidate counts must be unique and positive')
     if args.threads<=0: p.error('Thread count must be positive')
+    label = args.model_label or ('minilm-l6' if args.model.name == 'ms-marco-MiniLM-L6-v2' else args.model.name)
+    if not label or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789-_' for c in label):
+        p.error('Model label must use lowercase letters, digits, hyphens or underscores')
+    if args.max_length <= 0: p.error('Maximum length must be positive')
     started = time.perf_counter()
     import torch
     torch.set_num_threads(args.threads)
@@ -46,7 +51,7 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(str(args.tokenizer), local_files_only=True)
     token_counts = {c['chunk_id']:len(tokenizer.encode(c['text'])) for c in chunks}
     tick = time.perf_counter()
-    reranker = ChunkReranker(args.model)
+    reranker = ChunkReranker(args.model, max_length=args.max_length)
     load_seconds = time.perf_counter()-tick
     bm25 = BM25Retriever(chunks, 1.25, .75)
     qrels = load_judgments(judgments)
@@ -79,7 +84,7 @@ def main():
             outputs[n]['diagnostics'].append({**base,**grade_proxy(ordered,qrels[qid],chunks),
                 'candidate_document_ids':sorted({c['document_id'] for c in ranking[:n]}),
                 'context_chunks_by_document_grade':dict(counts), 'selected_chunks':len(selected['selected_chunks']),
-                'truncated_cross_encoder_pairs':sum(v>512 for v in lengths[:n]) if active else 0,
+                'truncated_cross_encoder_pairs':sum(v>args.max_length for v in lengths[:n]) if active else 0,
                 'scored_pairs':min(n,len(scores)),
                 'query_tokens':query_info['query_tokens'],
                 'passage_token_budget':query_info['passage_token_budget'],
@@ -89,7 +94,7 @@ def main():
     summaries=[]
     write_json(args.output_dir/'judgments.json',judgments)
     for n in modes:
-        name='hybrid-control' if not n else f'hybrid-ce-minilm-l6-top{n}-query-preserved-maxlen512-cpu'
+        name='hybrid-control' if not n else f'hybrid-ce-{label}-top{n}-query-preserved-maxlen{args.max_length}-cpu'
         folder=args.output_dir/name
         data=outputs[n]
         rp={'variant':name,'questions':data['ranking']}; cp={'variant':name,'questions':data['context']}
@@ -109,8 +114,8 @@ def main():
             'scored_pairs':sum(r['scored_pairs'] for r in diag),
             'fallback_questions':sum(r['fallback_to_hybrid'] for r in diag)}
         summaries.append(summary); write_json(folder/'summary.json',summary)
-        write_json(folder/'manifest.json',{'status':'complete','config':{'candidates':n,'max_length':512,'batch_size':16,'device':'cpu','truncation':'only_second','query_overflow_policy':'preserve hybrid ranking','tail_policy':'append unchanged after reranked prefix'},'model_files':{p.name:fingerprint(p) for p in args.model.iterdir() if p.is_file()}})
-    manifest.update({'status':'complete','source_manifest':source,'config':{'k1':1.25,'b':.75,'rrf_k':60,'weights':[1,.75],'token_budget':10000,'candidates':args.candidates,'cpu_threads':args.threads,'truncation':'only_second','query_overflow_policy':'preserve hybrid ranking'},
+        write_json(folder/'manifest.json',{'status':'complete','config':{'candidates':n,'max_length':args.max_length,'batch_size':16,'device':'cpu','truncation':'only_second','query_overflow_policy':'preserve hybrid ranking','tail_policy':'append unchanged after reranked prefix'},'model_files':{p.name:fingerprint(p) for p in args.model.iterdir() if p.is_file()}})
+    manifest.update({'status':'complete','source_manifest':source,'config':{'k1':1.25,'b':.75,'rrf_k':60,'weights':[1,.75],'token_budget':10000,'candidates':args.candidates,'cpu_threads':args.threads,'max_length':args.max_length,'model_label':label,'truncation':'only_second','query_overflow_policy':'preserve hybrid ranking'},
         'model_load_seconds':load_seconds,'model_path':str(args.model),'model_files':{p.name:fingerprint(p) for p in args.model.iterdir() if p.is_file()},
         'source_ranking':fingerprint(args.source_run/'ranking.json'),
         'code':{s:fingerprint(ROOT/s) for s in ('src/retrieval.py','src/reranking.py','tools/compare_reranking.py')},
