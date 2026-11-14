@@ -1,0 +1,500 @@
+{
+  "summary": [
+    {
+      "order": "hybrid",
+      "questions": 22,
+      "statuses": {
+        "ok": 22
+      },
+      "output_limit_ids": [
+        5,
+        6,
+        13,
+        23
+      ],
+      "mean_output_tokens": 597.1363636363636,
+      "peak_allocated_gib": 10.820091724395752,
+      "peak_reserved_gib": 12.173828125
+    },
+    {
+      "order": "ce100",
+      "questions": 22,
+      "statuses": {
+        "ok": 22
+      },
+      "output_limit_ids": [
+        5,
+        13,
+        23
+      ],
+      "mean_output_tokens": 587.0909090909091,
+      "peak_allocated_gib": 10.820091724395752,
+      "peak_reserved_gib": 12.173828125
+    }
+  ],
+  "per_question": {
+    "hybrid": [
+      {
+        "id": 1,
+        "status": "ok",
+        "input_tokens": 10383,
+        "output_tokens": 352,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.728137969970703,
+        "peak_reserved_gib": 12.0859375
+      },
+      {
+        "id": 2,
+        "status": "ok",
+        "input_tokens": 10333,
+        "output_tokens": 338,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.707459449768066,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 3,
+        "status": "ok",
+        "input_tokens": 10199,
+        "output_tokens": 418,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.63072395324707,
+        "peak_reserved_gib": 11.923828125
+      },
+      {
+        "id": 4,
+        "status": "ok",
+        "input_tokens": 10334,
+        "output_tokens": 539,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.707757472991943,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 5,
+        "status": "ok",
+        "input_tokens": 10051,
+        "output_tokens": 1024,
+        "output_at_limit": true,
+        "peak_allocated_gib": 10.550408840179443,
+        "peak_reserved_gib": 11.806640625
+      },
+      {
+        "id": 6,
+        "status": "ok",
+        "input_tokens": 10223,
+        "output_tokens": 1024,
+        "output_at_limit": true,
+        "peak_allocated_gib": 10.637693405151367,
+        "peak_reserved_gib": 11.923828125
+      },
+      {
+        "id": 7,
+        "status": "ok",
+        "input_tokens": 10052,
+        "output_tokens": 590,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.55066442489624,
+        "peak_reserved_gib": 11.806640625
+      },
+      {
+        "id": 8,
+        "status": "ok",
+        "input_tokens": 10207,
+        "output_tokens": 571,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.633047103881836,
+        "peak_reserved_gib": 11.923828125
+      },
+      {
+        "id": 9,
+        "status": "ok",
+        "input_tokens": 10241,
+        "output_tokens": 574,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.646092414855957,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 10,
+        "status": "ok",
+        "input_tokens": 10252,
+        "output_tokens": 638,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.651925086975098,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 11,
+        "status": "ok",
+        "input_tokens": 10249,
+        "output_tokens": 830,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.650334358215332,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 12,
+        "status": "ok",
+        "input_tokens": 10302,
+        "output_tokens": 309,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.680091381072998,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 13,
+        "status": "ok",
+        "input_tokens": 10535,
+        "output_tokens": 1024,
+        "output_at_limit": true,
+        "peak_allocated_gib": 10.820091724395752,
+        "peak_reserved_gib": 12.173828125
+      },
+      {
+        "id": 14,
+        "status": "ok",
+        "input_tokens": 10255,
+        "output_tokens": 538,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.653515815734863,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 15,
+        "status": "ok",
+        "input_tokens": 10298,
+        "output_tokens": 230,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.67780065536499,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 17,
+        "status": "ok",
+        "input_tokens": 10038,
+        "output_tokens": 106,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.523128032684326,
+        "peak_reserved_gib": 11.806640625
+      },
+      {
+        "id": 19,
+        "status": "ok",
+        "input_tokens": 10284,
+        "output_tokens": 552,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.668894290924072,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 20,
+        "status": "ok",
+        "input_tokens": 10166,
+        "output_tokens": 794,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.601030349731445,
+        "peak_reserved_gib": 11.888671875
+      },
+      {
+        "id": 22,
+        "status": "ok",
+        "input_tokens": 10291,
+        "output_tokens": 325,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.67281436920166,
+        "peak_reserved_gib": 12.005859375
+      },
+      {
+        "id": 23,
+        "status": "ok",
+        "input_tokens": 8406,
+        "output_tokens": 1024,
+        "output_at_limit": true,
+        "peak_allocated_gib": 9.567832469940186,
+        "peak_reserved_gib": 10.494140625
+      },
+      {
+        "id": 24,
+        "status": "ok",
+        "input_tokens": 10376,
+        "output_tokens": 611,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.724471092224121,
+        "peak_reserved_gib": 11.328125
+      },
+      {
+        "id": 25,
+        "status": "ok",
+        "input_tokens": 10258,
+        "output_tokens": 726,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.655106544494629,
+        "peak_reserved_gib": 11.97265625
+      }
+    ],
+    "ce100": [
+      {
+        "id": 1,
+        "status": "ok",
+        "input_tokens": 10383,
+        "output_tokens": 251,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.728137969970703,
+        "peak_reserved_gib": 12.0859375
+      },
+      {
+        "id": 2,
+        "status": "ok",
+        "input_tokens": 10333,
+        "output_tokens": 453,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.707459449768066,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 3,
+        "status": "ok",
+        "input_tokens": 10199,
+        "output_tokens": 523,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.63072395324707,
+        "peak_reserved_gib": 11.923828125
+      },
+      {
+        "id": 4,
+        "status": "ok",
+        "input_tokens": 10334,
+        "output_tokens": 715,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.707757472991943,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 5,
+        "status": "ok",
+        "input_tokens": 10051,
+        "output_tokens": 1024,
+        "output_at_limit": true,
+        "peak_allocated_gib": 10.550408840179443,
+        "peak_reserved_gib": 11.806640625
+      },
+      {
+        "id": 6,
+        "status": "ok",
+        "input_tokens": 10223,
+        "output_tokens": 689,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.637693405151367,
+        "peak_reserved_gib": 11.923828125
+      },
+      {
+        "id": 7,
+        "status": "ok",
+        "input_tokens": 10052,
+        "output_tokens": 265,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.55066442489624,
+        "peak_reserved_gib": 11.806640625
+      },
+      {
+        "id": 8,
+        "status": "ok",
+        "input_tokens": 10207,
+        "output_tokens": 832,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.633047103881836,
+        "peak_reserved_gib": 11.923828125
+      },
+      {
+        "id": 9,
+        "status": "ok",
+        "input_tokens": 10241,
+        "output_tokens": 623,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.646092414855957,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 10,
+        "status": "ok",
+        "input_tokens": 10252,
+        "output_tokens": 838,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.651925086975098,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 11,
+        "status": "ok",
+        "input_tokens": 10249,
+        "output_tokens": 777,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.650334358215332,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 12,
+        "status": "ok",
+        "input_tokens": 10302,
+        "output_tokens": 761,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.680091381072998,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 13,
+        "status": "ok",
+        "input_tokens": 10535,
+        "output_tokens": 1024,
+        "output_at_limit": true,
+        "peak_allocated_gib": 10.820091724395752,
+        "peak_reserved_gib": 12.173828125
+      },
+      {
+        "id": 14,
+        "status": "ok",
+        "input_tokens": 10255,
+        "output_tokens": 499,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.653515815734863,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 15,
+        "status": "ok",
+        "input_tokens": 10298,
+        "output_tokens": 158,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.67780065536499,
+        "peak_reserved_gib": 12.0078125
+      },
+      {
+        "id": 17,
+        "status": "ok",
+        "input_tokens": 10038,
+        "output_tokens": 108,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.523128032684326,
+        "peak_reserved_gib": 11.806640625
+      },
+      {
+        "id": 19,
+        "status": "ok",
+        "input_tokens": 10284,
+        "output_tokens": 402,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.668894290924072,
+        "peak_reserved_gib": 11.97265625
+      },
+      {
+        "id": 20,
+        "status": "ok",
+        "input_tokens": 10166,
+        "output_tokens": 604,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.601030349731445,
+        "peak_reserved_gib": 11.888671875
+      },
+      {
+        "id": 22,
+        "status": "ok",
+        "input_tokens": 10291,
+        "output_tokens": 360,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.67281436920166,
+        "peak_reserved_gib": 12.005859375
+      },
+      {
+        "id": 23,
+        "status": "ok",
+        "input_tokens": 8406,
+        "output_tokens": 1024,
+        "output_at_limit": true,
+        "peak_allocated_gib": 9.567832469940186,
+        "peak_reserved_gib": 10.494140625
+      },
+      {
+        "id": 24,
+        "status": "ok",
+        "input_tokens": 10376,
+        "output_tokens": 386,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.724471092224121,
+        "peak_reserved_gib": 11.328125
+      },
+      {
+        "id": 25,
+        "status": "ok",
+        "input_tokens": 10258,
+        "output_tokens": 600,
+        "output_at_limit": false,
+        "peak_allocated_gib": 10.655106544494629,
+        "peak_reserved_gib": 11.97265625
+      }
+    ]
+  },
+  "metadata": {
+    "hybrid": {
+      "model_id": "allenai/Olmo-3-7B-Instruct",
+      "input_sha256": "db659e4aa0022f826b11a22345f7946b95fc99c6c55951f880c2fde6eb88a84c",
+      "max_new_tokens": 1024,
+      "cache_implementation": null,
+      "use_cache": true,
+      "logits_to_keep": 1,
+      "do_sample": false,
+      "quantization": "NF4 double quantization",
+      "compute_dtype": "torch.float16",
+      "versions": {
+        "torch": "2.14.1+cu130",
+        "transformers": "5.17.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2"
+      }
+    },
+    "ce100": {
+      "model_id": "allenai/Olmo-3-7B-Instruct",
+      "input_sha256": "ae4c5c78918343b54b2ee95d8f0f8440f9bd42811716a9185e4420baec4392e6",
+      "max_new_tokens": 1024,
+      "cache_implementation": null,
+      "use_cache": true,
+      "logits_to_keep": 1,
+      "do_sample": false,
+      "quantization": "NF4 double quantization",
+      "compute_dtype": "torch.float16",
+      "versions": {
+        "torch": "2.14.1+cu130",
+        "transformers": "5.17.0",
+        "accelerate": "1.15.0",
+        "bitsandbytes": "0.50.2"
+      }
+    }
+  },
+  "sources": {
+    "hybrid": {
+      "experiments/exports/colab-selection-order-2026-11-14/select-hybrid-order-hybrid-query-preserved.json": "db659e4aa0022f826b11a22345f7946b95fc99c6c55951f880c2fde6eb88a84c",
+      "experiments/exports/colab-selection-order-2026-11-14/results/select-hybrid-order-hybrid-query-preserved_answers.json": "d88de343443679e5ab40b5245309478ba6eed8e579db631eed8605d6317f17ef",
+      "experiments/runs/public22-ce-selection-order-2026-11-14/select-hybrid-order-hybrid-query-preserved/context.json": "40628dbccff5026f32e457becb6a86dec8678cfae69cd38ba09573aa835a6f48"
+    },
+    "ce100": {
+      "experiments/exports/colab-selection-order-2026-11-14/select-hybrid-order-ce100-query-preserved.json": "ae4c5c78918343b54b2ee95d8f0f8440f9bd42811716a9185e4420baec4392e6",
+      "experiments/exports/colab-selection-order-2026-11-14/results/select-hybrid-order-ce100-query-preserved_answers.json": "da3566ff6d59b4bd5238d374eff7070ab6e53845a9c99f1d4f85e2d23ea1718f",
+      "experiments/runs/public22-ce-selection-order-2026-11-14/select-hybrid-order-ce100-query-preserved/context.json": "564533be11587bd0e162d43a8a236fa190e720ebef1a80e14f36d5941a6e0d11"
+    }
+  },
+  "sample_sha256": "434bfe996df41b16e74fafe443e74fc67d8ab2cb5b57112006ac6a7145f7587f",
+  "code_sha256": "c68d993dfc4fbdf23b2265f7a28369ef6a453e51c2b8e6ff04559ef8f579cd36",
+  "checks": {
+    "input_hashes": true,
+    "references": true,
+    "prompts_match_contexts": true,
+    "system_prompt_matches_main": true,
+    "selected_evidence_equal": true,
+    "recorded_generation_settings_equal": true
+  },
+  "limitations": [
+    "Structural audit, no automated or official answer judge.",
+    "Reaching token limit is an indicator; EOS stop reason was not logged.",
+    "Device map, GPU identity, model/tokenizer revisions and runtime were not recorded."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-14",
+  "offline": true,
+  "full_suite_tests_passed": 45,
+  "additional_context_order_tests_passed": 2,
+  "actual_ce_weights": true,
+  "question13_pairs_replayed": 100,
+  "score_absolute_tolerance": 0.0001,
+  "checks": [
+    "Actual predict tensors preserve complete query across batches and empty passages",
+    "508 query tokens plus pair markers and one passage token: real forward passed",
+    "509, 510 and 600 query tokens: no CE predict; hybrid ranking, selected chunks and context equal",
+    "Inference errors propagate instead of activating fallback",
+    "Short-query inference works after long-query fallback",
+    "Frozen question13 scores reproduce within tolerance",
+    "All four selection/order combinations built for 22 questions without repacking"
+  ],
+  "code_sha256": {
+    "src/reranking.py": "d09cf6525006c164c759b561e6a4fd0c389eb895bf406dc780883be6522484b3",
+    "src/retrieval.py": "d194478b4355be032835e23fc58cb2ee5972f6f1c3832744f4b53d6f58faa3d0",
+    "tests/test_reranking_integration.py": "b64a7b664c1ddbca6847747a1a8be0fc848df8217479f0d036673d3703357b14",
+    "tests/test_context_order.py": "5294c61af2d357e54854b923f14954bb1aa70aed4315dd25a131eafc6875a4b7",
+    "tools/compare_context_order.py": "8dd8cd056ce9368fd246935c9c802ce2724ff35805f90c19d080b7081dab2a77"
+  },
+  "final_llm_tested": false,
+  "h100_total_runtime_tested": false,
+  "installed_versions": {
+    "sentence-transformers": "6.0.1",
+    "transformers": "5.17.0",
+    "torch": "2.8.0",
+    "rank-bm25": "0.2.2"
+  }
+}

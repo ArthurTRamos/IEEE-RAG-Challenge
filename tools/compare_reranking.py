@@ -59,14 +59,18 @@ def main():
         prefix = ranking[:max(modes)]
         pairs = reranker.model.tokenizer([q['question']]*len(prefix), [c['text'] for c in prefix], truncation=False, padding=False)
         lengths = [len(ids) for ids in pairs['input_ids']]
+        query_info = reranker.query_diagnostics(q['question'])
         tick = time.perf_counter()
-        scores = reranker.score(q['question'], prefix)
+        scores = (np.empty(0) if query_info['fallback_to_hybrid']
+                  else reranker.score(q['question'], prefix))
         duration = time.perf_counter()-tick
-        if len(scores)!=len(prefix): raise ValueError('Incorrect cross-encoder score count')
+        if not query_info['fallback_to_hybrid'] and len(scores)!=len(prefix): raise ValueError('Incorrect cross-encoder score count')
         score_records.append({'id':q['id'],'chunks': [{'chunk_id':c['chunk_id'], 'rerank_score':float(s), 'pair_tokens':length}
-                              for c,s,length in zip(prefix,scores,lengths)], 'score_seconds':duration})
+                              for c,s,length in zip(prefix,scores,lengths)], 'score_seconds':duration,
+                              **query_info})
         for n in modes:
-            ordered = reorder_prefix(ranking, scores[:n]) if n else ranking
+            active = n > 0 and not query_info['fallback_to_hybrid']
+            ordered = reorder_prefix(ranking, scores[:n]) if active else ranking
             selected = select_context(ordered, tokenizer, token_counts=token_counts)
             base = {'id':q['id'],'question':q['question'],'domain':q['domain']}
             outputs[n]['ranking'].append({**base,'chunks':[{k:v for k,v in c.items() if k not in ('text','source_path')} for c in ordered]})
@@ -75,14 +79,17 @@ def main():
             outputs[n]['diagnostics'].append({**base,**grade_proxy(ordered,qrels[qid],chunks),
                 'candidate_document_ids':sorted({c['document_id'] for c in ranking[:n]}),
                 'context_chunks_by_document_grade':dict(counts), 'selected_chunks':len(selected['selected_chunks']),
-                'truncated_cross_encoder_pairs':sum(v>512 for v in lengths[:n]),
-                'scored_pairs':min(n,len(prefix)),
-                'selected_unscored_tail_chunks':sum(c.get('hybrid_rank', c['rank'])>n for c in selected['selected_chunks']) if n else 0})
+                'truncated_cross_encoder_pairs':sum(v>512 for v in lengths[:n]) if active else 0,
+                'scored_pairs':min(n,len(scores)),
+                'query_tokens':query_info['query_tokens'],
+                'passage_token_budget':query_info['passage_token_budget'],
+                'fallback_to_hybrid':n > 0 and query_info['fallback_to_hybrid'],
+                'selected_unscored_tail_chunks':sum(c.get('hybrid_rank', c['rank'])>n for c in selected['selected_chunks']) if active else 0})
         print(f"Scored question {qid}: {len(prefix)} pairs, {duration:.2f}s",flush=True)
     summaries=[]
     write_json(args.output_dir/'judgments.json',judgments)
     for n in modes:
-        name='hybrid-control' if not n else f'hybrid-ce-minilm-l6-top{n}-maxlen512-cpu'
+        name='hybrid-control' if not n else f'hybrid-ce-minilm-l6-top{n}-query-preserved-maxlen512-cpu'
         folder=args.output_dir/name
         data=outputs[n]
         rp={'variant':name,'questions':data['ranking']}; cp={'variant':name,'questions':data['context']}
@@ -99,10 +106,11 @@ def main():
             'context_chunks_by_document_grade':dict(counts),
             'selected_chunks':sum(counts.values()),
             'truncated_cross_encoder_pairs':sum(r['truncated_cross_encoder_pairs'] for r in diag),
-            'scored_pairs':sum(r['scored_pairs'] for r in diag)}
+            'scored_pairs':sum(r['scored_pairs'] for r in diag),
+            'fallback_questions':sum(r['fallback_to_hybrid'] for r in diag)}
         summaries.append(summary); write_json(folder/'summary.json',summary)
-        write_json(folder/'manifest.json',{'status':'complete','config':{'candidates':n,'max_length':512,'batch_size':16,'device':'cpu','tail_policy':'append unchanged after reranked prefix'},'model_files':{p.name:fingerprint(p) for p in args.model.iterdir() if p.is_file()}})
-    manifest.update({'status':'complete','source_manifest':source,'config':{'k1':1.25,'b':.75,'rrf_k':60,'weights':[1,.75],'token_budget':10000,'candidates':args.candidates,'cpu_threads':args.threads},
+        write_json(folder/'manifest.json',{'status':'complete','config':{'candidates':n,'max_length':512,'batch_size':16,'device':'cpu','truncation':'only_second','query_overflow_policy':'preserve hybrid ranking','tail_policy':'append unchanged after reranked prefix'},'model_files':{p.name:fingerprint(p) for p in args.model.iterdir() if p.is_file()}})
+    manifest.update({'status':'complete','source_manifest':source,'config':{'k1':1.25,'b':.75,'rrf_k':60,'weights':[1,.75],'token_budget':10000,'candidates':args.candidates,'cpu_threads':args.threads,'truncation':'only_second','query_overflow_policy':'preserve hybrid ranking'},
         'model_load_seconds':load_seconds,'model_path':str(args.model),'model_files':{p.name:fingerprint(p) for p in args.model.iterdir() if p.is_file()},
         'source_ranking':fingerprint(args.source_run/'ranking.json'),
         'code':{s:fingerprint(ROOT/s) for s in ('src/retrieval.py','src/reranking.py','tools/compare_reranking.py')},

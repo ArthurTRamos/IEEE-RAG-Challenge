@@ -71,7 +71,9 @@ def main():
         from src.reranking import ChunkReranker
         reranker = ChunkReranker(args.reranker_model)
     manifest["config"].update(reranker_model=str(args.reranker_model) if args.reranker_model else None,
-                               rerank_candidates=args.rerank_candidates if reranker else None)
+                               rerank_candidates=args.rerank_candidates if reranker else None,
+                               rerank_truncation='only_second' if reranker else None,
+                               rerank_query_overflow_policy='preserve input ranking' if reranker else None)
     ranking = {"variant": args.method, "questions": []}
     context = {"variant": f"{args.method}_selected_context", "questions": []}
     for question in questions:
@@ -82,6 +84,8 @@ def main():
                           reranker=reranker, rerank_candidates=args.rerank_candidates)
         base = {"id": question["id"], "domain": question["domain"],
                 "question": question["question"]}
+        if reranker:
+            base['reranking'] = reranker.query_diagnostics(question['question'])
         ranking["questions"].append({**base, "chunks": result["chunks"],
                                      "retrieval_seconds": time.perf_counter() - tick})
         if tokenizer is not None:

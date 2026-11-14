@@ -10,13 +10,27 @@ Scores CE e RRF não são somados nem comparados. Empates CE preservam a ordem
 híbrida. A cauda não pontuada é anexada na ordem original. O orçamento de
 contexto e o texto dos chunks permanecem os mesmos.
 
+Desde 14/11/2026, a tokenização usa `only_second`: preserva a pergunta inteira
+e os marcadores do par, truncando somente a passagem durante a pontuação.
+Se a pergunta não deixar ao menos um token para a passagem, `rerank()` mantém
+o ranking de entrada e emite um aviso; `score()` sinaliza `QueryTooLongError`.
+Diagnósticos registram tokens da pergunta, orçamento da passagem e fallback.
+A implementação usa `processing_kwargs` do Sentence Transformers 6.0.1,
+disponível no ambiente oficial, sem novos pesos ou dependências.
+
+A [validação com pesos reais e ablação de seleção/ordem](reports/ce-validation-selection-order-2026-11-14.md)
+verifica os tensores durante `predict()` e a igualdade do contexto no fallback.
+`tools/compare_context_order.py` permite permutar os contextos congelados entre
+ordem híbrida e CE sem repetir a seleção por orçamento, isolando o efeito da
+ordenação. Essa ferramenta é offline e não modifica o `answer()` de produção.
+
 Para a comparação congelada de 50, 100 e 200 candidatos:
 
 ```bash
 .venv/bin/python tools/compare_reranking.py \
   --model models/ms-marco-MiniLM-L6-v2 \
-  --candidates 50 100 200 --threads 4 \
-  --output-dir experiments/runs/public22-ce-minilm-l6-2026-11-13
+  --candidates 100 --threads 4 \
+  --output-dir experiments/runs/public22-ce-minilm-l6-query-preserved-NOVA-RUN
 ```
 
 O diretório de modelo deve conter os pesos e tokenizer locais do
@@ -38,6 +52,8 @@ original para rastreabilidade, mesmo depois da reordenação. `scores.json`
 registra todos os scores CE calculados, tamanhos dos pares e tempos por pergunta.
 Truncamento em 512 tokens ocorre somente para a pontuação; o contexto usa o
 chunk original, sujeito à regra de orçamento já existente.
+Os nomes novos incluem `query-preserved`. A execução histórica de 13/11 utilizou
+`longest_first`; seus scores e resultados permanecem próprios daquela política.
 
 Além das métricas documentais, há nDCG@10 por chunk com **grau herdado do
 documento** e contagem de chunks de documentos grau 2 nos primeiros dez. Isso é

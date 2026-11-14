@@ -1,0 +1,207 @@
+{
+  "verified_pairs": 2200,
+  "query_truncations": 0,
+  "real_ce_preprocess_and_forward_smoke": "passed, 300-token synthetic query plus final question, long passage, pair length 512",
+  "unit_tests": 40,
+  "control_contexts_identical": true,
+  "per_question": [
+    {
+      "id": "1",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.814697265625e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "2",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 4.291534423828125e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "3",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.814697265625e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "4",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 6.198883056640625e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "5",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.814697265625e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "6",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 1.9073486328125e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "7",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.384185791015625e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "8",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 4.76837158203125e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "9",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.384185791015625e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "10",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.86102294921875e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "11",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.86102294921875e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "12",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.6226043701171875e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "13",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.7279114723205566,
+      "scores_changed_at_1e4": 64,
+      "full_ranking_order_changed": true,
+      "context_order_changed": true,
+      "context_set_changed": true
+    },
+    {
+      "id": "14",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.0174851417541504e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "15",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 1.9073486328125e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "17",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.86102294921875e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "19",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.86102294921875e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "20",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 1.9073486328125e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "22",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 2.86102294921875e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "23",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.814697265625e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "24",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.0994415283203125e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    },
+    {
+      "id": "25",
+      "verified_complete_query_pairs": 100,
+      "max_score_difference": 3.337860107421875e-06,
+      "scores_changed_at_1e4": 0,
+      "full_ranking_order_changed": false,
+      "context_order_changed": false,
+      "context_set_changed": false
+    }
+  ]
+}

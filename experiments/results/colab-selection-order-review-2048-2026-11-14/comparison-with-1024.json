@@ -1,0 +1,58 @@
+{
+  "hybrid": {
+    "metadata_changes": {
+      "max_new_tokens": {
+        "old": 1024,
+        "new": 2048
+      }
+    },
+    "output_length_changes": [
+      {
+        "id": 5,
+        "previous_tokens": 1024,
+        "current_tokens": 1309
+      },
+      {
+        "id": 6,
+        "previous_tokens": 1024,
+        "current_tokens": 1347
+      },
+      {
+        "id": 13,
+        "previous_tokens": 1024,
+        "current_tokens": 1359
+      },
+      {
+        "id": 23,
+        "previous_tokens": 1024,
+        "current_tokens": 1179
+      }
+    ]
+  },
+  "ce100": {
+    "metadata_changes": {
+      "max_new_tokens": {
+        "old": 1024,
+        "new": 2048
+      }
+    },
+    "output_length_changes": [
+      {
+        "id": 5,
+        "previous_tokens": 1024,
+        "current_tokens": 1512
+      },
+      {
+        "id": 13,
+        "previous_tokens": 1024,
+        "current_tokens": 1480
+      },
+      {
+        "id": 23,
+        "previous_tokens": 1024,
+        "current_tokens": 1111
+      }
+    ]
+  },
+  "limitation": "Previous full 1024-token result files are absent from the supplied results directory. Historical audit retains lengths and metadata, but not per-answer hashes; unchanged lengths do not prove unchanged text."
+}

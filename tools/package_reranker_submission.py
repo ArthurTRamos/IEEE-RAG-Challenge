@@ -68,9 +68,11 @@ def main():
               'context_chunk_text_budget':10000,'max_new_tokens':config['MAX_NEW_TOKENS'],
               'reranker_device':'cpu','reranker_cpu_threads':'environment default; no global thread override',
               'tail_policy':'append unscored candidates in unchanged hybrid order',
+              'reranker_truncation':'only_second',
+              'query_overflow_policy':'preserve input ranking when no passage token fits',
               'model_provenance':json.loads((args.model/'provenance.json').read_text()),
               'zip_entry_sha256':entries,'validation':{'zip_crc':'passed','size_under_1GB':True},
-              'reference_run':'experiments/runs/public22-ce-minilm-l6-2026-11-13/hybrid-ce-minilm-l6-top100-maxlen512-cpu',
+              'reference_run':'experiments/runs/public22-ce-minilm-l6-query-preserved-2026-11-14/hybrid-ce-minilm-l6-top100-query-preserved-maxlen512-cpu',
               'official_submission_status':'not_uploaded'}
     args.manifest.parent.mkdir(parents=True,exist_ok=True)
     args.manifest.write_text(json.dumps(record,indent=2)+'\n')
