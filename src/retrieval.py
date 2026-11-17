@@ -130,6 +130,68 @@ def _chunk_markdown(text, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     return chunks
 
 
+# Docling without table structure collapses each table into one cell: "| ... |\n|---|".
+ONE_CELL_TABLE = re.compile(r"^\|[^|\n]*\|\n\|-+\|$", re.M)
+PLUMBER_SETTINGS = {"vertical_strategy": "text", "horizontal_strategy": "text"}
+# Docling without formula enrichment exports each display formula as this placeholder.
+FORMULA_GAP = "<!-- formula-not-decoded -->"
+UNMAPPED_GLYPH = re.compile(r"\(cid:\d+\)|[\ue000-\uf8ff]")  # big operators with no Unicode
+
+
+def _export_markdown(document, pdf_path):
+    """Docling markdown; collapsed tables and undecoded formulas are re-read by
+    pdfplumber inside Docling's bbox."""
+    text = document.export_to_markdown()
+    tables = [t for t in document.tables if t.data.num_cols <= 1]
+    formulas = [t for t in document.texts if t.label == "formula" and t.orig and not t.text]
+    if text.count(FORMULA_GAP) != len(formulas):
+        formulas = []  # placeholders cannot be paired with items: leave them untouched
+    if not (tables and ONE_CELL_TABLE.search(text)) and not formulas:
+        return text
+    import pdfplumber
+
+    with pdfplumber.open(pdf_path) as pdf:
+        pending = iter(tables)  # markdown and document items share reading order
+
+        def replace(match):
+            rows = _plumber_rows(pdf, next(pending, None))
+            return _to_markdown(rows) if rows else match.group(0)
+        text = ONE_CELL_TABLE.sub(replace, text)
+        pending = iter(formulas)
+        return re.sub(re.escape(FORMULA_GAP),
+                      lambda m: _plumber_formula(pdf, next(pending)) or m.group(0), text)
+
+
+def _crop(pdf, item):
+    prov = item.prov[0]
+    page = pdf.pages[prov.page_no - 1]
+    box = prov.bbox.to_top_left_origin(page.height)
+    return page.crop((box.l, box.t, box.r, box.b), strict=False)
+
+
+def _plumber_rows(pdf, table):
+    if table is None or not table.prov:
+        return None
+    table = _crop(pdf, table).find_table(PLUMBER_SETTINGS)
+    # Same grid as extract_table; x_tolerance=1 only restores spaces inside small-font cells.
+    rows = table.extract(x_tolerance=1) if table else None
+    return rows if rows and any(cell for row in rows for cell in row) else None
+
+
+def _plumber_formula(pdf, formula):
+    if not formula.prov:
+        return None
+    raw = _crop(pdf, formula).extract_text(x_tolerance=1) or ""
+    return " ".join(UNMAPPED_GLYPH.sub(" ", raw).split()) or None
+
+
+def _to_markdown(rows):
+    rows = [[(cell or "").replace("\n", " ").strip() for cell in row] for row in rows]
+    rows = [row for row in rows if any(row)]
+    rows.insert(1, ["---"] * len(rows[0]))
+    return "\n".join("| " + " | ".join(row) + " |" for row in rows)
+
+
 def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
                 docling_models_path=DOCLING_MODELS_PATH):
     from docling.datamodel.base_models import InputFormat
@@ -143,12 +205,12 @@ def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
                                  do_ocr=False, do_table_structure=False)
     converter = DocumentConverter(format_options={
         InputFormat.PDF: PdfFormatOption(pipeline_options=options)})
-    embedder = SentenceTransformer(str(embed_model_path), device="cpu",
+    embedder = SentenceTransformer(str(embed_model_path), device=None,
                                   local_files_only=True)
     chunks, failures = [], []
     for pdf in pdfs:
         try:
-            text = converter.convert(str(pdf)).document.export_to_markdown()
+            text = _export_markdown(converter.convert(str(pdf)).document, pdf)
             parts = _chunk_markdown(text)
             if not parts:
                 raise ValueError("PDF produced no text chunks")
