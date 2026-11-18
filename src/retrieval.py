@@ -5,9 +5,11 @@ retain the starter kit's character-based overlap and first-overflow stopping rul
 """
 
 from dataclasses import dataclass
+from functools import lru_cache
 from pathlib import Path
 import re
 import time
+import unicodedata
 
 import numpy as np
 
@@ -16,6 +18,7 @@ CHUNK_OVERLAP = 150
 MAX_CONTEXT_TOKENS = 10_000
 EMBED_MODEL_PATH = Path(__file__).parent / "embed_model"
 DOCLING_MODELS_PATH = Path(__file__).parent / "docling_models"
+SPACY_MODEL_PATH = Path(__file__).parent / "spacy_model"  # en_core_web_sm 3.8.0
 
 
 @dataclass
@@ -29,9 +32,28 @@ class RetrievalIndex:
     lexical_index: object = None
 
 
+def _fold(text):
+    """Case-fold and strip diacritics: 'Café' -> 'cafe'."""
+    text = unicodedata.normalize("NFKD", text.casefold())
+    return "".join(c for c in text if not unicodedata.combining(c))
+
+
+@lru_cache(maxsize=1)
+def _nlp():
+    """Tagger + lemmatizer only; parser and NER are not needed for lemmas."""
+    import spacy
+    return spacy.load(SPACY_MODEL_PATH, exclude=["parser", "ner"])
+
+
+def lexical_tokens_many(texts):
+    """Lemmatized, stopword-free, folded words/numbers for each text."""
+    return [[t for tok in doc if not tok.is_stop
+             for t in re.findall(r"\w+", _fold(tok.lemma_))]
+            for doc in _nlp().pipe(texts, batch_size=256)]
+
+
 def lexical_tokens(text):
-    """Unicode words/numbers, case-folded; no stemming or stopword resources."""
-    return re.findall(r"\w+", text.casefold())
+    return lexical_tokens_many([text])[0]
 
 
 class BM25Retriever:
@@ -41,7 +63,7 @@ class BM25Retriever:
         if not np.isfinite(k1) or k1 <= 0 or not np.isfinite(b) or not 0 <= b <= 1:
             raise ValueError("BM25 requires finite k1 > 0 and 0 <= b <= 1")
         self.k1, self.b = k1, b
-        tokens = [lexical_tokens(chunk["text"]) for chunk in chunks]
+        tokens = lexical_tokens_many(chunk["text"] for chunk in chunks)
         if not any(tokens):
             raise ValueError("BM25 corpus has no lexical tokens")
         self.model = BM25Okapi(tokens, k1=k1, b=b)
