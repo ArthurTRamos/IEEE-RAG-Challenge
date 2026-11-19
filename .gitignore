@@ -6,6 +6,7 @@ __pycache__/
 *.zip
 src/embed_model/
 src/docling_models/
+src/spacy_model/
 experiments/runs/
 models/
 .cache/
