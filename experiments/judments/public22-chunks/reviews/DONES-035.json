@@ -1,0 +1,190 @@
+{
+  "document_id": "DONES-035",
+  "markdown_sha256": "522e6539df4fa4eb44869a68d62a395dc20624b5f5b2ee62593c07a57ad66692",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 3,
+      "zero_rationale": "Não informa meia-vida de Be-7 ou relação específica para sua constante; números de outros isótopos, temperaturas e vazões não servem para o cálculo.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            74
+          ],
+          "rationale": "Informa meia-vida de Be-7 de 53,2 dias, que arredonda a 53 dias, dado direto para calcular a constante de decaimento."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zero_rationale": "Trata de projeto, diagnóstico, manutenção ou bibliografia sem descrever o cálculo dos inventários de Be-7 e trítio.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            74
+          ],
+          "rationale": "Apresenta reações produtoras de Be-7, suas frações e inventário de equilíbrio de 150 mg após um ano considerando decaimento; suporta parte direta da resposta."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            69
+          ],
+          "rationale": "Explica origem e produção anual de trítio e distingue produção, inventário mobilizável e retenção nas armadilhas."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            8,
+            37,
+            58,
+            61,
+            62,
+            63,
+            67,
+            68,
+            73,
+            75,
+            76,
+            77,
+            78,
+            79,
+            81,
+            82,
+            84,
+            85,
+            86,
+            87,
+            109
+          ],
+          "rationale": "Fornece cenário operacional, volume de lítio, hipóteses de solubilidade/distribuição, remoção e limites de inventário, sem cadeia explícita de espectros de transporte e cálculo FISPACT dos dois isótopos."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zero_rationale": "Não fornece vazão nominal do circuito/trocador primário nem dados úteis para calculá-la; outras vazões e dados de sensores não respondem ao valor solicitado.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            14
+          ],
+          "rationale": "Fornece seção 260 mm × 25 mm e velocidade de 15 m/s, suficientes para calcular 97,5 L/s."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            42
+          ],
+          "rationale": "Tabela informa diretamente vazão nominal do circuito principal de 97,5 L/s."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            43
+          ],
+          "rationale": "Tabela fornece 49,7 kg/s no lado de lítio do HX1 e temperaturas: entrada direta para conversão volumétrica."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            47,
+            51,
+            108
+          ],
+          "rationale": "Informa requisito nominal da bomba primária de aproximadamente 100 L/s, consistente com o valor aproximado procurado."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            33,
+            34,
+            35,
+            40,
+            44,
+            54,
+            59,
+            60
+          ],
+          "rationale": "Identifica o circuito e lado de lítio do HX1, apresenta fragmento de tabela sem todos os rótulos, ou vazão de projeto da bomba; contexto de interpretação sem o dado nominal completo do HX."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zero_rationale": "Não informa temperatura/regime da armadilha de N; temperaturas de lítio, sensores ou armadilhas de H/Be não equivalem à temperatura da armadilha de nitrogênio.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            61,
+            62
+          ],
+          "rationale": "Afirma que NT opera off-line apenas com o circuito parado e é conectada ao dump tank; corrige diretamente a premissa."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            70
+          ],
+          "rationale": "Descreve NT estática com getter de Ti a 600 °C, usada no comissionamento e manutenção anual, suporte direto à correção de regime e temperatura da versão atual."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            58,
+            63,
+            67,
+            71,
+            90
+          ],
+          "rationale": "Contextualiza impurezas, tipos de armadilha, monitoramento ou localização de NT, sem a temperatura e regime completos; a faixa geral 190–600 °C não é temperatura exclusiva da NT."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zero_rationale": "Não fornece vazões ou desvio do ICS; geometria, manutenção, diagnósticos e referências não estabelecem essa razão.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            35,
+            82
+          ],
+          "rationale": "Explicita que o ramo ICS desvia cerca de 2% da vazão principal."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            63
+          ],
+          "rationale": "Fornece 2,015 L/s no ICS e a divisão 1,95/0,065 L/s entre purificação e monitoramento."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            42
+          ],
+          "rationale": "Fornece denominador nominal de 97,5 L/s no circuito principal, dado direto para calcular a razão com a vazão ICS."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            7,
+            60,
+            71,
+            78,
+            81
+          ],
+          "rationale": "Descreve topologia do bypass, repartição interna ou efeito da vazão nas armadilhas, sem estabelecer isoladamente a razão ICS/principal; 3% em monitoramento é outra razão."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "3cbf304b61f389782f2d271b303189602b0e2cb2276853c70eae58bb34d47a50"
+}

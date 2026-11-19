@@ -1,0 +1,71 @@
+{
+  "document_id": "AI-008",
+  "markdown_sha256": "d3e979404cb9259517a0847ebc0c5f7e1893e89d675264cdc82b1c9ae7dee3a8",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 14,
+      "zero_rationale": "Resultados experimentais, testes estatísticos, preparação de dados, geração de explicações ou referências sem explicar a escolha dos limites das métricas REVEL.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            2,
+            7,
+            9,
+            34,
+            35,
+            38,
+            39,
+            40,
+            41,
+            44,
+            45,
+            46,
+            50,
+            51,
+            52,
+            55,
+            64,
+            160,
+            193
+          ],
+          "rationale": "Relaciona limites bem definidos à interpretação absoluta, extremos melhor/pior, suavidade e ausência de saturação. O chunk 64 também ressalva que robustez admite valores negativos; não se deve afirmar que todas as métricas ficam estritamente em [0,1]."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            5,
+            8,
+            10,
+            33,
+            36,
+            37,
+            42,
+            43,
+            47,
+            48,
+            49,
+            53,
+            54,
+            56,
+            58,
+            60,
+            61,
+            62,
+            63,
+            65,
+            66,
+            72,
+            92,
+            192,
+            194
+          ],
+          "rationale": "Apresenta objetivo, fórmula, interpretação ou contexto de avaliação das métricas, mas não explica sozinho a motivação e as propriedades dos limites."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "82e266d512e8f46a99f9883876689a7cc633fa96438188386e0172203b8fe12c"
+}

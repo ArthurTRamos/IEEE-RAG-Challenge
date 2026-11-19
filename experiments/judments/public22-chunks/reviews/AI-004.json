@@ -1,0 +1,118 @@
+{
+  "document_id": "AI-004",
+  "markdown_sha256": "19c8684511450a1a0cbc13f2fc6b67ff79178e6eafee29c65602373944b69a70",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 12,
+      "zero_rationale": "Trata de introdução geral, geometria sem restrições, outros aspectos de qualidade, referências ou tempo computacional sem evidência útil sobre projeções, imutabilidade e justiça da comparação.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            12,
+            14,
+            42,
+            43,
+            44,
+            46,
+            49,
+            54,
+            74
+          ],
+          "rationale": "Explica projeções com valores imutáveis fixos, sua contribuição à esparsidade/ação e as condições em que restrições são relaxadas; não pressupõe satisfação absoluta em todos os casos."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            23,
+            26
+          ],
+          "rationale": "Discute baselines com restrições e limitações de sua aplicação; contradiz a generalização de que todos os baselines não impõem restrições."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            52,
+            53
+          ],
+          "rationale": "Distingue o mapeamento de dados feito uma única vez da geração de candidatos, relevante para explicar que projeções não mudam a representação base por instância."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            83,
+            84,
+            85,
+            86
+          ],
+          "rationale": "Mostra Growing Spheres atuando em atributos não imutáveis e exemplos de preservação/violação nos baselines e no ONB-MACF, úteis para auditar a premissa de comparação injusta."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            8,
+            9,
+            11,
+            13,
+            19,
+            20,
+            22,
+            24,
+            28,
+            29,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38,
+            45,
+            51,
+            55,
+            56,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            65,
+            69,
+            72,
+            73,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            88,
+            89,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110
+          ],
+          "rationale": "Fornece contexto de actionability, mapeamento, comparação experimental ou violações medidas; não estabelece isoladamente que restrições são exclusivas do ONB-MACF nem decide a necessidade de ablação."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "dad9f1ab83ab5a603b32a23ab62468dd3a80bf2b9fd5d13819762b465de6b376"
+}

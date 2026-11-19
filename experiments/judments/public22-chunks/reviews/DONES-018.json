@@ -1,0 +1,42 @@
+{
+  "document_id": "DONES-018",
+  "markdown_sha256": "8e6559bd0fd2175c58d718d28d9d4eaa9a6b28644051409be6684a15c96e7f16",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Trecho de layout, parâmetros, instrumentação, conclusões ou referências; não explica o mecanismo de emissão exigido pela pergunta.",
+      "decisions": [
+        {
+          "indices": [
+            13
+          ],
+          "grade": 1,
+          "rationale": "Apresenta fluorescência e ionização do gás residual como perfilometria não interceptiva; contextualiza emissão óptica, mas não explica deposição de energia na cintilação nem OTR."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zero_rationale": "Descreve instalação, instrumentação, parâmetros ou bibliografia sem explicar intercepção/perturbação do feixe nem restrição operacional diretamente útil.",
+      "decisions": [
+        {
+          "indices": [
+            7
+          ],
+          "grade": 2,
+          "rationale": "Restringe diagnósticos interceptivos, como wire scanners e Faraday cups, ao comissionamento em modo pulsado de baixo duty factor; apoia diretamente o uso fora da operação nominal."
+        },
+        {
+          "indices": [
+            13
+          ],
+          "grade": 1,
+          "rationale": "Identifica perfilometria não interceptiva para monitoramento permanente, útil como contraste, mas sem definir como um diagnóstico destrutivo altera o feixe."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "d00baf307164ad435539de81d6e5c669c9c0778c95829b8c2c0fd04a35d0165a"
+}

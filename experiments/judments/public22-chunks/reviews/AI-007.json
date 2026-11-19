@@ -1,0 +1,42 @@
+{
+  "document_id": "AI-007",
+  "markdown_sha256": "38ac0008ae87634333454faa80e11327684d2679b8d89ae5534c57cfce3dfbfd",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 13,
+      "zero_rationale": "Trata de índice numérico, renormações, ultrapro­dutos, somas ou referências, sem justificar a lushness do subespaço Y construído no Teorema 4.2.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            31,
+            32,
+            35,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
+          "rationale": "Enuncia a caracterização do Teorema 4.1 e/ou a construção de Y: testemunhas incorporadas a E_(m+1), pares densos repetidos infinitamente e epsilons arbitrariamente pequenos garantem a propriedade em Y."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            2,
+            3,
+            10,
+            33,
+            34,
+            36
+          ],
+          "rationale": "Fornece a definição, notação ou direção auxiliar da equivalência; ajuda a interpretar o argumento, sem completar a passagem do subconjunto denso a Y."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "681b54e62a9c751db6249cc6cc09af1802f786954f5d6e46e022ee0df4b5d83e"
+}

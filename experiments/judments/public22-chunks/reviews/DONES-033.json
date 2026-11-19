@@ -1,0 +1,74 @@
+{
+  "document_id": "DONES-033",
+  "markdown_sha256": "b6e199adfd782eacd17595726d47fb770f2f8a93d3f34822fddb748d7e8b9257",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Trata de medidas, circuitos, instrumentação ou propriedades operacionais sem explicar o mecanismo de geração de luz em comparação com cintilação.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            30
+          ],
+          "rationale": "Define OTR como emissão na interface de meios com constantes dielétricas distintas e fenômeno superficial, suporte direto à metade OTR da comparação."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            29,
+            31
+          ],
+          "rationale": "Compara uso e espessura de telas cintiladoras e OTR, mas não explica a necessidade de deposição de energia na cintilação."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zero_rationale": "Trata de eletrônica, desempenho, instalação ou referências sem explicar intercepção ou efeito destrutivo sobre o feixe.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            9
+          ],
+          "rationale": "Explicita os graus de efeito sobre o feixe, incluindo perturbação e destruição."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            18
+          ],
+          "rationale": "Define a Faraday cup como destrutiva porque as partículas são paradas no dispositivo."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            26,
+            28,
+            29,
+            30,
+            32
+          ],
+          "rationale": "Descreve interceptar o feixe com matéria, perturbação, passagem por fios, aumento de emitância ou caráter mais/menos invasivo: suporte físico à definição."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            3,
+            8,
+            19,
+            27,
+            31,
+            33,
+            34
+          ],
+          "rationale": "Fornece classificação, exemplos ou contraste entre instrumentos invasivos e não invasivos, sem definir isoladamente a alteração destrutiva do feixe."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "f0a088f8fd0e312cb8321550873f81a9e35708fd708edfe329038ef3c991e826"
+}

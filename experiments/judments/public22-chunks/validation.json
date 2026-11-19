@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "pair_count": 113432,
+  "counts": {
+    "0": 112144,
+    "inherited_document_zero": 107727,
+    "codex_semantic_review": 5705,
+    "1": 1003,
+    "2": 285
+  },
+  "question_count": 22,
+  "chunk_count": 5156,
+  "reviewed_documents": 41,
+  "reviewed_question_document_pairs": 65,
+  "document_grade_1_with_chunk_grade_2": 32,
+  "checks": [
+    "exact_active_question_ids_and_text",
+    "one_judgment_per_question_chunk",
+    "grades_are_integers_0_1_2",
+    "nonempty_rationales",
+    "document_zero_inheritance",
+    "all_other_pairs_codex_reviewed",
+    "no_pending_pairs",
+    "qrels_matches_json",
+    "report_links_exist",
+    "chunk_content_hashes",
+    "source_and_review_fingerprints"
+  ],
+  "artifacts": [
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/manifest.json",
+      "sha256": "13f60917d0bcabaf69b80858a7c5c083e089c9e3f916b7c7d8aa912c9cff0944"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/chunks.json",
+      "sha256": "d947325882b5bfc8307e229bf7c417de91e1025515ded44a82a76efaf6080b16"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/qrels.tsv",
+      "sha256": "a4136ef9cd9037ed642cac3660793a9f217d24558dfb4ef878640ff456d6ed6d"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/summary.csv",
+      "sha256": "053369779a363533a56a09d31479d5d0b6ed542e09736df0f1de990c8b361cc7"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/01.json",
+      "sha256": "ac70a81dc2bfd14ecbf4b1bc4ab0fa8b1e9b2e8fae5c480fc51ca4a8e49874e3"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/02.json",
+      "sha256": "cb821127df45abe1f03d7271ec0677033b1db5ad6aa468c73e876b7fe716153f"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/03.json",
+      "sha256": "b2e335b9a1f7cec1afec228a1772bdefa981cabd5d44b03290e10cdb25c6560b"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/04.json",
+      "sha256": "cd7a8113a46154cbe5e617f15db4856da4f6e9e1a3a2a3d7bcc03de6636b82a9"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/05.json",
+      "sha256": "c67a27ecffb67764e0332aa6e06d8c1380b8f76fd9288ee2bcebeb16359427cf"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/06.json",
+      "sha256": "0d78fda22659544e7161dbbfcbd400a7ef6e3bc034e12eb198f84401c241db31"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/07.json",
+      "sha256": "8d17ddc0c8eaf2f54b61d6d8ea4b9d14b3dea4f872b18479d135e51cdadb35c9"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/08.json",
+      "sha256": "49f8f05881ddc8355f20fdfd4d7c400e7569a3a9a20902470a26f5160cf439d0"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/09.json",
+      "sha256": "ddcd6b9d7f9d6e62d69168515bec3544416133f07c20c391b75446a3bcd803b4"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/10.json",
+      "sha256": "4dbf0bc72d821c80ecd90d460a9126e3bf28b2735c442eb875ecc36e09e6399c"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/11.json",
+      "sha256": "5b73ec091cd3187ba7782c57d3be283eddb37eba5585433b7c18889c99625b6d"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/12.json",
+      "sha256": "e5d667ab5d5eccbbcb3d7da5210779e894d15745478a65ea1c1c4d93c0140497"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/13.json",
+      "sha256": "aabd549fb2f7039d4cd077ae40aea5e293109da3bc911843200d3d3e3563b6ce"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/14.json",
+      "sha256": "0f20093eb7c79db80f6508dea4891124095d8613b67651c212f768a6f6574862"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/15.json",
+      "sha256": "764ac77cf6bd9d6300c4950d7cde06443d6b2604d7cd17882ced3719530cc00b"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/17.json",
+      "sha256": "6be1b95d9746ee776192afa1f0be458ff246eeff9ae37880aca06231da09d4c6"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/19.json",
+      "sha256": "a7b9a03649dcd596f59a80b2c37f5c06fdfd825768f25f9e91ae0597957dcaba"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/20.json",
+      "sha256": "9e1f4d91b2d20e9f5d65d0f94334b391fad9268853bc0833c93dbd56b5929ca6"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/22.json",
+      "sha256": "48efed672ce4ec9cd2de777f781bd7d0339b9e3047649a457eb74ce1cb1bd662"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/23.json",
+      "sha256": "d0801c6a2c97150343d315a9dc67113010299b3fa3189f304df30568abd18c9a"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/24.json",
+      "sha256": "1928a55eb20304b825aed2d715f0fbe25756fbf09f9cdc0e43b1daa4835da0ba"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/questions/25.json",
+      "sha256": "df2c4093353bde5e6ca1ce9206bfb30f3388c421f63d5db52381caf2da2ddf72"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/01.md",
+      "sha256": "10e9d9cf96da82e18e74b66b59c1a3d86ca33610191cd381d6ab20a5dd491d36"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/02.md",
+      "sha256": "abd44cfbc603976f6c8edf23d5709aef8ffe61c05284d760d21701c095582097"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/03.md",
+      "sha256": "801e56c00b9c6a040a1aed6b087912b7c9f3e4f550d531b638ffde0836ae0039"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/04.md",
+      "sha256": "9cc1418283e6291b26f2c4955a23274844aa0d7b667784e70fdbed4a17d7de75"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/05.md",
+      "sha256": "e0e584acc715324e9a97d7b186fe576c92315f92ba0ef4ccddba19ec24924889"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/06.md",
+      "sha256": "6817be7b942dac1fa9eaa8974e037c76a2fc8981772ade4c25dc9b4b1b4f0d7e"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/07.md",
+      "sha256": "559abef1b6969cffe848a11e58025d12a146d13a18e0faa01c2b23fba31c1652"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/08.md",
+      "sha256": "80bf02d52300d3c19b0b6e85ce77eddb533f0dcfcd4b62f4600e8c8e76eeffdf"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/09.md",
+      "sha256": "dcbb7d10a8218d810f5335184e6a8c107123be1515d194bf6a375900450fe69b"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/10.md",
+      "sha256": "e1821a1884822224bb623c8c19c8205f1156d7f7d5b250d4fecc4bb46014c6b9"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/11.md",
+      "sha256": "25730f49357a6e9693384d316a4436ce846514b9ca77b549616190b2da8fc9ce"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/12.md",
+      "sha256": "1aa957da58a8552d735a0ca521561e6916dee25070d94ee84543f52faa392f3c"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/13.md",
+      "sha256": "8afcbd8f5717c302f01f73d04c2f31a1d300574a62e7d464529039f2e868cedf"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/14.md",
+      "sha256": "a4e80a625d296e1c4218fd8b6aa643708623e3a6b1c52540913d93fa221bf4b4"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/15.md",
+      "sha256": "3ad63ffb856ef36147ec70f0421fd65cb723f01cf1cbec277566542e18350458"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/17.md",
+      "sha256": "67dd57ba46887e6aedd01bff88ce76b5b98d24d5497570e0ac112c7ebe541fd3"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/19.md",
+      "sha256": "119e8719859638be03704f449f5bffb906d5216f9318ee26201feb9c23621aa2"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/20.md",
+      "sha256": "2f03bd1cb233397811fd46f31d13bf37469a465d0e1fa26954487828abb70264"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/22.md",
+      "sha256": "ec392eeedcbe1196d02628821bbd194cedf0f6e3d99ab7987a9795df602dfc09"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/23.md",
+      "sha256": "e20a034c1f7c57391f5fc313add455233f9130dff9554d9085da271c473e6b5f"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/24.md",
+      "sha256": "c44a6ac86421f9fc99d42e5d9deeaddf6cd79a59d4a75a5d43f21216bea65554"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reports/25.md",
+      "sha256": "0b09cfe3bcf50fbed39b8976b2f77b1f237a6eecf2ef13257975e8c2d8b8cebf"
+    }
+  ]
+}

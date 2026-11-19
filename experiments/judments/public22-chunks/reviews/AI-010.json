@@ -1,0 +1,92 @@
+{
+  "document_id": "AI-010",
+  "markdown_sha256": "687887d391d55315193a86c67c87fa92558d4f8fecca487fe26130f6a452dd4e",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 15,
+      "zero_rationale": "Discussão de arquiteturas, resultados, pesos, embaralhamento ou referências sem determinar a faixa da janela para L=512.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            1,
+            71,
+            72,
+            75
+          ],
+          "rationale": "Declara a heurística de um quarto a um terço do comprimento, w em [floor(L/4),floor(L/3)], ou sua ressalva de memória; permite obter [128,170] para L=512."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            38,
+            39,
+            40,
+            46,
+            47,
+            48,
+            50,
+            69,
+            70,
+            73,
+            74,
+            76,
+            88,
+            89,
+            91,
+            92,
+            127
+          ],
+          "rationale": "Contextualiza estatísticas locais, compromisso entre janelas pequenas/grandes, configuração experimental ou custo de memória; não fornece sozinho a faixa numérica solicitada."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "zero_rationale": "Trecho sobre outras codificações, escolha de janela, dados ou desempenho sem evidência da normalização dos pesos WinStatFlex.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            41,
+            42,
+            44,
+            45,
+            127
+          ],
+          "rationale": "Explicita Softmax(w), pesos treináveis normalizados com soma um, combinação de componentes e/ou estabilidade do treinamento."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            7,
+            8,
+            36,
+            38,
+            43,
+            77,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            124,
+            128
+          ],
+          "rationale": "Mostra adaptação e valores dos pesos ou contexto das misturas, mas não explica integralmente a operação softmax e o motivo da normalização."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "6b7d573273b2ee7087aef45138be6c6f74b5fe13443b137363f5f4c61909d811"
+}

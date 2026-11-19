@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "unit": "chunk",
+  "status": "complete",
+  "assessor": "Codex semantic review; not independently human-validated",
+  "labels": {
+    "0": "não relevante",
+    "1": "parcialmente relevante",
+    "2": "relevante"
+  },
+  "criteria": {
+    "2": "Suporte direto a pelo menos uma parte material da resposta, inclusive dado para cálculo.",
+    "1": "Contexto útil mas insuficiente, ambíguo, conflitante ou incompleto devido à extração.",
+    "0": "Sem suporte útil à pergunta; nos documentos grau 0, rótulo herdado por instrução."
+  },
+  "source_judgments": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public-22-questions.json",
+    "sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5"
+  },
+  "source_export": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/runs/pdf-markdown-chunks/manifest.json",
+    "sha256": "9c6f4dc6c276a705bec922eac1c39ab9853ad09bb8394d9012d17c08ca31c51f"
+  },
+  "review_sources": [
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-001.json",
+      "sha256": "fb39da9669154745824a0f5f8bfea7dc0ea5231ed09e1c3d5829b1f401527e0c"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-004.json",
+      "sha256": "ec80b647dd5180efca240078abbfeebb62eb5014dc0d6ac686ded0cb4994abdf"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-005.json",
+      "sha256": "419dc0125a6e6bcff55eb2691e00977f7c2e3055ebe574a1c2703eb02ee730d6"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-006.json",
+      "sha256": "9b4350dfbcffa84db1b7c2c16d991b1b2a8cbe5139896bf882e15f34f725447b"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-007.json",
+      "sha256": "6ab15be6dbb65c774ce23fd85a68457a9d24d1aa09e08bdbd499e3658ffe0c98"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-008.json",
+      "sha256": "d45fda08510800f52d9099eb9dc2591ddf247babb3a9211d8d95cf0545c416cd"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-010.json",
+      "sha256": "1e131a55fd682de41511428a3cf999b4effa31612a16491b2ca0692416384255"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-011.json",
+      "sha256": "e9ee86b6dc8172a8c4a38b55ae29d2a82b46b39a2f30076ac99d988c6ddc64ea"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-014.json",
+      "sha256": "5f151da5a6f9d9b4c1c737bb6ce5b73550cd81dbbfae8bff44978a691ae998bc"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-015.json",
+      "sha256": "866da56f029043d5cf4a501e5bf24a42616482fd6d4b0cbac4089cb0b7d09bc7"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-016.json",
+      "sha256": "43318502cc45ed7face63e28f2c59986427486f5b1fbf4071b22817bda86bb06"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-018.json",
+      "sha256": "73e79846ca6cdba125b244f1adba2d7538de58f3736787d9de7b617f171ed3d5"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-019.json",
+      "sha256": "6282b86a1cc8005b71bcd6fee596914b42816b32eacf8744213f47f0ff3ac738"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-020.json",
+      "sha256": "649a55343ca5e94727e02368df5b563c4ab83321025e15a75b16f6e57a2d9366"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-021.json",
+      "sha256": "d6112367bab50afb6ce88ba843ef6761b08b81963afdd1e35b5d810226af8137"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-022.json",
+      "sha256": "d312112904aaa86ad4c62d8c0771b07d207b8488b76902d5e46199d6b3e3c9f5"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-025.json",
+      "sha256": "dbaf85939491e885c15d5fb2f8489b72848705f2cd201c1194e119ca6e48ca55"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-027.json",
+      "sha256": "ff54ac3a1436c79b87fd0cec7e51ef3cc7e81bc566abe88d7dd3ff5b0014e1fa"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/AI-028.json",
+      "sha256": "5d49958a8f7c92bf3b64ceb0d9707a7d1c05de956b2499c03339c5fa66588287"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-001.json",
+      "sha256": "ae810db6ac489407be14725f87dff7e33738915106f90a58bdc9246303cf54cc"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-006.json",
+      "sha256": "3a5f83d5525a680737cf3ed569261ef5252685dead239fafc0f2725625202bf3"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-008.json",
+      "sha256": "7f10df8c9af658eefe9f520cf585d6198ebb6a7f1b66a0694f423e3a96189be9"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-010.json",
+      "sha256": "ac70e2030f9557423bd727435de7649064a9a1f094bf7aa404cc9c11e7539cac"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-013.json",
+      "sha256": "99b3b71ecfe1c5b1392483fbec5f0840d600660531d6c3afe1529ed700712a52"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-017.json",
+      "sha256": "1c40861a5aadec015712da6a7a0fe43cee475bcf74d407248e7b158006b59dfa"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-018.json",
+      "sha256": "07bde8195c900eda7418db2a16dae28e769efc7baf34eee6f1af86d43c6b9b8b"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-019.json",
+      "sha256": "916bd729cdd208b4455fa0f0ebecec9aed02454001dc909c450a40422c98a3b0"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-020.json",
+      "sha256": "95a3c66e97ed6d7b75fe291f80da042230bee61e189bd01f1b7dba80fcce5fb9"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-021.json",
+      "sha256": "7078bc4045f32d3c3c9f20366752cea06395a2ca8e841ff9b1b69f17aac30d7c"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-022.json",
+      "sha256": "4b29bb0c271be023d13622f84aa58a4e797224def48490658adea30112e1816d"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-023.json",
+      "sha256": "2d4ccb792e6c69377016789616bbcc6a9d44cf21570b02d46b5c851a8cbd18eb"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-025.json",
+      "sha256": "580f3cfd01aa83b8b5be7d161a11f9f3b67a8a9fd9b4d95ac6a499e8fb9539c4"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-026.json",
+      "sha256": "7afb22b1d4ed6d7b778631fdabb2332dce97fbeb51771c163ec598d2ab26bc04"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-027.json",
+      "sha256": "c113eb4a6644a77f32e50b8f1f608791a2f636099c30db06c7d5acb8eac302ad"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-028.json",
+      "sha256": "a2e9f5c7801ef64d70b6b73d75a0554bc3876d33f3d603edd1f0cdf514268fdd"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-029.json",
+      "sha256": "5b4cdbc70533e356231a649947e84214aa826d357d1ddad5087a5e47835808e8"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-031.json",
+      "sha256": "9b4a114474af2f64872c9a547625b5c0889da0cdf14e6502c537e7b55d18e636"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-032.json",
+      "sha256": "deb4958e875e9ad2610992164a8a878f7f23616ff6bb2a4cb8ea03ca1a5eed47"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-033.json",
+      "sha256": "7254c394acaa31a01b99c2e81fc708350a450a9fc4e19ad713037afff0d1a072"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-034.json",
+      "sha256": "5c5d6283ccdef1fa286f8f7ab6c669bb8c66dc4cd6abd1077fe13e32f48fee07"
+    },
+    {
+      "path": "/home/arthur/repos/IEEE-RAG-Challenge/experiments/judments/public22-chunks/reviews/DONES-035.json",
+      "sha256": "c46cda31c098541c35cdbe509810c48a96249898f349d5ec269c7ac725318f6f"
+    }
+  ],
+  "code": {
+    "path": "/home/arthur/repos/IEEE-RAG-Challenge/tools/build_chunk_judgments.py",
+    "sha256": "3fbf43290125cab8a4f2c00100d4e526665acc8d167bb0d9b6ee06cea57f464e"
+  },
+  "reference_answers_used": true,
+  "excluded_question_ids": [
+    "16",
+    "18",
+    "21"
+  ],
+  "chunk_grade_not_capped_by_document_grade": true,
+  "counts": {
+    "0": 112144,
+    "inherited_document_zero": 107727,
+    "codex_semantic_review": 5705,
+    "1": 1003,
+    "2": 285
+  },
+  "question_count": 22,
+  "chunk_count": 5156,
+  "pair_count": 113432,
+  "reviewed_question_document_pairs": 65,
+  "pending_question_document_pairs": [],
+  "questions": [
+    {
+      "id": "1",
+      "counts": {
+        "0": 5123,
+        "inherited_document_zero": 4921,
+        "codex_semantic_review": 235,
+        "1": 28,
+        "2": 5
+      }
+    },
+    {
+      "id": "2",
+      "counts": {
+        "0": 5122,
+        "inherited_document_zero": 4914,
+        "codex_semantic_review": 242,
+        "2": 15,
+        "1": 19
+      }
+    },
+    {
+      "id": "3",
+      "counts": {
+        "0": 5150,
+        "inherited_document_zero": 4805,
+        "codex_semantic_review": 351,
+        "1": 4,
+        "2": 2
+      }
+    },
+    {
+      "id": "4",
+      "counts": {
+        "0": 5143,
+        "inherited_document_zero": 4920,
+        "codex_semantic_review": 236,
+        "1": 13
+      }
+    },
+    {
+      "id": "5",
+      "counts": {
+        "0": 5060,
+        "inherited_document_zero": 4571,
+        "codex_semantic_review": 585,
+        "1": 80,
+        "2": 16
+      }
+    },
+    {
+      "id": "6",
+      "counts": {
+        "0": 5121,
+        "inherited_document_zero": 4782,
+        "codex_semantic_review": 374,
+        "1": 26,
+        "2": 9
+      }
+    },
+    {
+      "id": "7",
+      "counts": {
+        "0": 5133,
+        "inherited_document_zero": 4753,
+        "codex_semantic_review": 403,
+        "1": 16,
+        "2": 7
+      }
+    },
+    {
+      "id": "8",
+      "counts": {
+        "0": 5136,
+        "inherited_document_zero": 4806,
+        "codex_semantic_review": 350,
+        "1": 15,
+        "2": 5
+      }
+    },
+    {
+      "id": "9",
+      "counts": {
+        "0": 5154,
+        "inherited_document_zero": 4943,
+        "codex_semantic_review": 213,
+        "1": 1,
+        "2": 1
+      }
+    },
+    {
+      "id": "10",
+      "counts": {
+        "0": 5098,
+        "inherited_document_zero": 4854,
+        "codex_semantic_review": 302,
+        "1": 47,
+        "2": 11
+      }
+    },
+    {
+      "id": "11",
+      "counts": {
+        "0": 5131,
+        "codex_semantic_review": 108,
+        "1": 19,
+        "2": 6,
+        "inherited_document_zero": 5048
+      }
+    },
+    {
+      "id": "12",
+      "counts": {
+        "0": 5025,
+        "inherited_document_zero": 4900,
+        "codex_semantic_review": 256,
+        "1": 100,
+        "2": 31
+      }
+    },
+    {
+      "id": "13",
+      "counts": {
+        "0": 5141,
+        "inherited_document_zero": 5094,
+        "codex_semantic_review": 62,
+        "1": 7,
+        "2": 8
+      }
+    },
+    {
+      "id": "14",
+      "counts": {
+        "0": 5112,
+        "inherited_document_zero": 4954,
+        "codex_semantic_review": 202,
+        "2": 19,
+        "1": 25
+      }
+    },
+    {
+      "id": "15",
+      "counts": {
+        "0": 5135,
+        "inherited_document_zero": 5021,
+        "codex_semantic_review": 135,
+        "2": 4,
+        "1": 17
+      }
+    },
+    {
+      "id": "17",
+      "counts": {
+        "0": 5076,
+        "inherited_document_zero": 5060,
+        "codex_semantic_review": 96,
+        "2": 18,
+        "1": 62
+      }
+    },
+    {
+      "id": "19",
+      "counts": {
+        "0": 5130,
+        "inherited_document_zero": 5021,
+        "codex_semantic_review": 135,
+        "1": 21,
+        "2": 5
+      }
+    },
+    {
+      "id": "20",
+      "counts": {
+        "0": 5081,
+        "inherited_document_zero": 4940,
+        "codex_semantic_review": 216,
+        "1": 67,
+        "2": 8
+      }
+    },
+    {
+      "id": "22",
+      "counts": {
+        "0": 5105,
+        "inherited_document_zero": 5034,
+        "codex_semantic_review": 122,
+        "1": 47,
+        "2": 4
+      }
+    },
+    {
+      "id": "23",
+      "counts": {
+        "0": 4908,
+        "inherited_document_zero": 4817,
+        "codex_semantic_review": 339,
+        "2": 84,
+        "1": 164
+      }
+    },
+    {
+      "id": "24",
+      "counts": {
+        "0": 5108,
+        "inherited_document_zero": 5031,
+        "codex_semantic_review": 125,
+        "1": 39,
+        "2": 9
+      }
+    },
+    {
+      "id": "25",
+      "counts": {
+        "0": 4952,
+        "inherited_document_zero": 4538,
+        "codex_semantic_review": 618,
+        "1": 186,
+        "2": 18
+      }
+    }
+  ],
+  "limitations": [
+    "Julgamentos da IA, não ground truth humano independente.",
+    "Zeros documentais são herdados e não foram reavaliados semanticamente.",
+    "A referência orienta a revisão, mas o chunk precisa conter a evidência.",
+    "Figuras ausentes e fórmulas danificadas não têm conteúdo visual inferido."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "document_id": "DONES-028",
+  "markdown_sha256": "a2453ec28b0fef1d1c7c48825ca6cdc7d3648ad776ff29e1b235376c79f098af",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 5,
+      "zero_rationale": "Refere-se a composição, ativação e doses de porta-amostras do HFTM, introdução ou referências, sem evidência do inventário de Be-7 e trítio do circuito de lítio.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            22,
+            28
+          ],
+          "rationale": "Descreve MCNP para espectros, FISPACT/EAF para ativação, equações de Bateman ou cenário de irradiação, mas aplicados ao HFTM; contexto metodológico transferível sem comprovar o procedimento específico do lítio."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "5762f10806b664194e3c91ecd4a67f81e63b1e49e9f8e5c64af491d51d60df5c"
+}

@@ -1,0 +1,23 @@
+{
+  "document_id": "DONES-017",
+  "markdown_sha256": "7c2ca7e13213d6ef7256fe9c97eee3ec0b657bed42ee00b5261ec73825776c74",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 2,
+      "zero_rationale": "Detalha projeto mecânico, requisitos de manutenção, vácuo, alinhamento ou referências sem explicar o que um diagnóstico destrutivo faz ao feixe.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            17,
+            18
+          ],
+          "rationale": "Explica que o SEM intercepta o feixe e mede elétrons secundários ejetados pela perda de energia do feixe ao atravessar a grade; suporte direto à interação física."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "9d6a1f12add6ceac18d4c0e3a9150aa9a8f517a50f4999de49f5b912885d4b06"
+}

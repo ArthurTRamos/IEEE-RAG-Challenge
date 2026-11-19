@@ -1,0 +1,54 @@
+{
+  "document_id": "DONES-025",
+  "markdown_sha256": "4d3c3f334ea2688b2062d91fa0aa439f62bc981800256c6e94abbb4f45419254",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Trata de montagem, blindagem, sensores ou referências sem suporte ao processo de cintilação comparado com OTR.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            3,
+            5
+          ],
+          "rationale": "Contextualiza perfilometria por fluorescência não interceptiva, sem mecanismo de cintilação/OTR."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            4,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21
+          ],
+          "rationale": "Descreve excitação, desexcitação e emissão de fótons no gás, ou propriedades dessa emissão. É analogia útil, mas não demonstra cintilação versus emissão na interface OTR."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zero_rationale": "Detalha emissão, câmera, gases, montagem ou referências sem explicar a interação destrutiva com o feixe.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            3,
+            4,
+            22
+          ],
+          "rationale": "Motiva métodos não interceptivos e menciona destruição do instrumento por alta corrente, sem definir a perturbação do feixe; destruição do instrumento não é a definição pedida."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "766873c87772e14c956966d3966e65843780bafc93ae9c59bfe59f9c96e102d4"
+}

@@ -1,0 +1,180 @@
+{
+  "document_id": "DONES-031",
+  "markdown_sha256": "c30fa4a92f443f344e3b6ebe7e34f7eb7070fbf2fea5e2dc0a62599ee05c1bf5",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 3,
+      "zero_rationale": "Não apresenta meia-vida de Be-7 ou dados específicos para calcular sua constante; meias-vidas de outros nuclídeos não são evidência para Be-7.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            117
+          ],
+          "rationale": "Informa explicitamente Be-7 com meia-vida de 53,2 dias; arredondando, fornece os 53 dias para lambda=ln(2)/53."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zero_rationale": "Não fornece o instante em que Be-7 deixa de dominar a atividade no trocador; informação de outras estruturas ou dose não equivale à evolução da atividade pedida.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            117,
+            119,
+            120,
+            121,
+            122
+          ],
+          "rationale": "Informa meia-vida, distribuição de Be-7 e ACP ou comparação de doses no trocador, mas não o cruzamento temporal de atividades; dose e atividade são grandezas diferentes."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            132
+          ],
+          "rationale": "Legenda aponta evolução de radionuclídeos em dez anos numa figura ausente do Markdown; não permite ler o instante de troca de dominância."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zero_rationale": "Trata de outros sistemas, doses, geometria, danos, detectores, concreto ou referências sem dar a metodologia específica dos inventários de Be-7/trítio no lítio.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            20,
+            21,
+            23
+          ],
+          "rationale": "Identifica códigos de transporte, ferramentas de inventário, bibliotecas e grupos de energia usados no DONES; suporte direto à cadeia computacional."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            117,
+            118
+          ],
+          "rationale": "Explica reações produtoras, avaliação FZK-2005, taxas de produção e inventário de equilíbrio de Be-7 e trítio, distinguindo taxa de estoque."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            8,
+            11,
+            12,
+            13,
+            15,
+            115,
+            116,
+            119,
+            120,
+            121,
+            122
+          ],
+          "rationale": "Contextualiza ativação, transporte e distribuição/remoção no lítio; o trecho de ACP trata de outros radionuclídeos e não deve ser atribuído integralmente aos inventários pedidos."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            102,
+            150,
+            154,
+            155,
+            156,
+            158,
+            191,
+            193,
+            194
+          ],
+          "rationale": "Fornece metodologia geral de ativação, incertezas das bibliotecas ou limitações, mas não descreve isoladamente o cálculo específico de Be-7 e trítio no circuito."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zero_rationale": "Não fornece vazão ou desvio do ramo ICS; menções a outros circuitos, doses ou bibliografia não respondem à razão solicitada.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            119
+          ],
+          "rationale": "Explicita QCT=2% nas condições otimizadas do lítio, suporte direto ao desvio nominal aproximado."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            114,
+            115,
+            116
+          ],
+          "rationale": "Descreve os subsistemas e as armadilhas da ICS, sem a razão numérica dos fluxos."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "zero_rationale": "Trata de modelagem, doses de componentes, outros sistemas ou referências sem critério de acesso/manutenção humana ou remota; dose absorvida em eletrônica não substitui dose biológica.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            43
+          ],
+          "rationale": "Explica retirada remota do scraper para reduzir dose e permitir trabalho manual por curto período; relação direta entre dose, tempo e manutenção."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            54,
+            89,
+            93,
+            94
+          ],
+          "rationale": "Explicita zonas de permanência livre até 10 µSv/h, dose de manutenção abaixo de 10 µSv/h ou acesso proibido acima de 100 mSv/h; suporte aos limiares e cenários."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            17,
+            25,
+            29,
+            30,
+            31,
+            34,
+            38,
+            39,
+            40,
+            42,
+            44,
+            52,
+            53,
+            81,
+            87,
+            90,
+            92,
+            96,
+            98,
+            99,
+            106,
+            122,
+            135,
+            136,
+            137,
+            138,
+            141,
+            191
+          ],
+          "rationale": "Apresenta dose residual, resfriamento, blindagem, contaminação ou duração de trabalho/transporte relevantes ao acesso, mas sem fornecer isoladamente a regra completa hands-on/remota."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "f407d2dde330834b60443dd97c3bddaff63b77e054d8b0381213d645443161e5"
+}

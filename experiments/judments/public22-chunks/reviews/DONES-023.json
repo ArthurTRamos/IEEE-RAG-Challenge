@@ -1,0 +1,22 @@
+{
+  "document_id": "DONES-023",
+  "markdown_sha256": "9488a8e5a5a63b1b13d903eafd97534b02a964657c65bbc5740325525c79db0f",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 9,
+      "zero_rationale": "Trata de proteção, composição, salas ou referências sem dimensões externas suficientes para calcular o volume do edifício principal; dimensões de salas individuais não são do prédio todo.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            13
+          ],
+          "rationale": "Descreve prédio IFMIF-DONES de quatro pavimentos e comprimento de 159 m, mas faltam largura e altura; versão diferente das dimensões IFMIF da resposta de referência."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "aa15c3d1e6b5bda61932a60635e8f360d57dc91f142bc08fba951df2bfa03d20"
+}

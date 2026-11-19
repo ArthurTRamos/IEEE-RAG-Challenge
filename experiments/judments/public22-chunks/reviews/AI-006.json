@@ -1,0 +1,52 @@
+{
+  "document_id": "AI-006",
+  "markdown_sha256": "c130587e1e2bb14e46f803a89923d682ba347ce507a25511cd29d471f6d3d484",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 12,
+      "zero_rationale": "Discute motivação geral, distâncias, geometria, outros experimentos ou referências sem evidência de restrições dos baselines ou da comparação com ONB-MACF.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            25,
+            27,
+            29,
+            30,
+            31,
+            33,
+            45
+          ],
+          "rationale": "Demonstra que FACE permite impor restrições, explicitamente imutabilidade de sexo e monotonicidade da idade via função de condições/remoção de arestas; contraevidência direta à premissa de que baselines não suportam restrições."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            4,
+            6,
+            10,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18,
+            26,
+            35,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            46
+          ],
+          "rationale": "Contextualiza necessidade de viabilidade/recourse, restrições ou comparação com outros métodos; não prova como cada implementação CARLA foi configurada no experimento ONB-MACF."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "c9188d1ef7034236216141d2234357c909739931857d7d651f1c0018d3f1b118"
+}

@@ -1,0 +1,115 @@
+{
+  "document_id": "DONES-001",
+  "markdown_sha256": "e5ae69c0ee6775782903b146f3372918b90adeddace8536af5a4127538c4c45a",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 5,
+      "zero_rationale": "Discute projeto mecânico/hidráulico, instalação ou referências sem descrever a cadeia de cálculo dos inventários de Be-7 e trítio.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            4,
+            6
+          ],
+          "rationale": "Descreve fonte de nêutrons por deuterons em lítio, sem espectros e cálculos de ativação."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            11,
+            12
+          ],
+          "rationale": "Apresenta impurezas e produção anual de isótopos de hidrogênio/remocão, mas não o procedimento de cálculo dos inventários."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            15,
+            16
+          ],
+          "rationale": "Informa inventário de lítio e condições relevantes à quantidade de material, mas não o cálculo de Be-7/trítio."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "zero_rationale": "Não fornece a vazão principal nominal ou os dados necessários para calculá-la; pressão, tensões e bibliografia não respondem ao valor pedido.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            15
+          ],
+          "rationale": "Informa explicitamente vazão nominal do circuito principal de 97,5 L/s, compatível com aproximadamente 98 L/s no trocador primário."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            8,
+            16
+          ],
+          "rationale": "Identifica o circuito primário/trocador ou fornece temperaturas e inventário, sem vazão isoladamente suficiente."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            17,
+            18
+          ],
+          "rationale": "Informa vazão máxima/de projeto de 104 L/s, distinguível da vazão nominal aproximada solicitada."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zero_rationale": "Não identifica a armadilha de nitrogênio nem sua temperatura; temperaturas de outros componentes não devem ser usadas como se fossem da armadilha de N.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            11
+          ],
+          "rationale": "Explicita getters de N no dump tank em condição estática antes da partida/após manutenção, operados a 500–600 °C; corrige diretamente a premissa on-line."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            9,
+            12,
+            13
+          ],
+          "rationale": "Descreve separação entre purificação, outras armadilhas e monitoramento on-line, útil para distinguir o tratamento de nitrogênio sem fornecer a resposta completa."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "zero_rationale": "Não informa o desvio do ramo ICS; dados mecânicos, tensões e referências não permitem responder à razão de vazões.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            9
+          ],
+          "rationale": "Identifica ICS como ramo lateral do circuito principal e separa purificação de monitoramento."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            21
+          ],
+          "rationale": "Fornece vazões/percentuais de projeto preliminar (ICS 0,65 L/s, cerca de 0,6%, divisão 90/10), divergentes da versão de 2%; contexto explícito de versão, sem substituir os dados pedidos."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "18067cb5824ebe4c64f87150d9ded7d00ab746f1224122b3259fae6ed28b09db"
+}

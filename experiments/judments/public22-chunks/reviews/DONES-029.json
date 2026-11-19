@@ -1,0 +1,53 @@
+{
+  "document_id": "DONES-029",
+  "markdown_sha256": "3c2ed39acecda34dcdb337458f058914c32873da83c9802acaca1c699dbba854",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 5,
+      "zero_rationale": "Trata de configuração da instalação, validação, gerenciamento ou referências sem descrever cálculos de inventário de Be-7 e trítio.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            39
+          ],
+          "rationale": "Identifica produção de Be-7 por D-Li, inventário de equilíbrio de 150 mg após um ano e taxa de trítio em g/ano; suporte direto a produção versus estoque."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            40,
+            41,
+            42
+          ],
+          "rationale": "Descreve retenção, inventário de lítio e mudanças de projeto para gerenciar Be-7/trítio, sem códigos/espectros do cálculo de ativação."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zero_rationale": "Não informa regime/temperatura da armadilha de N; temperaturas de outros subsistemas e ensaios não são evidência da armadilha quente.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            40
+          ],
+          "rationale": "Afirma explicitamente a mudança para armadilha de nitrogênio off-line no dump tank, corrigindo a premissa on-line; não fornece temperatura."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            39,
+            42,
+            86
+          ],
+          "rationale": "Explica controle do nitrogênio e sua relação com corrosão/deposição de Be-7, ou revisão da ICS; contexto sem regime/temperatura da NT."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "f03fbe4031b8a198dbb3ee6c93f27f8ea6367eff245e5f2f98175ecea2cc34d3"
+}

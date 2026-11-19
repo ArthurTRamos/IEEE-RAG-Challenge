@@ -1,0 +1,52 @@
+{
+  "document_id": "DONES-020",
+  "markdown_sha256": "9f28e666050d221c9d18a8fa975222131b03e917b203873625edcce0998075d2",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Trata de alvo, instrumentos, campos de irradiação ou bibliografia sem esclarecer o mecanismo físico comparado na pergunta.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            4
+          ],
+          "rationale": "Menciona diagnóstico óptico da pegada por excitação do gás residual; contexto sem distinguir cintilação de OTR."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            17,
+            18
+          ],
+          "rationale": "Enumera interações feixe-gás/feixe-lítio e OTR para imageamento, sem explicar deposição de energia versus interface."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zero_rationale": "Discute diagnósticos e condições gerais do alvo, sem temperatura ou caráter on-line/off-line da armadilha de nitrogênio.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            8
+          ],
+          "rationale": "Descreve ramo ICS com armadilhas frias e de hidrogênio, mas não a armadilha quente de nitrogênio."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            10,
+            21,
+            22
+          ],
+          "rationale": "Discute monitoramento de impurezas/nitrogênio ou análise off-line; não identifica o regime nem a temperatura da armadilha e não permite confundir monitoramento com remoção."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "f3a2ae136802bc9f0ac314888c68a7414d4fa58eb62c70a2f1d7704b7c56a0d0"
+}

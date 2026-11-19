@@ -1,0 +1,66 @@
+{
+  "document_id": "AI-015",
+  "markdown_sha256": "af2e3f080c1d3fdae18e4da3249ae11406a15d4e3c19936f407504048b3c6cce",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 20,
+      "zero_rationale": "Resultados, teste adaptativo, teoria de discriminadores ou referências de ZeroDiff++ sem explicar a função de R no ZeroDiff original.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            49,
+            53,
+            54
+          ],
+          "rationale": "Retoma explicitamente o ZeroDiff: representações não vistas são geradas por R* a partir da semântica da classe e ruído, depois condicionam G*; explica a ausência da representação real na síntese convencional."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            3,
+            4,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            18,
+            19,
+            25,
+            33,
+            37,
+            38,
+            45,
+            46,
+            47,
+            48,
+            55,
+            56,
+            58,
+            59,
+            62,
+            78,
+            79,
+            82,
+            83,
+            88,
+            89,
+            90,
+            92,
+            120
+          ],
+          "rationale": "Contextualiza SC e geração de classes não vistas ou distingue a extensão ZeroDiff++ com dados reais de teste; não deve ser confundido com a justificativa do R no método original."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "5ea1f074e28b40bf0afcad5062e65f550f948f49827a38d8854a27a06a9b0c94"
+}

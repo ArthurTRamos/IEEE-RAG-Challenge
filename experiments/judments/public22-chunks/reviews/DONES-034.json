@@ -1,0 +1,48 @@
+{
+  "document_id": "DONES-034",
+  "markdown_sha256": "fb623964fc0dfb4611ead7ce2268095356db838698791a7ad8caac88853d157d",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 6,
+      "zero_rationale": "Trata de outras instalações/sistemas, segurança, módulos, custos ou referências sem vazão útil no HX primário de DONES.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            53,
+            54,
+            55,
+            57
+          ],
+          "rationale": "Contextualiza circuito e alvo de IFMIF com dois feixes; não é o projeto DONES e não fornece isoladamente a vazão pedida."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            61,
+            62,
+            64,
+            70
+          ],
+          "rationale": "Fornece 97,5 L/s no circuito ou 49,7 kg/s no HX primário, dados numericamente compatíveis, mas explicitamente da versão IFMIF/EVEDA; suporte parcial por diferença de projeto."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "zero_rationale": "Descreve história, subsistemas, salas, segurança, custos ou referências sem dimensões/volume externo do edifício principal; volumes de módulos e salas não são do prédio inteiro.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            28
+          ],
+          "rationale": "Fornece 137 m × 111 m × 40,5 m e 27 m acima do solo, dados diretos para os volumes total e acima do solo. O texto se refere a IFMIF; essa identificação deve ser preservada ao responder sobre DONES."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "76169b4afbeb94d3993ed4840f5cdb582392c4c48d3e911e36ab731cc658ddac"
+}

@@ -1,0 +1,81 @@
+{
+  "document_id": "AI-018",
+  "markdown_sha256": "2dbca06f36b0302c8e18a56d59200283ba2429dbfa19ce3b33cff08f26b1767f",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 23,
+      "zero_rationale": "Metadados, aplicação experimental isolada, referências ou detalhes sem relação suficiente com a definição e comparação de garantias de agregação robusta.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            1,
+            8,
+            9,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            29,
+            30,
+            35,
+            38,
+            40,
+            42,
+            43,
+            50,
+            53,
+            54,
+            55,
+            56,
+            58
+          ],
+          "rationale": "Define condições formais de alinhamento/momentos ou compara hipóteses, mecanismo e garantias de Krum, média, mediana e variantes. A análise depende de hipóteses como estimadores honestos i.i.d.; não é uma alegação de superioridade universal."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            3,
+            4,
+            6,
+            7,
+            10,
+            12,
+            14,
+            15,
+            16,
+            27,
+            28,
+            31,
+            32,
+            33,
+            34,
+            36,
+            37,
+            39,
+            41,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            51,
+            52,
+            57
+          ],
+          "rationale": "Contextualiza o modelo de ameaça, prova, custo ou experimentos, sem fornecer sozinho a comparação conceitual completa com outras abordagens."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "eb7490fdb267b1eecc906d227abb68a04cc4f832227f68dabdadae408b999f82"
+}

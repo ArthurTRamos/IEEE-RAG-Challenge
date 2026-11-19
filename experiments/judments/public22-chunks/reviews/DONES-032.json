@@ -1,0 +1,34 @@
+{
+  "document_id": "DONES-032",
+  "markdown_sha256": "e3dd4e26bb50998b3d1fa8bcf99d8a8f24359cb2286d93da7c34177379250027",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Trata de resolução, óptica, configuração experimental, resultados ou bibliografia, sem explicar o processo necessário à emissão de cintilação.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            0,
+            1,
+            2,
+            8
+          ],
+          "rationale": "Explica a conversão/deposição de energia em elétrons e lacunas e a sequência de excitação e relaxação que produz luz no cintilador; suporta diretamente o mecanismo exigido."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            3,
+            5,
+            7
+          ],
+          "rationale": "Contextualiza luz produzida no cristal, níveis excitados e a alternativa à OTR, mas não fornece isoladamente a distinção física completa."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "c9cc867fcf51e4885f5871b3ae6d7b6badad6b152388833ce3621a46d07c1930"
+}

@@ -1,0 +1,78 @@
+{
+  "document_id": "AI-016",
+  "markdown_sha256": "c99542680d44fdad9f3c747b34ab052e0d8ff6827afe7c1c1999e88a566ccbe9",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 22,
+      "zero_rationale": "Arquitetura, tamanho de lote, otimização, avaliação ou referências sem sustentar a diferença entre resolver a tarefa contrastiva e aprender representações úteis com aumentações.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            6,
+            9,
+            29,
+            30
+          ],
+          "rationale": "Mostra que uma transformação isolada permite quase acertar todos os pares positivos mas gera representações ruins; composição torna a tarefa difícil e evita atalhos como histogramas de cor."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            31,
+            36,
+            37,
+            38,
+            39,
+            42,
+            43,
+            55,
+            56,
+            57,
+            59,
+            61,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            83,
+            109,
+            110,
+            112,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121
+          ],
+          "rationale": "Contextualiza tarefa contrastiva, composição/força das aumentações, invariância ou outros atalhos; não demonstra sozinho o resultado do caso com transformação única."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "34838847b9076b3c867f9997d0a43040492b3e6229bf12fc5b89720bc7f167fa"
+}

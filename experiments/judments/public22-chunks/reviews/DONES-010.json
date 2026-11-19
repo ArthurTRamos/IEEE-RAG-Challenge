@@ -1,0 +1,44 @@
+{
+  "document_id": "DONES-010",
+  "markdown_sha256": "78928fa1f633c2692595744f929a2252eba8ec71beda3f509d9bcbca36cd1616",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 10,
+      "zero_rationale": "Explica planejamento, execução, treinamento, equipamentos ou bibliografia de RH, sem estabelecer condições para decidir entre manutenção humana e remota.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            4,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "rationale": "Justifica RH por radiação, perigo ou acesso restrito e pelo princípio ALARA; contexto qualitativo sem limiares de dose de IFMIF-DONES."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            18,
+            19,
+            20,
+            23
+          ],
+          "rationale": "Relaciona especificação de intervenção a dose/condições ambientais e duração, sem fornecer os limiares biológicos pedidos; Gy/h da tabela não deve ser confundido com os limites em Sv/h."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            29
+          ],
+          "rationale": "Exige avaliar e descontaminar materiais antes do contato humano após RH; contexto útil de restrição de acesso, não regra quantitativa."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "021978f9af136c550fe66dfca0d75cd64520625f7c74289e5cd322165517c5eb"
+}

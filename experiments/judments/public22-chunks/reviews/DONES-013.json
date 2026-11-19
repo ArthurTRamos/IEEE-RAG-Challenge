@@ -1,0 +1,67 @@
+{
+  "document_id": "DONES-013",
+  "markdown_sha256": "98260f5ee8402c418d33d40375ec04f0fc3f29e8be519c525da24aaf4145e120",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 7,
+      "zero_rationale": "Trata de requisitos, geometria, irradiação, manutenção ou referências sem regime/temperatura da armadilha de N; valores térmicos do alvo e HFTM não se aplicam à NT.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            20,
+            21
+          ],
+          "rationale": "Afirma material ligante de N no dump tank para uso durante manutenção; suporta diretamente a operação off-line, sem temperatura explícita."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "zero_rationale": "Trata de concepção, construção, instrumentação ou bibliografia sem condições de dose/acesso para manutenção; descrição de equipamentos RH não define quando seu uso é necessário.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            31
+          ],
+          "rationale": "Afirma que componentes ativados exigem dispositivos RH para substituição periódica."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            40,
+            46
+          ],
+          "rationale": "Explicita acesso frequente abaixo de 10 µSv/h e área proibida acima de 100 mSv/h, distinguindo beam-on e manutenção."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            50,
+            52,
+            54
+          ],
+          "rationale": "Relaciona radiação/ativação à proibição de presença humana, necessidade de blindagem ou RH e acesso em manutenção."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            26,
+            39,
+            41,
+            44,
+            47,
+            49,
+            51,
+            55
+          ],
+          "rationale": "Descreve acesso, dose, resfriamento, blindagem ou operações programadas, mas não contém isoladamente os limiares completos hands-on/remota."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "bdf3756490abdc72187196aaa5423971ff4b030fa4e93c50e383a0f37bf4f49d"
+}

@@ -1,0 +1,106 @@
+{
+  "document_id": "DONES-027",
+  "markdown_sha256": "35a0f94d57a2f4c14a60d56b3aaed6d8fe23f5e98c18ce58ae9631345b2a26dd",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 3,
+      "zero_rationale": "Não fornece meia-vida numérica de Be-7 nem relação de cálculo da constante; conteúdo de geometria, doses, métodos ou referências não resolve esse cálculo.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            4
+          ],
+          "rationale": "Menciona a relevância da meia-vida de Be-7, mas não informa seu valor."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            20,
+            21,
+            24
+          ],
+          "rationale": "Fornece atividades em intervalos de resfriamento e perda aproximada em uma semana, informação indireta e arredondada sobre decaimento; não fornece os 53 dias necessários com precisão."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "zero_rationale": "Não fornece o instante de cruzamento da contribuição de Be-7 no trocador; geometria, espectros de energia, doses e referências não permitem ler esse tempo.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            5,
+            9
+          ],
+          "rationale": "Contextualiza a evolução de fontes Be-7/ACP no trocador e diferenças entre modelos, sem o instante procurado."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            20,
+            21,
+            24
+          ],
+          "rationale": "Mostra atividades agregadas ou mudanças somente na primeira semana, insuficientes para localizar a troca de dominância de Be-7."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            25,
+            26
+          ],
+          "rationale": "Aponta a Figura 8 e descreve evolução em dez anos e outros radionuclídeos, mas a figura não foi extraída em texto; não é possível ler dela o cruzamento de curvas."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "zero_rationale": "Não descreve diretamente o cálculo conjunto dos inventários de Be-7 e trítio; doses, geometria geral, instrumentos e referências não completam esse procedimento.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            4,
+            6
+          ],
+          "rationale": "Identifica produção de Be-7 por reações de deuterons com lítio; suporte direto a uma parte da cadeia física de produção."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            5,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            18,
+            24,
+            25,
+            27
+          ],
+          "rationale": "Descreve hipóteses de concentração/distribuição, transporte ou uso de FISPACT para decaimento e fontes gama; contexto metodológico, mas não o cálculo dos inventários de Be-7 e trítio por espectros de deuterons/nêutrons."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "zero_rationale": "Não informa armadilha quente de nitrogênio off-line nem temperatura de operação; temperaturas de lítio/armadilha fria não respondem à pergunta.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            11
+          ],
+          "rationale": "Inclui nitrogênio entre impurezas capturadas em armadilha fria e descreve o sistema de remoção, mas não identifica a armadilha quente de N ou o regime solicitado; versão/contexto divergente."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "328b59c67d384de5d76152bb567f5ae330f02c177d2dbcec86a413b3e5cbed9a"
+}

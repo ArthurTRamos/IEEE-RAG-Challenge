@@ -1,0 +1,57 @@
+{
+  "document_id": "DONES-019",
+  "markdown_sha256": "ed97d2f5d6379994c3a2b77f12fe6af19008469f5578993fa531f70573a8cbca",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Trata de configuração, sensores ou operação do acelerador, sem evidência do mecanismo de cintilação ou da emissão por interface.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            18
+          ],
+          "rationale": "Apresenta perfilometria óptica por fluorescência, mas não explica excitação/cintilação versus OTR."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            29,
+            30,
+            31,
+            34
+          ],
+          "rationale": "Identifica OTR como diagnóstico óptico de perfil ou descreve testes relacionados; não explica sua origem na interface nem a deposição exigida pela cintilação."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zero_rationale": "Trata de instalação, tecnologias, validação ou referências sem explicitar intercepção/perturbação ou a restrição operacional dos diagnósticos invasivos.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            12,
+            13,
+            18
+          ],
+          "rationale": "Afirma que métodos interceptivos são evitados em potência nominal e usados no comissionamento; apoia a distinção operacional pedida."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            16,
+            22,
+            24,
+            25
+          ],
+          "rationale": "Descreve monitores não interceptivos ou diagnósticos de comissionamento/SEM, mas não explica a perturbação do feixe."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "1b7cf3d85c59cd21cad1d655b31b302354426a4ace9f583d96d9b5c5e35c2f58"
+}

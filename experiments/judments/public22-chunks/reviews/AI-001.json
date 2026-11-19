@@ -1,0 +1,58 @@
+{
+  "document_id": "AI-001",
+  "markdown_sha256": "129ad60ddf49e19355117f311240af4a0cf1cebbb25492b4d446db6af140ca67",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 11,
+      "zero_rationale": "Trata de ranking, usuários, treinamento, implantação, resultados gerais ou referências sem explicar a propriedade arquitetural do tokenizador RQ-Kmeans frente a RQ-VAE.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            36,
+            37,
+            39,
+            40,
+            41
+          ],
+          "rationale": "Compara tokenizadores/codebooks ou explica priorização hierárquica por codebooks maiores nas primeiras camadas e balanceamento só na última. A alegação de colapso no texto está ligada ao balanceamento em todas as camadas; não deve ser atribuída automaticamente ao objetivo VAE."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            87
+          ],
+          "rationale": "Explica que quantizar/balancear sem preservar níveis destrói distinção hierárquica e agrega itens no mesmo SID, apoiando o mecanismo arquitetural."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            5,
+            12,
+            14,
+            17,
+            26,
+            28,
+            29,
+            30,
+            34,
+            35,
+            38,
+            42,
+            48,
+            49,
+            75,
+            78,
+            79,
+            81,
+            86
+          ],
+          "rationale": "Descreve representação hierárquica, perda de atributos, configuração ou desempenho dos códigos; contexto útil, mas sem comparação causal completa com RQ-VAE."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "a89cc70e95042ce656a6482aeba979615917013b67b91fccbd8309cadc9fdd54"
+}

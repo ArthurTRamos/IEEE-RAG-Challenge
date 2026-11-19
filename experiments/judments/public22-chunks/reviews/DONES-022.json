@@ -1,0 +1,22 @@
+{
+  "document_id": "DONES-022",
+  "markdown_sha256": "4482a89487731359aab0046d48b89d98a0f40f7da10f3eca8c76f131955cf03b",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 2,
+      "zero_rationale": "Trata de engenharia de HEBT, magnetismo, vácuo, manutenção ou bibliografia sem definir a ação do diagnóstico destrutivo.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            16
+          ],
+          "rationale": "Descreve combinação de FPM não interceptivo e SEM interceptivo na mesma câmara; exemplo contextual, sem explicar o efeito sobre o feixe."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "708b433d30c9ecd6b7d336815eb8e467627fd01c4b6d5e20f9474cd855e0734b"
+}

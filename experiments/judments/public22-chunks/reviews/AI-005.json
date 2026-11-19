@@ -1,0 +1,60 @@
+{
+  "document_id": "AI-005",
+  "markdown_sha256": "2bb18948d2d7bf16f042d330a2c662d736c08e022f778e2ea820b36e3ffb4bdd",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 12,
+      "zero_rationale": "Trecho sobre diversidade, métricas, dados, resultados ou referências de DiCE sem evidência sobre controle de atributos imutáveis na comparação com ONB-MACF.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            7,
+            8,
+            22,
+            27,
+            28,
+            72,
+            73
+          ],
+          "rationale": "DiCE admite restrições fornecidas pelo usuário e variáveis mantidas constantes; contradiz a premissa de que o baseline necessariamente modifica atributos imutáveis, mas não revela a configuração usada por ONB-MACF."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            1,
+            3,
+            6,
+            9,
+            10,
+            11,
+            23,
+            25,
+            26,
+            38,
+            39,
+            40,
+            45,
+            47,
+            59,
+            60,
+            68,
+            69,
+            74,
+            75,
+            76,
+            80,
+            81,
+            82,
+            86,
+            87
+          ],
+          "rationale": "Discute acionabilidade, causalidade, pesos, esparsidade ou condições de comparação: contexto útil para avaliar justiça experimental, insuficiente para demonstrar a ablação de imutabilidade em ONB-MACF."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "e5342f681ed34f889be22e439796a94921bad219c4e409201ceb8141a68845dc"
+}

@@ -1,0 +1,51 @@
+{
+  "document_id": "DONES-026",
+  "markdown_sha256": "479e5b11bdf46abfbd292428c374347ce1b5d5bc3ca9478a357c345d628de7db",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Trata de câmera, feixe, espectroscopia e resultados instrumentais, sem explicar o mecanismo comparado de cintilação e OTR.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            5
+          ],
+          "rationale": "Explica excitação eletrônica do gás pelo feixe e emissão ao retornar ao estado fundamental. Suporte por analogia de fluorescência, não comparação direta de cintilação e OTR."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            23
+          ],
+          "rationale": "Descreve uma transição de Kr e sua condição de excitação eletrônica; contexto de excitação, sem estabelecer a comparação solicitada."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "zero_rationale": "Trata de instrumentação óptica, resultados ou referências sem caracterizar diagnósticos que interceptam o feixe.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            5,
+            11
+          ],
+          "rationale": "Identifica diagnóstico por gás residual/fluorescência como alternativa não interceptiva, sem definir diagnóstico destrutivo."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            13,
+            17
+          ],
+          "rationale": "Relata placas de tungstênio do scanner bombardeadas por íons/sputtering ou perdas em scrapers: exemplos de interação material e perda de partículas do feixe, úteis para a definição física."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "bf2a4174b743ad851725f1007cfab9805e648b46a47ef85080ebce4ad9e6c917"
+}

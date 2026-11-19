@@ -1,0 +1,41 @@
+{
+  "document_id": "DONES-006",
+  "markdown_sha256": "7a33fe6137ef87e3dad306c32cf2e3e2dd840239f3f8a93bd6f292454ff659b5",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 6,
+      "zero_rationale": "Trata de acidentes, pressão, vácuo, válvulas, bibliografia ou transientes sem fornecer a vazão nominal no trocador primário.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            18
+          ],
+          "rationale": "Tabela fornece vazão mássica de referência de lítio 49,7 kg/s e temperatura de 250 °C no HX, dados diretos para converter em cerca de 98 L/s com densidade apropriada."
+        },
+        {
+          "grade": 2,
+          "indices": [
+            15
+          ],
+          "rationale": "Informa que 35 kg/s correspondem a 70% da vazão nominal; permite inferir aproximadamente 50 kg/s para a conversão volumétrica."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            8,
+            9,
+            13,
+            14,
+            16,
+            17
+          ],
+          "rationale": "Identifica circuito, HX e a modelagem da conservação de vazão/potência, mas não dá isoladamente a vazão volumétrica nominal."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "bc68265e11c2533b5f808ccab6ebd74e0d6e6a1f358d6d6a30e34d9c7f5b7ce6"
+}

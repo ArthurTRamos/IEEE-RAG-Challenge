@@ -1,0 +1,41 @@
+{
+  "document_id": "DONES-008",
+  "markdown_sha256": "12b5d3ef2229365f231001c32759f3df525d4fb4371a38f330cd87d2bd4e5b80",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 5,
+      "zero_rationale": "Trata de proteção, geometria, HFTM, doses ou bibliografia, sem suporte ao cálculo dos inventários no circuito de lítio.",
+      "decisions": [
+        {
+          "grade": 2,
+          "indices": [
+            15,
+            19,
+            23,
+            24,
+            25,
+            30
+          ],
+          "rationale": "Descreve transporte/espectros e acoplamento MCNP/McDeLicious–FISPACT, ativação por deuterons/nêutrons ou bibliotecas; suporte direto a partes da metodologia de inventário."
+        },
+        {
+          "grade": 1,
+          "indices": [
+            5,
+            7,
+            10,
+            14,
+            17,
+            43,
+            44,
+            47
+          ],
+          "rationale": "Apresenta a cadeia neutrônica, ativação ou aplicações radiológicas, mas não detalha especificamente o inventário conjunto de Be-7 e trítio no lítio."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "0c2206c74acc24d19d23361dc991812120b1ab82221b205f0af1e63541b97f66"
+}

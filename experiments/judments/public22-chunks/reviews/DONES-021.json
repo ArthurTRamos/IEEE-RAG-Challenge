@@ -1,0 +1,22 @@
+{
+  "document_id": "DONES-021",
+  "markdown_sha256": "ca166c47c3e081425a8a4dc072b096459983c9fb5092c20a54d413205ef69821",
+  "scope": "all_chunks_semantically_reviewed",
+  "questions": [
+    {
+      "id": 1,
+      "zero_rationale": "Discute RF pickups, simulações e proteção da máquina, sem a distinção física entre cintilação e OTR.",
+      "decisions": [
+        {
+          "grade": 1,
+          "indices": [
+            4
+          ],
+          "rationale": "Menciona OTR e fluorescência para medir o perfil e compara tempos de resposta; não explica o processo de excitação/deposição requerido."
+        }
+      ]
+    }
+  ],
+  "source_judgments_sha256": "bc1b32b037cdf21f1ec0c105232730d493b4ff42b8d227a49c510e8322669ea5",
+  "chunks_sha256": "791635a153fea3ec613b76fe3bd920f75e8b48e08ac45f883c4dc582fc51aad0"
+}
