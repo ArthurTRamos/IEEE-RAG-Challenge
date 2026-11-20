@@ -214,21 +214,25 @@ def _to_markdown(rows):
     return "\n".join("| " + " | ".join(row) + " |" for row in rows)
 
 
-def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
-                docling_models_path=DOCLING_MODELS_PATH):
+def _pdf_converter(docling_models_path, *, device=None, backend=None):
     from docling.datamodel.base_models import InputFormat
     from docling.datamodel.pipeline_options import PdfPipelineOptions
     from docling.document_converter import DocumentConverter, PdfFormatOption
-    from sentence_transformers import SentenceTransformer
 
-    started = time.perf_counter()
-    pdfs = discover_pdfs(corpus_dir)
     options = PdfPipelineOptions(artifacts_path=str(docling_models_path),
                                  do_ocr=False, do_table_structure=False)
-    converter = DocumentConverter(format_options={
-        InputFormat.PDF: PdfFormatOption(pipeline_options=options)})
-    embedder = SentenceTransformer(str(embed_model_path), device=None,
-                                  local_files_only=True)
+    if device is not None:
+        options.accelerator_options.device = device
+    format_option = PdfFormatOption(pipeline_options=options)
+    if backend is not None:
+        format_option = PdfFormatOption(pipeline_options=options, backend=backend)
+    return DocumentConverter(format_options={InputFormat.PDF: format_option})
+
+
+def extract_corpus(corpus_dir, docling_models_path=DOCLING_MODELS_PATH):
+    """Extract the same ordered chunks for indexing and controlled comparisons."""
+    pdfs = discover_pdfs(corpus_dir)
+    converter = _pdf_converter(docling_models_path)
     chunks, failures = [], []
     for pdf in pdfs:
         try:
@@ -247,11 +251,26 @@ def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
                            "text": part})
     if not chunks:
         raise ValueError("Corpus produced no text chunks")
+    return chunks, [pdf.stem for pdf in pdfs], failures
+
+
+def encode_chunks(chunks, embedder):
     embeddings = embedder.encode([chunk["text"] for chunk in chunks],
                                 normalize_embeddings=True,
                                 show_progress_bar=False, batch_size=64)
-    return RetrievalIndex(chunks, np.asarray(embeddings, dtype=np.float32),
-                          embedder, [pdf.stem for pdf in pdfs], failures,
+    return np.asarray(embeddings, dtype=np.float32)
+
+
+def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
+                docling_models_path=DOCLING_MODELS_PATH):
+    from sentence_transformers import SentenceTransformer
+
+    started = time.perf_counter()
+    embedder = SentenceTransformer(str(embed_model_path), device=None,
+                                  local_files_only=True)
+    chunks, documents, failures = extract_corpus(corpus_dir, docling_models_path)
+    return RetrievalIndex(chunks, encode_chunks(chunks, embedder),
+                          embedder, documents, failures,
                           time.perf_counter() - started)
 
 

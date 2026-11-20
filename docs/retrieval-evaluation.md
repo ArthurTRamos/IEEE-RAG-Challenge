@@ -132,6 +132,39 @@ O caminho de saída é relativo a `src/`. O build recusa sobrescrever um ZIP
 existente, confere integridade e tamanho máximo de 1 GB e inclui `main.py`,
 `retrieval.py`, `embed_model/` e `docling_models/` na raiz do pacote.
 
+## Comparação dos modelos de embedding
+
+O comparador avalia MiniLM-L6-v2 e Snowflake Arctic Embed XS com limites de 256
+e 512 tokens. As quatro variantes compartilham os chunks produzidos pelo
+extrator atual, os scores BM25, a configuração RRF da submissão e o tokenizer
+OLMo para seleção de contexto. O Arctic usa o prefixo de consulta publicado
+com o modelo no canal denso. O MiniLM usa a consulta original.
+
+Para preparar os pesos do Arctic com internet:
+
+```bash
+.venv/bin/hf download Snowflake/snowflake-arctic-embed-xs \
+  model.safetensors config.json sentence_bert_config.json \
+  config_sentence_transformers.json modules.json 1_Pooling/config.json \
+  tokenizer.json tokenizer_config.json special_tokens_map.json vocab.txt README.md \
+  --revision d8c86521100d3556476a063fc2342036d45c106f \
+  --local-dir models/embedding-comparison/arctic-xs
+```
+
+Com os pesos auxiliares e o tokenizer já em disco:
+
+```bash
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 .venv/bin/python tools/compare_embeddings.py \
+  --arctic-model models/embedding-comparison/arctic-xs \
+  --tokenizer models/olmo-tokenizer \
+  --output-dir experiments/runs/public22-embedding-comparison
+```
+
+O diretório de saída contém o catálogo compartilhado, os rankings, os
+contextos e as métricas por variante, além de um resumo comparativo. Os tempos
+de embeddings excluem a extração dos PDFs, o carregamento dos modelos, o BM25
+e a geração de respostas.
+
 ## Grade de parâmetros com nomes explícitos
 
 ```bash
