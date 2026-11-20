@@ -228,7 +228,19 @@ def load_inputs(export_dir, judgments_dir, corpus):
         pdf = corpus / doc["source_path"]
         if fingerprint(md)["sha256"] != doc["markdown_sha256"] or fingerprint(pdf)["sha256"] != doc["source_pdf"]["sha256"]:
             raise ValueError(f"Document hash changed: {doc['document_id']}")
-        parts = _chunk_markdown(md.read_text(encoding="utf-8"))
+        raw_text = md.read_text(encoding="utf-8")
+        if "index_markdown_path" in doc:
+            from src.retrieval import clean_markdown
+            index_md = export_dir / doc["index_markdown_path"]
+            if fingerprint(index_md)["sha256"] != doc["index_markdown_sha256"]:
+                raise ValueError(f"Index Markdown hash changed: {doc['document_id']}")
+            index_text = index_md.read_text(encoding="utf-8")
+            if clean_markdown(raw_text) != index_text:
+                raise ValueError("Current cleanup differs from indexed export")
+        else:
+            # Historical exports remain reproducible against their original qrels.
+            index_text = raw_text
+        parts = _chunk_markdown(index_text)
         if len(parts) != len(doc["chunks"]):
             raise ValueError("Current chunking differs from judged export")
         for number, (part, saved) in enumerate(zip(parts, doc["chunks"])):

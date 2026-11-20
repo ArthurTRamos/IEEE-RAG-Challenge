@@ -202,6 +202,68 @@ def discover_pdfs(corpus_dir):
     return paths
 
 
+def markdown_cleanup(text):
+    """Return indexable Markdown and audited removals at original offsets.
+
+    Keep the raw export and document metadata outside this function. Match
+    structural section labels, not mentions of references in ordinary prose.
+    Stop a bibliography at ANY next heading to protect appendices even when
+    PDF extraction assigned the wrong heading level. Ignore fenced code.
+    """
+    headings, starts = [], []
+    offset, fence = 0, None
+    for line in text.splitlines(keepends=True):
+        stripped = line.strip()
+        marker = re.match(r"^ {0,3}(`{3,}|~{3,})", line)
+        if marker:
+            run = marker[1]
+            if fence is None:
+                fence = (run[0], len(run))
+            elif run[0] == fence[0] and len(run) >= fence[1] and not stripped[len(run):].strip():
+                fence = None
+            offset += len(line)
+            continue
+        if fence is None:
+            match = re.match(r"^ {0,3}#{1,6}\s+(.+?)\s*#*\s*$", line)
+            if match:
+                label = re.sub(r"[*_`]", "", match[1]).strip()
+                label = re.sub(r"^(?:\d+(?:\.\d+)*|[IVXLCDM]+)[.)]?\s+", "", label, flags=re.I)
+                label = label.casefold().rstrip(".:").strip()
+                kind = "references" if label in {"reference", "references", "bibliography"} else None
+                headings.append((offset, kind, match[1]))
+                if re.match(r"^(?:abstract|introduction)\b", label):
+                    starts.append(offset)
+            elif not line.startswith(("    ", "\t", ">")):
+                # Common IEEE/math exports put an unheaded abstract on one line.
+                plain = re.sub(r"[*_`]", "", stripped)
+                if re.match(r"^abstract(?:\s*$|\s*[:.\-–—])", plain, re.I):
+                    starts.append(offset)
+        offset += len(line)
+    first_ref = next((pos for pos, kind, _ in headings if kind), len(text))
+    start = next((pos for pos in starts if pos < first_ref), 0)
+    cuts = []
+    if start:
+        cuts.append({"start": 0, "end": start, "reason": "front_matter"})
+    for i, (pos, kind, _) in enumerate(headings):
+        if kind:
+            end = headings[i + 1][0] if i + 1 < len(headings) else len(text)
+            cuts.append({"start": pos, "end": end, "reason": "bibliography"})
+    pieces, cursor = [], 0
+    for cut in sorted(cuts, key=lambda cut: cut["start"]):
+        if cut["start"] >= cursor:
+            pieces.append(text[cursor:cut["start"]])
+        cursor = max(cursor, cut["end"])
+    pieces.append(text[cursor:])
+    cleaned = "".join(pieces)
+    if not cleaned.strip() and text.strip():
+        return {"text": text, "removed": [], "fallback": "cleanup_would_empty_document"}
+    return {"text": cleaned, "removed": cuts, "fallback": None}
+
+
+def clean_markdown(text):
+    return markdown_cleanup(text)["text"]
+
+
 def _chunk_markdown(text, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
     paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
     chunks, current = [], ""
@@ -297,7 +359,7 @@ def build_index(corpus_dir, embed_model_path=EMBED_MODEL_PATH,
     for pdf in pdfs:
         try:
             text = _export_markdown(converter.convert(str(pdf)).document, pdf)
-            parts = _chunk_markdown(text)
+            parts = _chunk_markdown(clean_markdown(text))
             if not parts:
                 raise ValueError("PDF produced no text chunks")
         except Exception as exc:

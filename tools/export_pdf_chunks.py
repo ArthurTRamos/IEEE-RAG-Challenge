@@ -14,7 +14,7 @@ from prepare_evaluation import ROOT, DEFAULT_JUDGMENTS, fingerprint, write_json
 
 sys.path.insert(0, str(ROOT))
 from src.retrieval import (CHUNK_SIZE, CHUNK_OVERLAP, DOCLING_MODELS_PATH,
-                           discover_pdfs, _export_markdown, _chunk_markdown)
+                           discover_pdfs, _export_markdown, _chunk_markdown, markdown_cleanup)
 
 
 def main():
@@ -87,6 +87,7 @@ def main():
                    "gpu": torch.cuda.get_device_name() if device == "cuda" else None,
                    "do_ocr": False, "do_table_structure": False,
                    "pdfplumber_repairs": True,
+                   "markdown_cleanup": "front_matter_and_bibliography_sections",
                    "chunk_size_characters": CHUNK_SIZE,
                    "chunk_overlap_characters": CHUNK_OVERLAP,
                    "chunk_size_is_hard_limit": False},
@@ -109,8 +110,11 @@ def main():
             md = args.output_dir / "markdown" / f"{pdf.stem}.md"
             md.parent.mkdir(parents=True, exist_ok=True)
             md.write_text(text, encoding="utf-8")
-            # Read the saved Markdown: these are the exact inputs to chunking.
-            parts = _chunk_markdown(md.read_text(encoding="utf-8"))
+            cleaned = markdown_cleanup(md.read_text(encoding="utf-8"))
+            index_md = args.output_dir / "index-markdown" / f"{pdf.stem}.md"
+            index_md.parent.mkdir(parents=True, exist_ok=True)
+            index_md.write_text(cleaned["text"], encoding="utf-8")
+            parts = _chunk_markdown(cleaned["text"])
             if not parts:
                 raise ValueError("PDF produced no text chunks")
             chunk_dir = args.output_dir / "chunks" / pdf.stem
@@ -129,6 +133,9 @@ def main():
                 "source_path": pdf.relative_to(args.corpus).as_posix(),
                 "markdown_path": md.relative_to(args.output_dir).as_posix(),
                 "markdown_sha256": fingerprint(md)["sha256"],
+                "index_markdown_path": index_md.relative_to(args.output_dir).as_posix(),
+                "index_markdown_sha256": fingerprint(index_md)["sha256"],
+                "cleanup": {key: value for key, value in cleaned.items() if key != "text"},
                 "pages": len(result.document.pages), "conversion_status": status,
                 "chunk_count": len(parts), "chunks": chunks,
                 "elapsed_seconds": time.perf_counter() - tick})
