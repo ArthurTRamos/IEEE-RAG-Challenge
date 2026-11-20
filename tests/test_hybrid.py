@@ -80,7 +80,33 @@ class HybridTests(unittest.TestCase):
 
     def test_unicode_tokenization_is_shared_by_queries_and_documents(self):
         self.assertEqual(lexical_tokens("IFMIF-DONES 1.25 ÉNERGIE"),
-                         ["ifmif", "dones", "1", "25", "énergie"])
+                         ["ifmif-dones", "1.25", "energie"])
+        self.assertEqual(lexical_tokens("IFMIF-DONES 1.25 ÉNERGIE", mode="legacy"),
+                         ["ifmif", "dones", "1", "25", "energie"])
+
+    def test_technical_distinctions_survive(self):
+        for left, right in (("ZeroDiff", "ZeroDiff++"), ("C", "C++"),
+                            ("10^-3", "10^3"), ("1.25", "1/25"),
+                            ("1e-3", "1e3"), ("-3", "3"),
+                            ("not required", "required"), ("without cooling", "cooling")):
+            with self.subTest(left=left, right=right):
+                self.assertNotEqual(lexical_tokens(left), lexical_tokens(right))
+
+    def test_equivalent_power_spellings_and_surrounding_text(self):
+        for text in ("10^-3", "10^{−3}", "10⁻³", "10 ^ -3"):
+            self.assertEqual(lexical_tokens(text), ["10^-3"])
+        self.assertEqual(lexical_tokens("(ZeroDiff++), 1.25; 1/25."),
+                         ["zerodiff++", "1.25", "1/25"])
+        self.assertEqual(lexical_tokens("m^3/s"), ["m^3", "s"])
+
+    def test_query_scores_distinguish_technical_names(self):
+        chunks = [{"text": t} for t in ("ZeroDiff generator", "ZeroDiff++ generator",
+                                        "unrelated text", "another passage", "other example")]
+        model = BM25Retriever(chunks)
+        self.assertGreater(model.scores("ZeroDiff")[0], model.scores("ZeroDiff")[1])
+        self.assertGreater(model.scores("ZeroDiff++")[1], model.scores("ZeroDiff++")[0])
+        legacy = BM25Retriever(chunks, tokenization="legacy")
+        np.testing.assert_array_equal(legacy.scores("ZeroDiff"), legacy.scores("ZeroDiff++"))
 
     def test_context_is_not_cut_at_ten_chunks(self):
         class Tokenizer:

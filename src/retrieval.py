@@ -45,25 +45,89 @@ def _nlp():
     return spacy.load(SPACY_MODEL_PATH, exclude=["parser", "ner"])
 
 
-def lexical_tokens_many(texts):
-    """Lemmatized, stopword-free, folded words/numbers for each text."""
-    return [[t for tok in doc if not tok.is_stop
-             for t in re.findall(r"\w+", _fold(tok.lemma_))]
-            for doc in _nlp().pipe(texts, batch_size=256)]
+_NUMBER = r"[+\-−]?(?:\d+(?:[.,]\d+)?|[.,]\d+)(?:[eE][+\-−]?\d+)?"
+_POWER = r"(?:\s*\^\s*(?:\{[+\-−]?\d+\}|[+\-−]?\d+)|[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+)"
+_NAME = r"[^\W\d_]\w*"
+# Match the longest expression before spaCy's punctuation/stopword handling.
+# Boundaries prevent numeric suffixes inside ordinary identifiers being split.
+TECHNICAL_TERM = re.compile(
+    rf"(?<!\w)(?:{_NUMBER}(?:{_POWER}|/{_NUMBER})?(?:[a-zA-Z]+\b)?|"
+    rf"{_NAME}(?:[-‐‑/]{_NAME})+(?:[+#]+)?|{_NAME}[+#]+|{_NAME}{_POWER})(?!\w)")
+_SUPERSCRIPTS = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻", "0123456789+-")
+_TECH_DASHES = str.maketrans({"−": "-", "‐": "-", "‑": "-"})
+_NEGATIONS = {"no", "not", "never", "without", "neither", "nor", "cannot", "n't"}
 
 
-def lexical_tokens(text):
-    return lexical_tokens_many([text])[0]
+def _technical_term(text):
+    # Preserve exponent semantics before NFKD turns superscripts into digits.
+    text = re.sub(r"[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+",
+                  lambda m: "^" + m[0].translate(_SUPERSCRIPTS), text)
+    text = re.sub(r"\s+|[{}]", "", text).translate(_TECH_DASHES)
+    return _fold(text)
+
+
+def _lexical_doc(doc, mode):
+    if mode == "legacy":
+        return [word for tok in doc if not tok.is_stop
+                for word in re.findall(r"\w+", _fold(tok.lemma_))]
+    spans = list(TECHNICAL_TERM.finditer(doc.text))
+    index = 0
+    result = []
+    for tok in doc:
+        start, end = tok.idx, tok.idx + len(tok.text)
+        while index < len(spans) and spans[index].end() <= start:
+            index += 1
+        if index < len(spans) and spans[index].start() < end:
+            # spaCy may split one expression across tokens, or put multiple
+            # expressions in one token. Preserve all surrounding text too.
+            cursor = start
+            while index < len(spans) and spans[index].start() < end:
+                span = spans[index]
+                if cursor < span.start():
+                    result.extend(re.findall(r"\w+", _fold(doc.text[cursor:span.start()])))
+                if span.start() >= start:
+                    result.append(_technical_term(span[0]))
+                cursor = max(cursor, span.end())
+                if span.end() > end:
+                    break
+                index += 1
+            if cursor < end:
+                result.extend(re.findall(r"\w+", _fold(doc.text[cursor:end])))
+            continue
+        negation = tok.lower_ in _NEGATIONS or tok.lemma_.lower() in _NEGATIONS
+        if negation:
+            result.append("not" if tok.lower_ == "n't" else _fold(tok.lower_))
+        elif not tok.is_stop:
+            result.extend(re.findall(r"\w+", _fold(tok.lemma_)))
+    return result
+
+
+def lexical_tokens_many(texts, mode="technical"):
+    """Shared query/document representation; legacy is retained for ablations.
+
+    Technical mode preserves compounds, signed numbers, ratios, exponents and
+    method suffixes as complete tokens. Ordinary words retain spaCy lemmas and
+    accent/case folding; negations survive stopword removal. This is lexical
+    matching, not a mathematical parser or proof of logical equivalence.
+    """
+    if mode not in {"technical", "legacy"}:
+        raise ValueError(f"Unknown lexical tokenization: {mode}")
+    return [_lexical_doc(doc, mode) for doc in _nlp().pipe(texts, batch_size=256)]
+
+
+def lexical_tokens(text, mode="technical"):
+    return lexical_tokens_many([text], mode=mode)[0]
 
 
 class BM25Retriever:
-    def __init__(self, chunks, k1=1.25, b=0.75):
+    def __init__(self, chunks, k1=1.25, b=0.75, tokenization="technical"):
         from rank_bm25 import BM25Okapi
 
         if not np.isfinite(k1) or k1 <= 0 or not np.isfinite(b) or not 0 <= b <= 1:
             raise ValueError("BM25 requires finite k1 > 0 and 0 <= b <= 1")
         self.k1, self.b = k1, b
-        tokens = lexical_tokens_many(chunk["text"] for chunk in chunks)
+        self.tokenization = tokenization
+        tokens = lexical_tokens_many((chunk["text"] for chunk in chunks), mode=tokenization)
         if not any(tokens):
             raise ValueError("BM25 corpus has no lexical tokens")
         self.model = BM25Okapi(tokens, k1=k1, b=b)
@@ -73,7 +137,7 @@ class BM25Retriever:
         # contribution is zero: no query term occurs. Keep such chunks in the
         # corpus statistics so existing configurations retain identical scores.
         with np.errstate(divide="ignore", invalid="ignore"):
-            values = np.asarray(self.model.get_scores(lexical_tokens(question)))
+            values = np.asarray(self.model.get_scores(lexical_tokens(question, mode=self.tokenization)))
         values[np.asarray(self.model.doc_len) == 0] = 0.0
         if not np.isfinite(values).all():
             raise ValueError("BM25 produced non-finite scores for nonempty chunks")
